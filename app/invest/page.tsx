@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Header } from "@/components/header"
+import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { TrendingUp, Shield, Users, Zap, Target, DollarSign, Check, ArrowRight } from "lucide-react"
 
@@ -90,7 +90,7 @@ export default function InvestPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <Navbar />
 
       {/* Hero */}
       <section className="px-6 pt-32 pb-24 md:pt-40 md:pb-32">
