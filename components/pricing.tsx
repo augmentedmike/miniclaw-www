@@ -39,10 +39,10 @@ const plans = [
     features: [
       "Brand new ClawMini included",
       "ClawDaddy pre-installed & configured",
+      "White glove setup — we unbox with you on video",
       "Hardware, labor & shipping included",
       "Plug in, turn on, start talking",
       "Priority support for 1 year",
-      "Extended warranty available",
     ],
     highlighted: true,
   },

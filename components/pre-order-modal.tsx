@@ -30,6 +30,12 @@ export function PreOrderModal({ isOpen, onClose }: PreOrderModalProps) {
           Choose your payment option. Either way, you're first in line when we ship Spring 2026.
         </p>
 
+        <div className="mt-4 rounded-lg border border-primary/20 bg-primary/5 p-4">
+          <p className="text-sm text-foreground">
+            <strong>Includes white glove setup:</strong> We'll join you on video during unboxing to make sure everything works perfectly on day one.
+          </p>
+        </div>
+
         <div className="mt-8 grid gap-6 md:grid-cols-2">
           {/* 50% Deposit Option */}
           <div className="flex flex-col rounded-xl border-2 border-primary bg-card p-6">
