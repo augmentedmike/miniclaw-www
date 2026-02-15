@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Check, Download, Monitor, ShieldCheck } from "lucide-react"
+import { EmailSignupModal } from "@/components/email-signup-modal"
 
 const plans = [
   {
@@ -69,6 +70,8 @@ const plans = [
 export function Pricing() {
   const [activeSlug, setActiveSlug] = useState("download")
   const [animatingSlug, setAnimatingSlug] = useState<string | null>(null)
+  const [modalOpen, setModalOpen] = useState(false)
+  const [selectedPlan, setSelectedPlan] = useState("")
 
   useEffect(() => {
     function handleHash() {
@@ -174,6 +177,12 @@ export function Pricing() {
                 className="mt-3"
                 size="lg"
                 variant={activeSlug === plan.slug ? "default" : "outline"}
+                onClick={() => {
+                  if (plan.cta === "Notify Me") {
+                    setSelectedPlan(plan.name)
+                    setModalOpen(true)
+                  }
+                }}
               >
                 {plan.cta}
               </Button>
@@ -181,6 +190,12 @@ export function Pricing() {
           ))}
         </div>
       </div>
+
+      <EmailSignupModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        plan={selectedPlan}
+      />
     </section>
   )
 }
