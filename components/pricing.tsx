@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Check, Download, Monitor, ShieldCheck } from "lucide-react"
 import { EmailSignupModal } from "@/components/email-signup-modal"
+import { PreOrderModal } from "@/components/pre-order-modal"
 
 const plans = [
   {
@@ -34,7 +35,7 @@ const plans = [
       "We install and preconfigure your ClawDaddy AI assistant on a brand new ClawMini and ship it straight to you. Plug in and go.",
     icon: Monitor,
     cta: "Pre-Order Now",
-    timeline: "Shipping Summer 2026",
+    timeline: "Shipping Spring 2026",
     features: [
       "Brand new ClawMini included",
       "ClawDaddy pre-installed & configured",
@@ -54,7 +55,7 @@ const plans = [
       "We keep your AI assistant updated, secure, and running smoothly. If anything goes wrong, we fix it for you.",
     icon: ShieldCheck,
     cta: "Notify Me",
-    timeline: "Available Summer 2026",
+    timeline: "Available Spring 2026",
     features: [
       "Automatic updates & security patches",
       "Remote troubleshooting & fixes",
@@ -70,7 +71,8 @@ const plans = [
 export function Pricing() {
   const [activeSlug, setActiveSlug] = useState("download")
   const [animatingSlug, setAnimatingSlug] = useState<string | null>(null)
-  const [modalOpen, setModalOpen] = useState(false)
+  const [emailModalOpen, setEmailModalOpen] = useState(false)
+  const [preOrderModalOpen, setPreOrderModalOpen] = useState(false)
   const [selectedPlan, setSelectedPlan] = useState("")
 
   useEffect(() => {
@@ -180,7 +182,9 @@ export function Pricing() {
                 onClick={() => {
                   if (plan.cta === "Notify Me") {
                     setSelectedPlan(plan.name)
-                    setModalOpen(true)
+                    setEmailModalOpen(true)
+                  } else if (plan.cta === "Pre-Order Now") {
+                    setPreOrderModalOpen(true)
                   }
                 }}
               >
@@ -192,9 +196,14 @@ export function Pricing() {
       </div>
 
       <EmailSignupModal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
+        isOpen={emailModalOpen}
+        onClose={() => setEmailModalOpen(false)}
         plan={selectedPlan}
+      />
+
+      <PreOrderModal
+        isOpen={preOrderModalOpen}
+        onClose={() => setPreOrderModalOpen(false)}
       />
     </section>
   )
