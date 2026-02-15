@@ -15,7 +15,7 @@ export function Hero() {
         </h1>
 
         <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
-          You have heard of OpenClaw and Clawdbot and you want to start playing with AGI - but you dont have a degree in nerd, and you don't have hours to spend trying to make things work. That's where ClawDaddy fits in - we streamlined everything from the ground up to be usable by your mother - not the wiz kid down the street.
+          Catch the ClawBot craze and feel the agi, without a degree in nerd.
         </p>
 
 
