@@ -6,21 +6,21 @@ const testimonials = [
       "I was genuinely shocked. I downloaded it, clicked install, and two minutes later I was using AI to draft my weekly supplier emails. No one had to explain anything to me.",
     name: "Maria Gonzalez",
     role: "Bakery Owner, Portland",
-    image: "/images/testimonial-1.jpg",
+    image: "/images/avatar-1.png",
   },
   {
     quote:
       "I run 600 acres by myself most days. I don't have time to learn software. ClawDaddy just sits on my desk and helps me with invoices, weather reports, and equipment manuals. Best purchase I've made this year.",
     name: "Tom Bridger",
     role: "Cattle Rancher, Montana",
-    image: "/images/testimonial-2.jpg",
+    image: "/images/avatar-2.png",
   },
   {
     quote:
       "I ordered the ClawMini option because I didn't want to deal with anything. It showed up, I plugged it in, and it worked. That's exactly what I needed — technology that stays out of my way.",
     name: "Priya Sharma",
     role: "Marketing Consultant, Austin",
-    image: "/images/testimonial-3.jpg",
+    image: "/images/avatar-3.png",
   },
 ]
 
