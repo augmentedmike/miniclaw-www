@@ -2,40 +2,76 @@ import Image from "next/image"
 
 const capabilities = [
   {
-    capability: "See Something, Buy It — Hands Free",
+    capability: "Answer Customer Questions 24/7",
     description:
-      "Wearing Meta Ray-Bans? Just look at something and tell your assistant to order it. It finds it on Amazon and adds it to your cart.",
-    image: "/images/showcase-raybans.png",
+      "Your business never sleeps. It handles order status, returns, FAQs, and password resets while you're off the clock. Real customers, real answers, zero overtime.",
+    image: "/images/showcase-support.png",
   },
   {
-    capability: "Wake Up to a Personal Briefing Every Morning",
+    capability: "Inbox Zero Every Single Day",
     description:
-      "Weather, calendar, top news, and a to-do list — waiting for you before your first cup of coffee. Every single morning, automatically.",
-    image: "/images/showcase-briefing.png",
-  },
-  {
-    capability: "Let AI Handle Your Inbox While You Work",
-    description:
-      "It reads your emails, unsubscribes from junk, drafts replies, and flags what actually matters. Thousands of emails — handled.",
+      "It reads every email, unsubscribes from junk, drafts replies you can edit, and flags what needs your attention. Reclaim 10+ hours a week.",
     image: "/images/showcase-inbox.png",
   },
   {
-    capability: "A 24/7 Employee That Never Calls In Sick",
+    capability: "Turn Meetings Into Action Items",
     description:
-      "It tracks your industry, watches competitors, manages customers, and sends you a report — while you sleep.",
-    image: "/images/showcase-employee.png",
+      "Record any meeting and get a summary with key decisions, next steps, and who's responsible. No more 'wait, what did we decide?'",
+    image: "/images/showcase-meetings.png",
   },
   {
-    capability: "Plan a Vacation Without Lifting a Finger",
+    capability: "Your Social Media Manager",
     description:
-      "Tell it where you want to go. It searches flights, compares hotels, builds an itinerary, and sends you the options.",
+      "Post daily content, maintain your brand voice, and keep your audience engaged. It writes, schedules, and even suggests trending topics.",
+    image: "/images/showcase-social.png",
+  },
+  {
+    capability: "Find & Email Your Next 100 Customers",
+    description:
+      "Tell it your ideal customer. It researches leads, writes personalized outreach, and updates your CRM. Sales on autopilot.",
+    image: "/images/showcase-leads.png",
+  },
+  {
+    capability: "Get Financial Reports Without Spreadsheets",
+    description:
+      "Cash flow, profit forecasts, break-even analysis — in plain English. Just ask 'How much did we make last month?' and get the answer.",
+    image: "/images/showcase-finance.png",
+  },
+  {
+    capability: "Control Your Home With Your Voice",
+    description:
+      "'Turn on the lights.' 'Lock the door.' 'Set temperature to 72.' Your entire home responds to you like magic.",
+    image: "/images/showcase-smarthome.png",
+  },
+  {
+    capability: "Never Miss Your Medication Again",
+    description:
+      "Daily reminders, refill alerts, and health tracking. It can even notify family if something seems off. Peace of mind, automated.",
+    image: "/images/showcase-health.png",
+  },
+  {
+    capability: "Plan Your Dream Vacation in Minutes",
+    description:
+      "Tell it where you want to go. It searches flights, compares hotels, books reservations, and builds a day-by-day itinerary.",
     image: "/images/showcase-vacation.png",
   },
   {
-    capability: "Know What People Are Saying About Your Business",
+    capability: "Know What People Say About Your Business",
     description:
-      "It monitors Reddit, Twitter, and review sites for mentions of your brand — then summarizes what people love and hate.",
+      "It monitors Reddit, Twitter, and review sites for your brand mentions — then tells you what people love and what needs fixing.",
     image: "/images/showcase-mentions.png",
+  },
+  {
+    capability: "Your Morning Briefing, Personalized",
+    description:
+      "Weather, calendar, top news, and your to-do list — waiting before your first cup of coffee. Every morning, automatically.",
+    image: "/images/showcase-briefing.png",
+  },
+  {
+    capability: "Research Anything While You Work",
+    description:
+      "Need to know about a competitor? Industry trend? New market? It researches, summarizes, and sends you a report. Like having an analyst on staff.",
+    image: "/images/showcase-research.png",
   },
 ]
 
