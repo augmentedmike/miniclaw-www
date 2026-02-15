@@ -7,6 +7,7 @@ import { HowItWorks } from "@/components/how-it-works"
 import { Pricing } from "@/components/pricing"
 import { Testimonials } from "@/components/testimonials"
 import { Press } from "@/components/press"
+import { Showcase } from "@/components/showcase"
 import { FAQ } from "@/components/faq"
 import { CTA } from "@/components/cta"
 import { Footer } from "@/components/footer"
@@ -20,9 +21,10 @@ export default function Page() {
       <Features />
       <Personalize />
       <HowItWorks />
+      <Press />
       <Pricing />
       <Testimonials />
-      <Press />
+      <Showcase />
       <FAQ />
       <CTA />
       <Footer />

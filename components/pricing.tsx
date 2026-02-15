@@ -13,7 +13,7 @@ const plans = [
     description: "Get ClawDaddy running on your existing Mac in minutes.",
     icon: Download,
     cta: "Notify Me",
-    timeline: "Available Late Spring 2026",
+    timeline: "Available soon!",
     features: [
       "One-click installer for macOS & Windows",
       "Full AI assistant capabilities",
@@ -67,14 +67,18 @@ const plans = [
 ]
 
 export function Pricing() {
-  const [highlightedSlug, setHighlightedSlug] = useState<string | null>(null)
+  const [activeSlug, setActiveSlug] = useState("download")
+  const [animatingSlug, setAnimatingSlug] = useState<string | null>(null)
 
   useEffect(() => {
     function handleHash() {
       const hash = window.location.hash.slice(1)
       if (hash === "download" || hash === "order") {
         // Small delay so the smooth scroll is underway before animation starts
-        setTimeout(() => setHighlightedSlug(hash), 300)
+        setTimeout(() => {
+          setActiveSlug(hash)
+          setAnimatingSlug(hash)
+        }, 300)
       }
     }
 
@@ -83,13 +87,13 @@ export function Pricing() {
     return () => window.removeEventListener("hashchange", handleHash)
   }, [])
 
-  // Clear highlight after animation completes
+  // Clear pulse animation after it completes
   useEffect(() => {
-    if (highlightedSlug) {
-      const timer = setTimeout(() => setHighlightedSlug(null), 2800)
+    if (animatingSlug) {
+      const timer = setTimeout(() => setAnimatingSlug(null), 2800)
       return () => clearTimeout(timer)
     }
-  }, [highlightedSlug])
+  }, [animatingSlug])
 
   return (
     <section id="pricing" className="px-6 py-24 md:py-32">
@@ -119,12 +123,12 @@ export function Pricing() {
             <div
               key={plan.name}
               id={plan.slug}
-              className={`relative flex flex-col rounded-2xl border p-8 scroll-mt-24 md:p-10 ${plan.highlighted
+              className={`relative flex flex-col rounded-2xl border p-8 scroll-mt-24 md:p-10 ${activeSlug === plan.slug
                 ? "border-primary/40 bg-card shadow-lg shadow-primary/5"
                 : "border-border/40 bg-card"
-                } ${highlightedSlug === plan.slug ? "animate-highlight-card" : ""}`}
+                } ${animatingSlug === plan.slug ? "animate-highlight-card" : ""}`}
             >
-              {plan.highlighted && (
+              {activeSlug === plan.slug && (
                 <div className="absolute -top-3 left-8 rounded-full bg-primary px-3 py-0.5 text-xs font-semibold text-primary-foreground">
                   Most popular
                 </div>
@@ -169,7 +173,7 @@ export function Pricing() {
               <Button
                 className="mt-3"
                 size="lg"
-                variant={plan.highlighted ? "default" : "outline"}
+                variant={activeSlug === plan.slug ? "default" : "outline"}
               >
                 {plan.cta}
               </Button>
