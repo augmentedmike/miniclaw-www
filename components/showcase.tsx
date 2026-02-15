@@ -95,10 +95,12 @@ export function Showcase() {
         </div>
 
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {capabilities.map((item) => (
+          {capabilities.map((item, index) => (
             <div
               key={item.capability}
-              className="flex flex-col overflow-hidden rounded-2xl border border-border/40 bg-card"
+              className={`flex flex-col overflow-hidden rounded-2xl border border-border/40 bg-card ${
+                index >= 6 ? "hidden md:flex" : ""
+              }`}
             >
               <div className="relative aspect-video w-full overflow-hidden bg-secondary">
                 <Image
