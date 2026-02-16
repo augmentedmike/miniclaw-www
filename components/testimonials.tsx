@@ -17,7 +17,7 @@ const testimonials = [
   },
   {
     quote:
-      "I ordered the ClawMini option because I didn't want to deal with anything. It showed up, I plugged it in, and it worked. That's exactly what I needed — technology that stays out of my way.",
+      "I ordered the Mac Mini option because I didn't want to deal with anything. It showed up, I plugged it in, and it worked. That's exactly what I needed — technology that stays out of my way.",
     name: "Priya Sharma",
     role: "Marketing Consultant, Austin",
     image: "/images/avatar-3.png",

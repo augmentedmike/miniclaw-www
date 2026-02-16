@@ -24,7 +24,7 @@ export function CTA() {
           <Button variant="outline" size="lg" className="gap-2 px-8 text-base" asChild>
             <a href="#order">
               <Monitor className="h-4 w-4" />
-              Order ClawMini — $1,999
+              Order Mac Mini — $1,999
             </a>
           </Button>
         </div>

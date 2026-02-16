@@ -34,7 +34,7 @@ export function Hero() {
           >
             <a href="#order">
               <Monitor className="h-4 w-4" />
-              Order a ClawMini
+              Order a Mac Mini
             </a>
           </Button>
         </div>
@@ -49,7 +49,7 @@ export function Hero() {
         <div className="relative overflow-hidden rounded-2xl border border-border/40 bg-card shadow-2xl shadow-primary/5">
           <Image
             src="/images/hero-product.jpg"
-            alt="MiniClaw mascot holding a margarita, sitting on top of a ClawMini"
+            alt="MiniClaw mascot holding a margarita, sitting on top of a Mac Mini"
             width={1200}
             height={675}
             className="w-full"

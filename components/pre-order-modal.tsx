@@ -25,7 +25,7 @@ export function PreOrderModal({ isOpen, onClose }: PreOrderModalProps) {
           <X className="h-5 w-5" />
         </button>
 
-        <h3 className="text-2xl font-bold text-foreground">Pre-Order ClawMini</h3>
+        <h3 className="text-2xl font-bold text-foreground">Pre-Order Mac Mini</h3>
         <p className="mt-2 text-sm text-muted-foreground">
           Choose your payment option. Either way, you're first in line when we ship Spring 2026.
         </p>

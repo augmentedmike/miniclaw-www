@@ -41,7 +41,7 @@ export function Navbar() {
             <a href="#download">Download</a>
           </Button>
           <Button size="sm" asChild>
-            <a href="#order">Order ClawMini</a>
+            <a href="#order">Order Mac Mini</a>
           </Button>
         </div>
 
@@ -72,7 +72,7 @@ export function Navbar() {
                 <a href="#download" onClick={() => setMobileOpen(false)}>Download</a>
               </Button>
               <Button size="sm" asChild>
-                <a href="#order" onClick={() => setMobileOpen(false)}>Order ClawMini</a>
+                <a href="#order" onClick={() => setMobileOpen(false)}>Order Mac Mini</a>
               </Button>
             </div>
           </div>

@@ -27,17 +27,17 @@ const plans = [
     highlighted: false,
   },
   {
-    name: "ClawMini + MiniClaw",
+    name: "Mac Mini + MiniClaw",
     slug: "order",
     price: "$1,999",
     period: "one time",
     description:
-      "We install and preconfigure your MiniClaw AI assistant on a brand new ClawMini and ship it straight to you. Plug in and go.",
+      "We install and preconfigure your MiniClaw AI assistant on a brand new Mac Mini and ship it straight to you. Plug in and go.",
     icon: Monitor,
     cta: "Pre-Order Now",
     timeline: "Shipping Spring 2026",
     features: [
-      "Brand new ClawMini included",
+      "Brand new Mac Mini included",
       "MiniClaw pre-installed & configured",
       "White glove setup — we unbox with you on video",
       "Hardware, labor & shipping included",
@@ -112,7 +112,7 @@ export function Pricing() {
           </h2>
           <p className="mt-4 text-pretty text-muted-foreground">
             MiniClaw is currently in active development. Sign up to be notified
-            when we launch, or pre-order a ClawMini to be first in line.
+            when we launch, or pre-order a Mac Mini to be first in line.
           </p>
           <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-sm text-primary">
             <span className="relative flex h-2 w-2">

@@ -24,9 +24,9 @@ const faqs = [
       "Your data stays on your machine. MiniClaw runs locally by default, which means your files, conversations, and business information never leave your computer unless you explicitly choose to use an online feature. Privacy isn't an add-on — it's the default.",
   },
   {
-    question: "What's the difference between the download and the ClawMini?",
+    question: "What's the difference between the download and the Mac Mini?",
     answer:
-      "The download is our free installer that puts MiniClaw on your existing Mac. The ClawMini option is a brand new Apple ClawMini (M4 chip) that we ship to you with MiniClaw already installed and configured — you literally just plug it in and start using it. It's for anyone who wants zero setup whatsoever.",
+      "The download is our free installer that puts MiniClaw on your existing Mac. The Mac Mini option is a brand new Apple Mac Mini (M4 chip) that we ship to you with MiniClaw already installed and configured — you literally just plug it in and start using it. It's for anyone who wants zero setup whatsoever.",
   },
   {
     question: "How much does it cost to run MiniClaw?",
