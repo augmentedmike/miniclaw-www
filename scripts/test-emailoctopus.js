@@ -1,5 +1,12 @@
-const apiKey = "eo_270c60780d264e5af535785c71c298b0209334654a2888d693c2d30e6daf6df6"
-const listId = "8b1456a8-0aaa-11f1-99dd-057f9f00eebf"
+// Load from environment variables
+const apiKey = process.env.EMAILOCTOPUS_API_KEY
+const listId = process.env.EMAILOCTOPUS_LIST_ID
+
+if (!apiKey || !listId) {
+  console.error("❌ Missing environment variables!")
+  console.error("Make sure EMAILOCTOPUS_API_KEY and EMAILOCTOPUS_LIST_ID are set in .env.local")
+  process.exit(1)
+}
 
 async function testSubscribe() {
   const response = await fetch(
