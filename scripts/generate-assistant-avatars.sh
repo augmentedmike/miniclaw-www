@@ -15,26 +15,26 @@ MODEL="gemini-2.0-flash-exp-image-generation"
 STYLE="High quality character portrait, 1:1 square aspect ratio, professional illustration."
 
 declare -a FILENAMES=(
-  "assistant-realistic-companion"
-  "assistant-fantasy-dreamgirl"
-  "assistant-romance-hero"
-  "assistant-mysterious-stranger"
-  "assistant-charismatic-rebel"
-  "assistant-sophisticated-seducer"
+  "assistant-executive-assistant"
+  "assistant-hacker-girl"
+  "assistant-research-partner"
+  "assistant-fantasy-companion"
+  "assistant-romantic-partner"
+  "assistant-business-coach"
 )
 
 declare -a PROMPTS=(
-  "A beautiful woman in her mid-20s with warm, inviting eyes and a genuine smile. Long flowing hair, wearing a cozy oversized sweater and jeans. Natural beauty, relatable and approachable. Soft window lighting, modern apartment background with plants. Comfortable, intimate atmosphere. Digital art, realistic style. $STYLE"
+  "An attractive professional woman in business attire - fitted blazer with low-cut blouse showing cleavage. Confident smile, sharp eyes. Beautiful face, styled hair. Holding tablet, standing in modern office. Sexy but professional. Glass office background with city view. Digital art, realistic style. $STYLE"
 
-  "A stunning anime-style fantasy woman with large expressive eyes, long flowing silver-white hair with soft highlights. Wearing an elegant fantasy dress with magical glowing accents. Delicate features, ethereal beauty. Surrounded by soft magical lights and floating sakura petals. Dreamy fantasy background with pastel colors. Anime illustration style. $STYLE"
+  "A hot female hacker with alternative style. Tank top and cargo pants showing her fit figure and curves. Purple and pink hair, face piercings, confident smirk. Surrounded by glowing code screens and neon lights. Attractive and skilled. Dark tech room background. Digital cyberpunk art. $STYLE"
 
-  "A handsome, masculine man in his 30s with strong jawline, intense eyes, and tousled dark hair. Wearing an open shirt showing muscular build. Confident, protective stance. Brooding yet caring expression. Dramatic lighting, moody romantic background. Romance novel cover style, detailed digital painting. $STYLE"
+  "A beautiful woman researcher in casual-professional style. V-neck sweater showing cleavage, glasses, warm smile. Intelligent and attractive. Surrounded by books, screens with data. Holding a notebook, leaning forward slightly. Library or study background. Academic yet sexy. Realistic digital painting. $STYLE"
 
-  "An alluring figure with mysterious eyes partially hidden by shadows, captivating smile. Dark elegant clothing, sophisticated style. Enigmatic expression, dangerous charm. Atmospheric noir lighting with deep contrasts. Urban nighttime background with neon lights. Cinematic, mysterious mood. Digital art. $STYLE"
+  "A stunning anime fantasy girl with large eyes, long flowing hair. Wearing a revealing magical outfit with exposed midriff and cleavage. Curvaceous figure, ethereal beauty. Flirty expression, magical sparkles around her. Floating in dreamy sky with stars and moons. Sexy anime illustration style. $STYLE"
 
-  "An attractive rebellious character with edgy style - leather jacket, casual confidence. Messy stylish hair, piercing gaze, mischievous smirk. Tattooed arms, cool demeanor. Standing against urban graffiti wall. Bold colors, dynamic lighting. Modern street style photography aesthetic. $STYLE"
+  "A gorgeous woman with bedroom eyes and inviting smile. Long hair, wearing a silk robe loosely tied showing cleavage and curves. Intimate, romantic setting. Soft warm lighting, cozy bedroom background with candles. Sensual, personal atmosphere. Romantic realistic art style. $STYLE"
 
-  "An elegant, sophisticated figure exuding confidence and allure. Impeccable style in luxurious attire, knowing smile. Refined features, magnetic presence. Holding a wine glass, seductive eyes. Upscale lounge background with ambient lighting. Classy, sensual atmosphere. Fashion photography style. $STYLE"
+  "A handsome, confident man in business casual - fitted shirt showing muscular build. Strong jawline, intense eyes, professional yet approachable. Arms crossed showing physique. Modern office or workspace background. Masculine, capable energy. Professional portrait style. $STYLE"
 )
 
 for i in "${!FILENAMES[@]}"; do

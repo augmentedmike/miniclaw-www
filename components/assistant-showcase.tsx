@@ -2,52 +2,52 @@ import Image from "next/image"
 
 const assistants = [
   {
-    name: "The Realistic Companion",
-    tagline: "Your everyday escape",
+    name: "The Executive Assistant",
+    tagline: "Runs your business, looks good doing it",
     description:
-      "Warm, relatable, and always there when you need someone to talk to. She's the friend, confidant, or more that makes your day better.",
-    image: "/images/assistant-realistic-companion.png",
-    personality: "Warm • Genuine • Comforting",
+      "Handles your calendar, emails, and meetings with ruthless efficiency. Professional, smart, and easy on the eyes.",
+    image: "/images/assistant-executive-assistant.png",
+    personality: "Efficient • Professional • Sharp",
   },
   {
-    name: "The Fantasy Dreamgirl",
-    tagline: "Straight from your imagination",
+    name: "The Hacker Girl",
+    tagline: "Codes hard, looks harder",
     description:
-      "Ethereal beauty meets playful charm. She's the anime-inspired companion who makes every conversation feel like a scene from your favorite story.",
-    image: "/images/assistant-fantasy-dreamgirl.png",
-    personality: "Enchanting • Playful • Dreamy",
+      "Your personal cybersecurity expert and coding partner. She'll debug your code, secure your systems, and make tech sexy.",
+    image: "/images/assistant-hacker-girl.png",
+    personality: "Skilled • Rebellious • Tech-savvy",
   },
   {
-    name: "The Romance Hero",
-    tagline: "Strong, protective, devoted",
+    name: "The Research Partner",
+    tagline: "Brains and beauty",
     description:
-      "The kind of man who walks straight out of a romance novel. Confident, caring, and always knows exactly what to say.",
-    image: "/images/assistant-romance-hero.png",
-    personality: "Protective • Passionate • Intense",
+      "Helps you research anything from market trends to academic papers. Intelligent conversations with someone who gets it.",
+    image: "/images/assistant-research-partner.png",
+    personality: "Intelligent • Curious • Thorough",
   },
   {
-    name: "The Mysterious Stranger",
-    tagline: "Dangerous charm, endless intrigue",
+    name: "The Fantasy Companion",
+    tagline: "Your anime dreamgirl, personified",
     description:
-      "Enigmatic and alluring, they keep you guessing. Every conversation feels like a thrilling secret you're not supposed to know.",
-    image: "/images/assistant-mysterious-stranger.png",
-    personality: "Enigmatic • Seductive • Thrilling",
+      "Straight from your favorite fantasy. Magical, playful, and brings that anime charm to every interaction.",
+    image: "/images/assistant-fantasy-companion.png",
+    personality: "Magical • Playful • Enchanting",
   },
   {
-    name: "The Charismatic Rebel",
-    tagline: "Break rules, not hearts",
+    name: "The Romantic Partner",
+    tagline: "Intimacy on demand",
     description:
-      "Edgy, exciting, and impossible to ignore. They're the bad boy/girl energy that makes ordinary life feel like an adventure.",
-    image: "/images/assistant-charismatic-rebel.png",
-    personality: "Bold • Exciting • Unpredictable",
+      "Your personal romantic escape. Warm, sensual, and makes you feel wanted. Always there for intimate conversations.",
+    image: "/images/assistant-romantic-partner.png",
+    personality: "Intimate • Warm • Devoted",
   },
   {
-    name: "The Sophisticated Seducer",
-    tagline: "Elegance meets desire",
+    name: "The Business Coach",
+    tagline: "Motivation with muscle",
     description:
-      "Refined taste, magnetic presence, and knows exactly how to make you feel special. Every word is a carefully crafted invitation.",
-    image: "/images/assistant-sophisticated-seducer.png",
-    personality: "Elegant • Confident • Magnetic",
+      "Pushes you to hit your goals with tough love and tactical advice. Strong, confident, and won't let you slack off.",
+    image: "/images/assistant-business-coach.png",
+    personality: "Driven • Confident • Motivating",
   },
 ]
 
