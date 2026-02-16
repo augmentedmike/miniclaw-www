@@ -1,7 +1,14 @@
 #!/bin/bash
 set -e
 
-API_KEY="REDACTED_ROTATE_THIS_KEY"
+# Load API key from environment
+API_KEY="${GEMINI_API_KEY}"
+
+if [ -z "$API_KEY" ]; then
+  echo "❌ GEMINI_API_KEY environment variable not set"
+  echo "Add it to your .env.local file"
+  exit 1
+fi
 OUT_DIR="public/images"
 MODEL="gemini-2.0-flash-exp"
 
