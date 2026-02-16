@@ -28,7 +28,7 @@ export function Footer() {
           <div className="md:col-span-1">
             <a href="#" className="flex items-center gap-2">
               <span className="text-lg font-bold tracking-tight text-foreground">
-                ClawDaddy
+                MiniClaw
               </span>
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
@@ -59,7 +59,7 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border/40 pt-8 md:flex-row">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} ClawDaddy. All rights reserved.
+            &copy; {new Date().getFullYear()} MiniClaw. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground/60">
             Made with care for people who make things.

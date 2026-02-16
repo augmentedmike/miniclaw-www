@@ -52,7 +52,7 @@ export function Press() {
             <span className="text-muted-foreground">OpenClaw.</span>
           </h2>
           <p className="mt-4 mx-auto max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            ClawDaddy makes it dead simple to run your own OpenClaw assistant.
+            MiniClaw makes it dead simple to run your own OpenClaw assistant.
             Here&apos;s what the press is saying about the technology behind it.
           </p>
         </div>

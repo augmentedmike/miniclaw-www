@@ -18,7 +18,7 @@ async function testSubscribe() {
       },
       body: JSON.stringify({
         api_key: apiKey,
-        email_address: "test@clawdaddy.com",
+        email_address: "test@miniclaw.com",
         fields: {
           FirstName: "Test User",
           Plan: "Download",

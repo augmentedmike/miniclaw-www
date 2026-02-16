@@ -90,7 +90,7 @@ export function Showcase() {
           <p className="mx-auto mt-4 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
             OpenClaw isn&apos;t a chatbot you talk to. It&apos;s an assistant
             that gets things done — on your computer, your phone, even your
-            smart glasses. ClawDaddy makes it all plug-and-play.
+            smart glasses. MiniClaw makes it all plug-and-play.
           </p>
         </div>
 
@@ -125,7 +125,7 @@ export function Showcase() {
         </div>
 
         <p className="mx-auto mt-12 max-w-2xl text-center text-pretty text-muted-foreground">
-          With ClawDaddy, all of these scenarios work out of the box — no
+          With MiniClaw, all of these scenarios work out of the box — no
           terminal commands, no config files, no YouTube tutorials required.
           Just plug in and go.
         </p>

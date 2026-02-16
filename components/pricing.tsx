@@ -12,7 +12,7 @@ const plans = [
     slug: "download",
     price: "Free",
     period: "",
-    description: "Get ClawDaddy running on your existing Mac in minutes.",
+    description: "Get MiniClaw running on your existing Mac in minutes.",
     icon: Download,
     cta: "Notify Me",
     timeline: "Available soon!",
@@ -27,18 +27,18 @@ const plans = [
     highlighted: false,
   },
   {
-    name: "ClawMini + ClawDaddy",
+    name: "ClawMini + MiniClaw",
     slug: "order",
     price: "$1,999",
     period: "one time",
     description:
-      "We install and preconfigure your ClawDaddy AI assistant on a brand new ClawMini and ship it straight to you. Plug in and go.",
+      "We install and preconfigure your MiniClaw AI assistant on a brand new ClawMini and ship it straight to you. Plug in and go.",
     icon: Monitor,
     cta: "Pre-Order Now",
     timeline: "Shipping Spring 2026",
     features: [
       "Brand new ClawMini included",
-      "ClawDaddy pre-installed & configured",
+      "MiniClaw pre-installed & configured",
       "White glove setup — we unbox with you on video",
       "Hardware, labor & shipping included",
       "Plug in, turn on, start talking",
@@ -47,7 +47,7 @@ const plans = [
     highlighted: true,
   },
   {
-    name: "ClawDaddy Care",
+    name: "MiniClaw Care",
     slug: "care",
     price: "$99",
     period: "month",
@@ -111,7 +111,7 @@ export function Pricing() {
             Pick what works for you.
           </h2>
           <p className="mt-4 text-pretty text-muted-foreground">
-            ClawDaddy is currently in active development. Sign up to be notified
+            MiniClaw is currently in active development. Sign up to be notified
             when we launch, or pre-order a ClawMini to be first in line.
           </p>
           <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-sm text-primary">

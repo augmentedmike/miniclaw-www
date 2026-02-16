@@ -22,7 +22,7 @@ const investorFeatures = [
 ]
 
 export function Investors() {
-  const investorEmail = "invest@clawdaddy.com"
+  const investorEmail = "invest@miniclaw.com"
 
   return (
     <section className="border-y border-border/40 bg-card/30 px-6 py-24 md:py-32">
@@ -32,7 +32,7 @@ export function Investors() {
             Investors
           </p>
           <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-            Invest in ClawDaddy
+            Invest in MiniClaw
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
             We're raising capital to bring AGI to everyone. Join us as an investor and help shape the future of accessible AI.

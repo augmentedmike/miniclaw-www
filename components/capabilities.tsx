@@ -73,7 +73,7 @@ export function Capabilities() {
             <span className="text-muted-foreground">Seven departments.</span>
           </h2>
           <p className="mt-4 text-pretty text-muted-foreground">
-            ClawDaddy handles the work that buries your team — support tickets,
+            MiniClaw handles the work that buries your team — support tickets,
             lead gen, competitor tracking, marketing, onboarding, research, and
             daily ops. Autonomously.
           </p>
@@ -110,7 +110,7 @@ export function Capabilities() {
             <span className="text-primary">today.</span>
           </p>
           <p className="mt-2 text-muted-foreground">
-            ClawDaddy connects to thousands of apps and APIs. If you can
+            MiniClaw connects to thousands of apps and APIs. If you can
             describe it, your assistant can probably do it.
           </p>
         </div>

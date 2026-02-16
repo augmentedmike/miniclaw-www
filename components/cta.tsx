@@ -7,7 +7,7 @@ export function CTA() {
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-5xl">
           Feel the AGI today.{" "}
-          <span className="text-primary">Download ClawDaddy.</span>
+          <span className="text-primary">Download MiniClaw.</span>
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-pretty text-lg text-muted-foreground">
           Join thousands of business owners, creators, and everyday people who

@@ -49,7 +49,7 @@ export function Hero() {
         <div className="relative overflow-hidden rounded-2xl border border-border/40 bg-card shadow-2xl shadow-primary/5">
           <Image
             src="/images/hero-product.jpg"
-            alt="ClawDaddy mascot holding a margarita, sitting on top of a ClawMini"
+            alt="MiniClaw mascot holding a margarita, sitting on top of a ClawMini"
             width={1200}
             height={675}
             className="w-full"

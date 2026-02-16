@@ -86,7 +86,7 @@ const faqs = [
 ]
 
 export default function InvestPage() {
-  const investorEmail = "invest@clawdaddy.com"
+  const investorEmail = "invest@miniclaw.com"
 
   return (
     <div className="min-h-screen bg-background">
@@ -107,7 +107,7 @@ export default function InvestPage() {
             Invest in the future of accessible AGI
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
-            ClawDaddy is making AGI accessible to everyone — not just developers. Join us as we build the AI assistant that your mother can use.
+            MiniClaw is making AGI accessible to everyone — not just developers. Join us as we build the AI assistant that your mother can use.
           </p>
 
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -148,7 +148,7 @@ export default function InvestPage() {
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-              Why invest in ClawDaddy?
+              Why invest in MiniClaw?
             </h2>
             <p className="mt-4 text-pretty text-lg text-muted-foreground">
               We're positioned to capture a massive, underserved market with a product people are already asking for.

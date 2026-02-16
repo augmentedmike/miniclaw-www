@@ -30,19 +30,19 @@ const features = [
     icon: ShieldCheck,
     title: "Private by default",
     description:
-      "Your data stays on your machine. ClawDaddy runs locally, so your conversations, files, and business info never leave your computer.",
+      "Your data stays on your machine. MiniClaw runs locally, so your conversations, files, and business info never leave your computer.",
   },
   {
     icon: RefreshCw,
     title: "Automatic updates",
     description:
-      "ClawDaddy keeps itself up to date. New models, new features, zero effort from you. Just like your phone apps, but smarter.",
+      "MiniClaw keeps itself up to date. New models, new features, zero effort from you. Just like your phone apps, but smarter.",
   },
   {
     icon: Wifi,
     title: "Works offline too",
     description:
-      "Lost your internet? ClawDaddy still works. Core features run entirely on your hardware so you're never left stranded.",
+      "Lost your internet? MiniClaw still works. Core features run entirely on your hardware so you're never left stranded.",
   },
 ]
 

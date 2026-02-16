@@ -10,7 +10,7 @@ const testimonials = [
   },
   {
     quote:
-      "I run 600 acres by myself most days. I don't have time to learn software. ClawDaddy just sits on my desk and helps me with invoices, weather reports, and equipment manuals. Best purchase I've made this year.",
+      "I run 600 acres by myself most days. I don't have time to learn software. MiniClaw just sits on my desk and helps me with invoices, weather reports, and equipment manuals. Best purchase I've made this year.",
     name: "Tom Bridger",
     role: "Cattle Rancher, Montana",
     image: "/images/avatar-2.png",
@@ -33,7 +33,7 @@ export function Testimonials() {
             Testimonials
           </p>
           <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-            People like you are already using ClawDaddy.
+            People like you are already using MiniClaw.
           </h2>
         </div>
 

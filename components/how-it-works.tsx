@@ -13,14 +13,14 @@ const steps = [
     icon: MousePointerClick,
     title: "Double-click to install",
     description:
-      "Open the file, click install, and wait about 90 seconds. ClawDaddy sets up everything it needs automatically. You don't have to touch a thing.",
+      "Open the file, click install, and wait about 90 seconds. MiniClaw sets up everything it needs automatically. You don't have to touch a thing.",
   },
   {
     number: "03",
     icon: Sparkles,
-    title: "Start talking to ClawDaddy",
+    title: "Start talking to MiniClaw",
     description:
-      "Open ClawDaddy from your desktop and start asking questions, getting help with documents, drafting emails — whatever you need. It just works.",
+      "Open MiniClaw from your desktop and start asking questions, getting help with documents, drafting emails — whatever you need. It just works.",
   },
 ]
 
