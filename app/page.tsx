@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { LogosBar } from "@/components/logos-bar"
 import { Features } from "@/components/features"
+import { AssistantShowcase } from "@/components/assistant-showcase"
 import { Personalize } from "@/components/personalize"
 import { HowItWorks } from "@/components/how-it-works"
 import { Pricing } from "@/components/pricing"
@@ -19,6 +20,7 @@ export default function Page() {
       <Hero />
       <LogosBar />
       <Features />
+      <AssistantShowcase />
       <Personalize />
       <HowItWorks />
       <Press />
