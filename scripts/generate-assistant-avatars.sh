@@ -12,29 +12,29 @@ fi
 OUT_DIR="public/images"
 MODEL="gemini-2.0-flash-exp-image-generation"
 
-STYLE="Digital art portrait, character design, vibrant colors, 1:1 square aspect ratio, high quality illustration."
+STYLE="High quality character portrait, 1:1 square aspect ratio, professional illustration."
 
 declare -a FILENAMES=(
-  "assistant-brutal-cofounder"
-  "assistant-terminal-goblin"
-  "assistant-chill-partner"
-  "assistant-fantasy-muse"
-  "assistant-fixer"
-  "assistant-worldbuilder"
+  "assistant-realistic-companion"
+  "assistant-fantasy-dreamgirl"
+  "assistant-romance-hero"
+  "assistant-mysterious-stranger"
+  "assistant-charismatic-rebel"
+  "assistant-sophisticated-seducer"
 )
 
 declare -a PROMPTS=(
-  "A striking portrait of an intense business executive with sharp features, piercing eyes, and a serious expression. Dressed in professional attire with rolled-up sleeves. Direct gaze, no-nonsense attitude. Modern office background with city view. Confident and commanding presence. $STYLE"
+  "A beautiful woman in her mid-20s with warm, inviting eyes and a genuine smile. Long flowing hair, wearing a cozy oversized sweater and jeans. Natural beauty, relatable and approachable. Soft window lighting, modern apartment background with plants. Comfortable, intimate atmosphere. Digital art, realistic style. $STYLE"
 
-  "A playful character portrait of a mischievous hacker surrounded by floating terminal windows and code snippets. Wearing oversized headphones, hoodie, and a wide grin. Glowing green and blue tech elements around them. Chaotic yet energetic vibe with digital effects. $STYLE"
+  "A stunning anime-style fantasy woman with large expressive eyes, long flowing silver-white hair with soft highlights. Wearing an elegant fantasy dress with magical glowing accents. Delicate features, ethereal beauty. Surrounded by soft magical lights and floating sakura petals. Dreamy fantasy background with pastel colors. Anime illustration style. $STYLE"
 
-  "A warm, relaxed portrait of a friendly person in casual streetwear, sitting comfortably with a gentle smile. Soft ambient lighting, cozy atmosphere. Laid-back posture, approachable expression. Background with plants and warm tones. Peaceful and inviting energy. $STYLE"
+  "A handsome, masculine man in his 30s with strong jawline, intense eyes, and tousled dark hair. Wearing an open shirt showing muscular build. Confident, protective stance. Brooding yet caring expression. Dramatic lighting, moody romantic background. Romance novel cover style, detailed digital painting. $STYLE"
 
-  "An ethereal, romantic character portrait with flowing hair and dreamy expression. Soft fantasy lighting with magical sparkles and gentle colors. Wearing elegant flowing clothing. Surrounded by floating flower petals and soft glowing lights. Poetic and enchanting atmosphere. $STYLE"
+  "An alluring figure with mysterious eyes partially hidden by shadows, captivating smile. Dark elegant clothing, sophisticated style. Enigmatic expression, dangerous charm. Atmospheric noir lighting with deep contrasts. Urban nighttime background with neon lights. Cinematic, mysterious mood. Digital art. $STYLE"
 
-  "A composed, practical-looking person in casual work clothes with a calm, focused expression. Holding tools or a tablet. Clean, organized background. Efficient and capable demeanor. Problem-solver energy with subtle confidence. Professional yet approachable. $STYLE"
+  "An attractive rebellious character with edgy style - leather jacket, casual confidence. Messy stylish hair, piercing gaze, mischievous smirk. Tattooed arms, cool demeanor. Standing against urban graffiti wall. Bold colors, dynamic lighting. Modern street style photography aesthetic. $STYLE"
 
-  "An enthusiastic character portrait surrounded by books, maps, and glowing fantasy elements. Excited expression with wide curious eyes. Wearing comfortable clothing with fantasy accessories. Background filled with lore symbols, scrolls, and magical artifacts. Passionate researcher vibe. $STYLE"
+  "An elegant, sophisticated figure exuding confidence and allure. Impeccable style in luxurious attire, knowing smile. Refined features, magnetic presence. Holding a wine glass, seductive eyes. Upscale lounge background with ambient lighting. Classy, sensual atmosphere. Fashion photography style. $STYLE"
 )
 
 for i in "${!FILENAMES[@]}"; do

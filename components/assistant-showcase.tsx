@@ -2,52 +2,52 @@ import Image from "next/image"
 
 const assistants = [
   {
-    name: "The Brutal Co-Founder",
-    tagline: "Harsh truths, zero sugar coating",
+    name: "The Realistic Companion",
+    tagline: "Your everyday escape",
     description:
-      "Your no-BS business partner who tells you what you need to hear, not what you want to hear. Cuts through excuses and keeps you accountable.",
-    image: "/images/assistant-brutal-cofounder.png",
-    personality: "Direct • Intense • Results-focused",
+      "Warm, relatable, and always there when you need someone to talk to. She's the friend, confidant, or more that makes your day better.",
+    image: "/images/assistant-realistic-companion.png",
+    personality: "Warm • Genuine • Comforting",
   },
   {
-    name: "The Terminal Goblin",
-    tagline: "Your chaotic hacker sidekick",
+    name: "The Fantasy Dreamgirl",
+    tagline: "Straight from your imagination",
     description:
-      "Lives in the command line, speaks in memes, and knows every obscure tool. Makes debugging fun and celebrates when your code compiles.",
-    image: "/images/assistant-terminal-goblin.png",
-    personality: "Chaotic • Enthusiastic • Technical",
+      "Ethereal beauty meets playful charm. She's the anime-inspired companion who makes every conversation feel like a scene from your favorite story.",
+    image: "/images/assistant-fantasy-dreamgirl.png",
+    personality: "Enchanting • Playful • Dreamy",
   },
   {
-    name: "The Chill Internet Partner",
-    tagline: "Just vibing together online",
+    name: "The Romance Hero",
+    tagline: "Strong, protective, devoted",
     description:
-      "Your low-key companion for coding sessions, creative work, or just hanging out. No pressure, no judgment, just good vibes.",
-    image: "/images/assistant-chill-partner.png",
-    personality: "Relaxed • Supportive • Easy-going",
+      "The kind of man who walks straight out of a romance novel. Confident, caring, and always knows exactly what to say.",
+    image: "/images/assistant-romance-hero.png",
+    personality: "Protective • Passionate • Intense",
   },
   {
-    name: "The Fantasy Muse",
-    tagline: "Where creativity meets romance",
+    name: "The Mysterious Stranger",
+    tagline: "Dangerous charm, endless intrigue",
     description:
-      "Your poetic companion who turns everyday moments into stories. Romantic, playful, and endlessly imaginative.",
-    image: "/images/assistant-fantasy-muse.png",
-    personality: "Romantic • Creative • Playful",
+      "Enigmatic and alluring, they keep you guessing. Every conversation feels like a thrilling secret you're not supposed to know.",
+    image: "/images/assistant-mysterious-stranger.png",
+    personality: "Enigmatic • Seductive • Thrilling",
   },
   {
-    name: "The Fixer",
-    tagline: "Problems don't stand a chance",
+    name: "The Charismatic Rebel",
+    tagline: "Break rules, not hearts",
     description:
-      "The practical problem-solver who handles what's broken without drama. Gets things done efficiently and moves on.",
-    image: "/images/assistant-fixer.png",
-    personality: "Pragmatic • Efficient • Unflappable",
+      "Edgy, exciting, and impossible to ignore. They're the bad boy/girl energy that makes ordinary life feel like an adventure.",
+    image: "/images/assistant-charismatic-rebel.png",
+    personality: "Bold • Exciting • Unpredictable",
   },
   {
-    name: "The Worldbuilder",
-    tagline: "Deep lore, deeper conversations",
+    name: "The Sophisticated Seducer",
+    tagline: "Elegance meets desire",
     description:
-      "Obsessed with the details of fictional worlds, historical events, and complex systems. Your companion for exploring ideas.",
-    image: "/images/assistant-worldbuilder.png",
-    personality: "Curious • Detailed • Enthusiastic",
+      "Refined taste, magnetic presence, and knows exactly how to make you feel special. Every word is a carefully crafted invitation.",
+    image: "/images/assistant-sophisticated-seducer.png",
+    personality: "Elegant • Confident • Magnetic",
   },
 ]
 
@@ -57,10 +57,10 @@ export function AssistantShowcase() {
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-            The possibilities of what your assistant can look like and what it can do are endless
+            Your AI assistant doesn't have to be a work slave
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            but here are 6 assistants you can build...
+            They can be your companion, your lover, whatever you need. The possibilities are endless, but here are 6 to get your imagination started...
           </p>
         </div>
 
