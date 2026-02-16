@@ -10,31 +10,31 @@ if [ -z "$API_KEY" ]; then
   exit 1
 fi
 OUT_DIR="public/images"
-MODEL="gemini-2.0-flash-exp-image-generation"
+MODEL="gemini-3-pro-image-preview"
 
 STYLE="High quality character portrait, 1:1 square aspect ratio, professional illustration."
 
 declare -a FILENAMES=(
   "assistant-executive-assistant"
-  "assistant-hacker-girl"
-  "assistant-research-partner"
-  "assistant-fantasy-companion"
-  "assistant-romantic-partner"
-  "assistant-business-coach"
+  "assistant-tech-genius"
+  "assistant-fantasy-babe"
+  "assistant-romance-hero"
+  "assistant-seductive-companion"
+  "assistant-custom"
 )
 
 declare -a PROMPTS=(
-  "An attractive professional woman in business attire - fitted blazer with low-cut blouse showing cleavage. Confident smile, sharp eyes. Beautiful face, styled hair. Holding tablet, standing in modern office. Sexy but professional. Glass office background with city view. Digital art, realistic style. $STYLE"
+  "A sophisticated professional woman in an elegant business suit, standing confidently in a modern office. Beautiful, composed, intelligent expression. Professional styling, polished appearance. Bright office setting with windows. Photorealistic corporate portrait style. $STYLE"
 
-  "A hot female hacker with alternative style. Tank top and cargo pants showing her fit figure and curves. Purple and pink hair, face piercings, confident smirk. Surrounded by glowing code screens and neon lights. Attractive and skilled. Dark tech room background. Digital cyberpunk art. $STYLE"
+  "A handsome muscular man shirtless showing defined six-pack abs, broad chest, strong arms. Strong jaw, intense eyes. Athletic build. Casual tech workspace background. Masculine energy. Realistic digital portrait. $STYLE"
 
-  "A beautiful woman researcher in casual-professional style. V-neck sweater showing cleavage, glasses, warm smile. Intelligent and attractive. Surrounded by books, screens with data. Holding a notebook, leaning forward slightly. Library or study background. Academic yet sexy. Realistic digital painting. $STYLE"
+  "A voluptuous anime girl with huge breasts in a very revealing bikini-style fantasy outfit showing massive cleavage and underboob. Large sparkling eyes, long hair. Extreme hourglass figure. Sexy playful pose. Magical fantasy background. Sexy anime illustration. $STYLE"
 
-  "A stunning anime fantasy girl with large eyes, long flowing hair. Wearing a revealing magical outfit with exposed midriff and cleavage. Curvaceous figure, ethereal beauty. Flirty expression, magical sparkles around her. Floating in dreamy sky with stars and moons. Sexy anime illustration style. $STYLE"
+  "A shirtless muscular man with chiseled abs, broad shoulders, V-cut visible. Handsome face with bedroom eyes, tousled dark hair. Low pants. Intimate dramatic lighting, romantic background. Romance novel cover style. $STYLE"
 
-  "A gorgeous woman with bedroom eyes and inviting smile. Long hair, wearing a silk robe loosely tied showing cleavage and curves. Intimate, romantic setting. Soft warm lighting, cozy bedroom background with candles. Sensual, personal atmosphere. Romantic realistic art style. $STYLE"
+  "A gorgeous woman with large breasts in revealing lingerie or silk robe open showing cleavage and curves. Sensual bedroom eyes, full lips. Hourglass figure, long hair. Intimate pose. Romantic bedroom with candles and soft lighting. Glamour photography. $STYLE"
 
-  "A handsome, confident man in business casual - fitted shirt showing muscular build. Strong jawline, intense eyes, professional yet approachable. Arms crossed showing physique. Modern office or workspace background. Masculine, capable energy. Professional portrait style. $STYLE"
+  "A creative visualization showing multiple silhouettes morphing together - different genders, styles, personalities blending. Abstract artistic representation of infinite possibilities. Colorful gradient background with sparks and light effects. Modern digital art, inspiring and open-ended. $STYLE"
 )
 
 for i in "${!FILENAMES[@]}"; do
