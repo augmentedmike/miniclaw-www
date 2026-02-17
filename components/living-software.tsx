@@ -51,10 +51,10 @@ export function LivingSoftware() {
                     return (
                       <line
                         key={i}
-                        x1={48 + r1 * Math.cos(angle)}
-                        y1={48 + r1 * Math.sin(angle)}
-                        x2={48 + r2 * Math.cos(angle)}
-                        y2={48 + r2 * Math.sin(angle)}
+                        x1={parseFloat((48 + r1 * Math.cos(angle)).toFixed(4))}
+                        y1={parseFloat((48 + r1 * Math.sin(angle)).toFixed(4))}
+                        x2={parseFloat((48 + r2 * Math.cos(angle)).toFixed(4))}
+                        y2={parseFloat((48 + r2 * Math.sin(angle)).toFixed(4))}
                         stroke="hsl(var(--border))"
                         strokeWidth={i % 3 === 0 ? 2 : 1}
                       />
