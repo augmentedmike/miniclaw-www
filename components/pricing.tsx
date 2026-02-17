@@ -2,9 +2,8 @@
 
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Check, Download, Monitor, ShieldCheck } from "lucide-react"
+import { Check, Download, Monitor } from "lucide-react"
 import { EmailSignupModal } from "@/components/email-signup-modal"
-import { PreOrderModal } from "@/components/pre-order-modal"
 
 const plans = [
   {
@@ -35,6 +34,7 @@ const plans = [
       "We install and preconfigure your MiniClaw AI assistant on a brand new Mac Mini and ship it straight to you. Plug in and go.",
     icon: Monitor,
     cta: "Pre-Order Now",
+    href: "/preorder",
     timeline: "Shipping Spring 2026",
     features: [
       "Brand new Mac Mini included",
@@ -46,33 +46,12 @@ const plans = [
     ],
     highlighted: true,
   },
-  {
-    name: "MiniClaw Care",
-    slug: "care",
-    price: "$99",
-    period: "month",
-    description:
-      "We keep your AI assistant updated, secure, and running smoothly. If anything goes wrong, we fix it for you.",
-    icon: ShieldCheck,
-    cta: "Notify Me",
-    timeline: "Available Spring 2026",
-    features: [
-      "Automatic updates & security patches",
-      "Remote troubleshooting & fixes",
-      "Priority email & phone support",
-      "Performance monitoring",
-      "Configuration changes on request",
-      "Peace of mind, hands-free",
-    ],
-    highlighted: false,
-  },
 ]
 
 export function Pricing() {
   const [activeSlug, setActiveSlug] = useState("download")
   const [animatingSlug, setAnimatingSlug] = useState<string | null>(null)
   const [emailModalOpen, setEmailModalOpen] = useState(false)
-  const [preOrderModalOpen, setPreOrderModalOpen] = useState(false)
   const [selectedPlan, setSelectedPlan] = useState("")
 
   useEffect(() => {
@@ -123,7 +102,7 @@ export function Pricing() {
           </div>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-6xl gap-6 md:grid-cols-3">
+        <div className="mx-auto mt-16 grid max-w-3xl gap-6 md:grid-cols-2">
           {plans.map((plan) => (
             <div
               key={plan.name}
@@ -175,21 +154,28 @@ export function Pricing() {
               <p className="mt-6 text-center text-xs font-medium uppercase tracking-widest text-primary">
                 {plan.timeline}
               </p>
-              <Button
-                className="mt-3"
-                size="lg"
-                variant={activeSlug === plan.slug ? "default" : "outline"}
-                onClick={() => {
-                  if (plan.cta === "Notify Me") {
+              {"href" in plan && plan.href ? (
+                <Button
+                  className="mt-3"
+                  size="lg"
+                  variant={activeSlug === plan.slug ? "default" : "outline"}
+                  asChild
+                >
+                  <a href={plan.href}>{plan.cta}</a>
+                </Button>
+              ) : (
+                <Button
+                  className="mt-3"
+                  size="lg"
+                  variant={activeSlug === plan.slug ? "default" : "outline"}
+                  onClick={() => {
                     setSelectedPlan(plan.name)
                     setEmailModalOpen(true)
-                  } else if (plan.cta === "Pre-Order Now") {
-                    setPreOrderModalOpen(true)
-                  }
-                }}
-              >
-                {plan.cta}
-              </Button>
+                  }}
+                >
+                  {plan.cta}
+                </Button>
+              )}
             </div>
           ))}
         </div>
@@ -199,11 +185,6 @@ export function Pricing() {
         isOpen={emailModalOpen}
         onClose={() => setEmailModalOpen(false)}
         plan={selectedPlan}
-      />
-
-      <PreOrderModal
-        isOpen={preOrderModalOpen}
-        onClose={() => setPreOrderModalOpen(false)}
       />
     </section>
   )

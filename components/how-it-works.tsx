@@ -20,7 +20,7 @@ const steps = [
     icon: Sparkles,
     title: "Start talking to MiniClaw",
     description:
-      "Open MiniClaw from your desktop and start asking questions, getting help with documents, drafting emails — whatever you need. It just works.",
+      "Tell your AI to clear your inbox, prep your morning briefing, find your next 100 customers, or book your next trip. It does the work. You get the results.",
   },
 ]
 

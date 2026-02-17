@@ -5,10 +5,10 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { label: "Features", href: "#features" },
-  { label: "How It Works", href: "#how-it-works" },
+  { label: "Your AI", href: "#your-ai" },
+  { label: "Skills", href: "#skills" },
   { label: "Pricing", href: "#pricing" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Support", href: "#support" },
 ]
 
 export function Navbar() {
@@ -18,7 +18,11 @@ export function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#" className="flex items-center gap-2">
-
+          <img
+            src="/images/logo.png"
+            alt="MiniClaw"
+            className="h-8 w-8 object-contain"
+          />
           <span className="text-lg font-bold tracking-tight text-foreground">
             MiniClaw
           </span>
@@ -41,7 +45,7 @@ export function Navbar() {
             <a href="#download">Download</a>
           </Button>
           <Button size="sm" asChild>
-            <a href="#order">Order Mac Mini</a>
+            <a href="/preorder">Order Mac Mini</a>
           </Button>
         </div>
 
@@ -72,7 +76,7 @@ export function Navbar() {
                 <a href="#download" onClick={() => setMobileOpen(false)}>Download</a>
               </Button>
               <Button size="sm" asChild>
-                <a href="#order" onClick={() => setMobileOpen(false)}>Order Mac Mini</a>
+                <a href="/preorder" onClick={() => setMobileOpen(false)}>Order Mac Mini</a>
               </Button>
             </div>
           </div>

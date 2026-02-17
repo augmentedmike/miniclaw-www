@@ -81,16 +81,16 @@ export function Showcase() {
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">
-            What You Can Do With OpenClaw
+            What Your AI Can Handle
           </p>
           <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-            Your AI assistant.{" "}
-            <span className="text-muted-foreground">Your rules.</span>
+            Real work.{" "}
+            <span className="text-muted-foreground">Done digitally.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            OpenClaw isn&apos;t a chatbot you talk to. It&apos;s an assistant
-            that gets things done — on your computer, your phone, even your
-            smart glasses. MiniClaw makes it all plug-and-play.
+            This isn&apos;t a chatbot you talk to. It&apos;s an assistant that
+            gets things done — on your computer, your phone, even your smart
+            glasses. MiniClaw makes it all plug-and-play.
           </p>
         </div>
 
@@ -125,9 +125,9 @@ export function Showcase() {
         </div>
 
         <p className="mx-auto mt-12 max-w-2xl text-center text-pretty text-muted-foreground">
-          With MiniClaw, all of these scenarios work out of the box — no
-          terminal commands, no config files, no YouTube tutorials required.
-          Just plug in and go.
+          Set up your agent once. Then just ask.{" "}
+          <span className="text-foreground font-medium">MiniClaw creates a project for each goal</span>
+          {" "}— tracks it on a kanban board, swaps roles as needed, and updates its own skills along the way.
         </p>
       </div>
     </section>

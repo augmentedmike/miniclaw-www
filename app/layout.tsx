@@ -15,9 +15,9 @@ const spaceMono = Space_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'MiniClaw — AI Assistants that just work',
+  title: 'MiniClaw — Your AI. Persona + Skills + Memory.',
   description:
-    'The easiest way to get an AI agent running. Download our installer or order a Mac Mini with MiniClaw pre-installed. Built for everyone, not just techies.',
+    'OpenClaw for humans. Build an AI with a real personality, memory, and powerful skills — no terminal, no config files, no tech degree required. Just plug in and go.',
   icons: {
     icon: [
       { url: '/favicon.ico' },

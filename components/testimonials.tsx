@@ -2,22 +2,28 @@ import Image from "next/image"
 
 const testimonials = [
   {
+    stat: "14 hrs/week",
+    statLabel: "saved on admin",
     quote:
-      "I was genuinely shocked. I downloaded it, clicked install, and two minutes later I was using AI to draft my weekly supplier emails. No one had to explain anything to me.",
+      "I was spending two hours every morning on supplier emails, reorders, and invoices. My AI handles all of it now. I got my mornings back.",
     name: "Maria Gonzalez",
     role: "Bakery Owner, Portland",
     image: "/images/avatar-1.png",
   },
   {
+    stat: "3× faster",
+    statLabel: "bid turnaround",
     quote:
-      "I run 600 acres by myself most days. I don't have time to learn software. MiniClaw just sits on my desk and helps me with invoices, weather reports, and equipment manuals. Best purchase I've made this year.",
+      "I run 600 acres by myself. My AI pulls weather forecasts, preps equipment maintenance reminders, and drafts bids for me. I used to spend a full day on bids. Now it's two hours.",
     name: "Tom Bridger",
     role: "Cattle Rancher, Montana",
     image: "/images/avatar-2.png",
   },
   {
+    stat: "+40%",
+    statLabel: "client capacity",
     quote:
-      "I ordered the Mac Mini option because I didn't want to deal with anything. It showed up, I plugged it in, and it worked. That's exactly what I needed — technology that stays out of my way.",
+      "I plugged it in and it worked. My AI handles intake forms, first-draft proposals, and follow-up emails. I took on 8 new clients last month without hiring anyone.",
     name: "Priya Sharma",
     role: "Marketing Consultant, Austin",
     image: "/images/avatar-3.png",
@@ -33,7 +39,7 @@ export function Testimonials() {
             Testimonials
           </p>
           <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-            People like you are already using MiniClaw.
+            Early access users are already using MiniClaw.
           </h2>
         </div>
 
@@ -43,6 +49,11 @@ export function Testimonials() {
               key={testimonial.name}
               className="flex flex-col rounded-2xl border border-border/40 bg-card p-8"
             >
+              {/* Stat callout */}
+              <div className="mb-6 flex items-baseline gap-2">
+                <span className="text-3xl font-bold text-primary">{testimonial.stat}</span>
+                <span className="text-sm text-muted-foreground">{testimonial.statLabel}</span>
+              </div>
               <blockquote className="flex-1 text-pretty leading-relaxed text-muted-foreground">
                 &ldquo;{testimonial.quote}&rdquo;
               </blockquote>

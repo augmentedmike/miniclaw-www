@@ -9,6 +9,11 @@ import {
 
 const faqs = [
   {
+    question: "How is this different from ChatGPT?",
+    answer:
+      "ChatGPT is a tool — you visit a website, ask a question, and get an answer. MiniClaw is your AI. It has a name you chose, a personality you defined, and a memory of everything you've told it. It doesn't just answer questions — it takes action. Clear your inbox, prep your morning briefing, find customers, book travel, run your smart home — all without a single line of code.",
+  },
+  {
     question: "Do I need to know anything about technology to use MiniClaw?",
     answer:
       "Absolutely not. If you can download a file from the internet and double-click it, you can install MiniClaw. We built it specifically for people who don't want to deal with technical setup. No terminal, no coding, no configuration. Just click and go.",

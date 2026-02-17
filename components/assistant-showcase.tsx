@@ -1,25 +1,38 @@
 "use client"
 
-import Image from "next/image"
 import { useState, useMemo } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
-// Randomly select an executive assistant image variant
-const getRandomExecutiveImage = () => {
-  const variants = [1, 2, 3]
-  const randomVariant = variants[Math.floor(Math.random() * variants.length)]
-  return `/images/assistant-executive-1771270688-${randomVariant}.png`
+// Assistant variants configuration
+const VARIANT_CONFIG = {
+  executive: {
+    timestamp: "1771275583",
+    count: 3,
+  },
+  research: {
+    timestamp: "1771275584",
+    count: 3,
+  },
+  worldbuilder: {
+    timestamp: "1771275585",
+    count: 3,
+  },
+  tech: {
+    timestamp: "1771277286",
+    count: 3,
+  },
 }
 
-const getAssistants = (executiveImage: string) => [
+const getPersonas = () => [
   {
+    id: "executive",
     name: "The Executive Assistant",
     tagline: "Your professional powerhouse",
     headline: "Let someone else handle your inbox for once",
     subheadline: "Manages your calendar, drafts emails, schedules meetings, and keeps you three steps ahead. Sharp, efficient, and easy on the eyes.",
     description:
       "Manages your calendar, emails, and meetings with ruthless efficiency. Handles complex scheduling, drafts correspondence, and keeps you organized. Professional, sharp, and always three steps ahead.",
-    image: executiveImage,
+    hasVariants: true,
     personality: "Professional, calm, razor-sharp. Keeps you on schedule and three steps ahead.",
     voice: "Low, steady, British accent. Think a concierge at a five-star hotel.",
     sampleConversation: {
@@ -28,13 +41,14 @@ const getAssistants = (executiveImage: string) => [
     }
   },
   {
+    id: "research",
     name: "The Research Partner",
     tagline: "Data-driven insights on demand",
     headline: "Intelligence you can actually work with",
     subheadline: "A research partner who makes complex topics feel simple. Digs through data, finds insights, and actually explains things clearly.",
     description:
       "Your personal analyst and fact-finder. Digs through research papers, compiles reports, and synthesizes complex information into clear insights. Thorough, analytical, and intellectually curious.",
-    image: "/images/assistant-research-partner.png",
+    hasVariants: true,
     personality: "Methodical, curious, encyclopedic. Loves diving deep into complex topics and connecting dots.",
     voice: "Warm professor type. Clear explanations, no condescension.",
     sampleConversation: {
@@ -43,13 +57,14 @@ const getAssistants = (executiveImage: string) => [
     }
   },
   {
+    id: "worldbuilder",
     name: "The Worldbuilder",
     tagline: "Imagination unleashed",
     headline: "Your creativity deserves a co-conspirator",
     subheadline: "Build worlds, craft stories, develop characters that feel alive. An AI that treats your imagination like it's the most important thing in the world.",
     description:
       "Helps you craft stories, develop characters, and build entire fictional universes. Perfect for writers, game designers, or anyone who wants to bring their creative visions to life. Imaginative, collaborative, and endlessly creative.",
-    image: "/images/assistant-worldbuilder.png",
+    hasVariants: true,
     personality: "Imaginative, collaborative, always asking 'what if?' Treats your ideas like they're the most fascinating thing in the world.",
     voice: "Enthusiastic storyteller. Animated, expressive, gets excited about plot twists.",
     sampleConversation: {
@@ -58,13 +73,14 @@ const getAssistants = (executiveImage: string) => [
     }
   },
   {
-    name: "The Terminal Goblin",
+    id: "tech",
+    name: "The Tech Wizard",
     tagline: "Your coding companion",
     headline: "Finally, a tech assistant who actually codes",
     subheadline: "Not just another chatbot. A real pair programming partner who lives in the terminal and gets genuinely excited about elegant solutions.",
     description:
       "Lives in the terminal, speaks fluent regex, and debugs like a wizard. Helps you solve gnarly programming problems, suggests optimizations, and explains technical concepts. Smart, quirky, and always down to pair program.",
-    image: "/images/assistant-terminal-goblin.png",
+    hasVariants: true,
     personality: "Caffeinated, mischievous, loves elegant solutions. Talks in terminal metaphors and gets genuinely excited about clean code.",
     voice: "Fast-talking hacker. Playful, uses lots of tech slang, occasionally in all caps when something is REALLY cool.",
     sampleConversation: {
@@ -104,31 +120,51 @@ const getAssistants = (executiveImage: string) => [
   },
 ]
 
-export function AssistantShowcase() {
+export function PersonaShowcase() {
   const [currentIndex, setCurrentIndex] = useState(0)
-  // Randomize executive assistant image once on mount
-  const executiveImage = useMemo(() => getRandomExecutiveImage(), [])
-  const assistants = useMemo(() => getAssistants(executiveImage), [executiveImage])
+  const personas = useMemo(() => getPersonas(), [])
 
-  const nextAssistant = () => {
-    setCurrentIndex((prev) => (prev + 1) % assistants.length)
+  // Track variant selections for each persona (randomly initialized)
+  const [variantSelections, setVariantSelections] = useState(() => {
+    const initial: Record<string, number> = {}
+    personas.forEach(persona => {
+      if (persona.hasVariants && persona.id && VARIANT_CONFIG[persona.id as keyof typeof VARIANT_CONFIG]) {
+        const config = VARIANT_CONFIG[persona.id as keyof typeof VARIANT_CONFIG]
+        initial[persona.id] = Math.floor(Math.random() * config.count) + 1
+      }
+    })
+    return initial
+  })
+
+  // Get image path for persona
+  const getPersonaImage = (persona: typeof personas[0]) => {
+    if (persona.hasVariants && persona.id && VARIANT_CONFIG[persona.id as keyof typeof VARIANT_CONFIG]) {
+      const config = VARIANT_CONFIG[persona.id as keyof typeof VARIANT_CONFIG]
+      const variant = variantSelections[persona.id] || 1
+      return `/images/assistant-${persona.id}-${config.timestamp}-${variant}.png`
+    }
+    return persona.image || ""
   }
 
-  const prevAssistant = () => {
-    setCurrentIndex((prev) => (prev - 1 + assistants.length) % assistants.length)
+  const nextPersona = () => {
+    setCurrentIndex((prev) => (prev + 1) % personas.length)
   }
 
-  const currentAssistant = assistants[currentIndex]
+  const prevPersona = () => {
+    setCurrentIndex((prev) => (prev - 1 + personas.length) % personas.length)
+  }
+
+  const currentPersona = personas[currentIndex]
 
   return (
     <section className="px-6 py-24 md:py-32 bg-secondary/20">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-            {currentAssistant.headline}
+            {currentPersona.headline}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            {currentAssistant.subheadline}
+            {currentPersona.subheadline}
           </p>
         </div>
 
@@ -136,9 +172,9 @@ export function AssistantShowcase() {
           {/* Desktop Navigation - Outside card */}
           <div className="hidden md:flex items-center justify-center gap-8">
             <button
-              onClick={prevAssistant}
+              onClick={prevPersona}
               className="shrink-0 p-3 rounded-full bg-card border border-border/40 hover:bg-secondary transition-colors"
-              aria-label="Previous assistant"
+              aria-label="Previous persona"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
@@ -148,12 +184,28 @@ export function AssistantShowcase() {
               <div className="flex overflow-hidden rounded-2xl border border-border/40 bg-card shadow-lg">
                 {/* Image - Left side on desktop */}
                 <div className="relative w-1/2 aspect-square overflow-hidden bg-secondary shrink-0">
-                  <Image
-                    src={currentAssistant.image}
-                    alt={currentAssistant.name}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 40vw"
+                  {/* Variant dots - above image */}
+                  {currentPersona.hasVariants && currentPersona.id && VARIANT_CONFIG[currentPersona.id as keyof typeof VARIANT_CONFIG] && (
+                    <div className="absolute top-4 left-0 right-0 z-10 flex justify-center gap-2">
+                      {Array.from({ length: VARIANT_CONFIG[currentPersona.id as keyof typeof VARIANT_CONFIG].count }, (_, i) => i + 1).map((variant) => (
+                        <button
+                          key={variant}
+                          onClick={() => setVariantSelections(prev => ({ ...prev, [currentPersona.id!]: variant }))}
+                          className={`w-2 h-2 rounded-full transition-all ${
+                            variantSelections[currentPersona.id!] === variant
+                              ? "bg-primary w-6"
+                              : "bg-white/60 hover:bg-white/80"
+                          }`}
+                          aria-label={`View variant ${variant}`}
+                        />
+                      ))}
+                    </div>
+                  )}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={getPersonaImage(currentPersona)}
+                    alt={currentPersona.name}
+                    className="w-full h-full object-cover"
                   />
                 </div>
 
@@ -161,13 +213,13 @@ export function AssistantShowcase() {
                 <div className="flex flex-col p-8 space-y-6 overflow-y-auto">
                   <div>
                     <h3 className="text-2xl font-bold text-foreground">
-                      {currentAssistant.name}
+                      {currentPersona.name}
                     </h3>
                     <p className="mt-2 text-base font-medium text-primary">
-                      {currentAssistant.tagline}
+                      {currentPersona.tagline}
                     </p>
                     <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                      {currentAssistant.description}
+                      {currentPersona.description}
                     </p>
                   </div>
 
@@ -182,7 +234,7 @@ export function AssistantShowcase() {
                         </h4>
                       </div>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        {currentAssistant.personality}
+                        {currentPersona.personality}
                       </p>
                     </div>
 
@@ -196,7 +248,7 @@ export function AssistantShowcase() {
                         </h4>
                       </div>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        {currentAssistant.voice}
+                        {currentPersona.voice}
                       </p>
                     </div>
 
@@ -212,11 +264,11 @@ export function AssistantShowcase() {
                       <div className="bg-secondary/30 rounded-lg p-4 space-y-3">
                         <div>
                           <p className="text-xs font-medium text-foreground mb-1">You</p>
-                          <p className="text-sm text-foreground">{currentAssistant.sampleConversation.user}</p>
+                          <p className="text-sm text-foreground">{currentPersona.sampleConversation.user}</p>
                         </div>
                         <div className="bg-primary/10 rounded-lg p-3 border-l-2 border-primary">
                           <p className="text-sm text-foreground leading-relaxed">
-                            {currentAssistant.sampleConversation.assistant}
+                            {currentPersona.sampleConversation.assistant}
                           </p>
                         </div>
                       </div>
@@ -227,9 +279,9 @@ export function AssistantShowcase() {
             </div>
 
             <button
-              onClick={nextAssistant}
+              onClick={nextPersona}
               className="shrink-0 p-3 rounded-full bg-card border border-border/40 hover:bg-secondary transition-colors"
-              aria-label="Next assistant"
+              aria-label="Next persona"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
@@ -240,12 +292,28 @@ export function AssistantShowcase() {
             <div className="flex flex-col overflow-hidden rounded-2xl border border-border/40 bg-card shadow-lg">
               {/* Image at top on mobile */}
               <div className="relative w-full aspect-square overflow-hidden bg-secondary">
-                <Image
-                  src={currentAssistant.image}
-                  alt={currentAssistant.name}
-                  fill
-                  className="object-cover"
-                  sizes="100vw"
+                {/* Variant dots - above image */}
+                {currentPersona.hasVariants && currentPersona.id && VARIANT_CONFIG[currentPersona.id as keyof typeof VARIANT_CONFIG] && (
+                  <div className="absolute top-4 left-0 right-0 z-10 flex justify-center gap-2">
+                    {Array.from({ length: VARIANT_CONFIG[currentPersona.id as keyof typeof VARIANT_CONFIG].count }, (_, i) => i + 1).map((variant) => (
+                      <button
+                        key={variant}
+                        onClick={() => setVariantSelections(prev => ({ ...prev, [currentPersona.id!]: variant }))}
+                        className={`w-2 h-2 rounded-full transition-all ${
+                          variantSelections[currentPersona.id!] === variant
+                            ? "bg-primary w-6"
+                            : "bg-white/60 hover:bg-white/80"
+                        }`}
+                        aria-label={`View variant ${variant}`}
+                      />
+                    ))}
+                  </div>
+                )}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={getPersonaImage(currentPersona)}
+                  alt={currentPersona.name}
+                  className="w-full h-full object-cover"
                 />
               </div>
 
@@ -253,13 +321,13 @@ export function AssistantShowcase() {
               <div className="flex flex-col p-6 space-y-4">
                 <div>
                   <h3 className="text-xl font-bold text-foreground">
-                    {currentAssistant.name}
+                    {currentPersona.name}
                   </h3>
                   <p className="mt-1 text-sm font-medium text-primary">
-                    {currentAssistant.tagline}
+                    {currentPersona.tagline}
                   </p>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    {currentAssistant.description}
+                    {currentPersona.description}
                   </p>
                 </div>
 
@@ -274,7 +342,7 @@ export function AssistantShowcase() {
                       </h4>
                     </div>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      {currentAssistant.personality}
+                      {currentPersona.personality}
                     </p>
                   </div>
 
@@ -288,7 +356,7 @@ export function AssistantShowcase() {
                       </h4>
                     </div>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      {currentAssistant.voice}
+                      {currentPersona.voice}
                     </p>
                   </div>
 
@@ -304,11 +372,11 @@ export function AssistantShowcase() {
                     <div className="bg-secondary/30 rounded-lg p-3 space-y-2">
                       <div>
                         <p className="text-xs font-medium text-foreground mb-1">You</p>
-                        <p className="text-sm text-foreground">{currentAssistant.sampleConversation.user}</p>
+                        <p className="text-sm text-foreground">{currentPersona.sampleConversation.user}</p>
                       </div>
                       <div className="bg-primary/10 rounded-lg p-2 border-l-2 border-primary">
                         <p className="text-sm text-foreground leading-relaxed">
-                          {currentAssistant.sampleConversation.assistant}
+                          {currentPersona.sampleConversation.assistant}
                         </p>
                       </div>
                     </div>
@@ -318,15 +386,15 @@ export function AssistantShowcase() {
                 {/* Mobile Navigation - Inside card at bottom */}
                 <div className="flex items-center justify-between pt-4 border-t border-border/40">
                   <button
-                    onClick={prevAssistant}
+                    onClick={prevPersona}
                     className="p-2 rounded-full bg-secondary/50 hover:bg-secondary transition-colors"
-                    aria-label="Previous assistant"
+                    aria-label="Previous persona"
                   >
                     <ChevronLeft className="w-5 h-5" />
                   </button>
 
                   <div className="flex gap-2">
-                    {assistants.map((_, index) => (
+                    {personas.map((_, index) => (
                       <button
                         key={index}
                         onClick={() => setCurrentIndex(index)}
@@ -341,9 +409,9 @@ export function AssistantShowcase() {
                   </div>
 
                   <button
-                    onClick={nextAssistant}
+                    onClick={nextPersona}
                     className="p-2 rounded-full bg-secondary/50 hover:bg-secondary transition-colors"
-                    aria-label="Next assistant"
+                    aria-label="Next persona"
                   >
                     <ChevronRight className="w-5 h-5" />
                   </button>
@@ -354,7 +422,7 @@ export function AssistantShowcase() {
 
           {/* Desktop Dots indicator */}
           <div className="hidden md:flex justify-center gap-2 mt-8">
-            {assistants.map((_, index) => (
+            {personas.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}

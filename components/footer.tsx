@@ -32,8 +32,7 @@ export function Footer() {
               </span>
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              AI Assistants that just work. Built for everyone who has better
-              things to do than learn software.
+              Your AI. Persona + Skills + Memory. Built for humans.
             </p>
           </div>
 
