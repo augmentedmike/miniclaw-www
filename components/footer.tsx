@@ -1,21 +1,15 @@
 
 const footerLinks = {
   Product: [
-    { label: "Features", href: "#features" },
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Features", href: "/#features" },
+    { label: "How It Works", href: "/#how-it-works" },
+    { label: "Pricing", href: "/#pricing" },
+    { label: "FAQ", href: "/#faq" },
+    { label: "Preorder", href: "/preorder" },
   ],
   Company: [
-    { label: "About", href: "#" },
-    { label: "Blog", href: "#" },
-    { label: "Careers", href: "#" },
-    { label: "Contact", href: "#" },
-  ],
-  Legal: [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
-    { label: "Refund Policy", href: "#" },
+    { label: "OpenClaw Platform", href: "/openclaw" },
+    { label: "Invest", href: "/invest" },
   ],
 }
 
@@ -23,7 +17,7 @@ export function Footer() {
   return (
     <footer className="px-6 py-16 md:py-20">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-12 md:grid-cols-4">
+        <div className="grid gap-12 md:grid-cols-3">
           {/* Brand */}
           <div className="md:col-span-1">
             <a href="#" className="flex items-center gap-2">
