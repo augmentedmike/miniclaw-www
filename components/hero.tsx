@@ -12,7 +12,7 @@ export function Hero() {
       <div className="relative flex min-h-screen flex-col items-center justify-center pt-16">
         <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
           <h1 className="text-balance text-5xl font-bold leading-tight tracking-tight text-foreground md:text-7xl lg:text-8xl">
-            An AI that uses your computer.<br className="hidden md:block" />
+            An AI that uses your computer.<br className="hidden md:block" />{" "}
             <span className="text-foreground/80">Like a human would.</span>
           </h1>
 
