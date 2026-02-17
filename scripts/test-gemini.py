@@ -5,7 +5,7 @@ import os
 import time
 import ssl
 
-API_KEY = "REDACTED_ROTATE_THIS_KEY"
+API_KEY = os.environ["GEMINI_API_KEY"]
 MODEL = "gemini-3-pro-image-preview"
 URL = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent?key={API_KEY}"
 OUT_DIR = "public/images"
