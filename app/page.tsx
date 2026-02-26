@@ -17,6 +17,7 @@ import { CTA } from "@/components/cta"
 import { Footer } from "@/components/footer"
 import { AGIMoment } from "@/components/agi-moment"
 import { ProjectBoard } from "@/components/project-board"
+import { BonsaiBrain } from "@/components/bonsai-brain"
 
 export default function Page() {
   return (
@@ -24,6 +25,7 @@ export default function Page() {
       <Navbar />
       <Hero />
       <ProjectBoard />
+      <BonsaiBrain />
       <AGIMoment />
       <LogosBar />
       <Showcase />
