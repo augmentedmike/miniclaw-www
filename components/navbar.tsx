@@ -5,10 +5,11 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { label: "Your AI", href: "#your-ai" },
-  { label: "Skills", href: "#skills" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Support", href: "#support" },
+  { label: "AI Company", href: "/ai-company-in-a-box" },
+  { label: "AI Companion", href: "/best-ai-companion" },
+  { label: "Pricing", href: "/ai-company-in-a-box#pricing" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Support", href: "https://usebonsai.org/support" },
 ]
 
 export function Navbar() {
@@ -17,7 +18,7 @@ export function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#" className="flex items-center gap-2">
+        <a href="/" className="flex items-center gap-2">
           <img
             src="/images/logo.png"
             alt="MiniClaw"

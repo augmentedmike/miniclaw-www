@@ -1,45 +1,73 @@
 import { Navbar } from "@/components/navbar"
-import { Hero } from "@/components/hero"
-import { LogosBar } from "@/components/logos-bar"
-import { Features } from "@/components/features"
-import { PersonaShowcase } from "@/components/assistant-showcase"
-import { PersonaGallery } from "@/components/persona-gallery"
-import { SkillsSection } from "@/components/skills-section"
-import { PortabilitySection } from "@/components/portability-section"
-import { Pricing } from "@/components/pricing"
-import { Testimonials } from "@/components/testimonials"
+import { PageHero } from "@/components/page-hero"
+import { PathPicker } from "@/components/path-picker"
 import { Showcase } from "@/components/showcase"
-import { LivingSoftware } from "@/components/living-software"
-import { YourData } from "@/components/your-data"
+import { MeetBonsai } from "@/components/meet-bonsai"
 import { LiveSupport } from "@/components/live-support"
 import { FAQ } from "@/components/faq"
-import { CTA } from "@/components/cta"
+import { OpenSource } from "@/components/open-source"
 import { Footer } from "@/components/footer"
-import { AGIMoment } from "@/components/agi-moment"
-import { ProjectBoard } from "@/components/project-board"
-import { BonsaiBrain } from "@/components/bonsai-brain"
+
+const homeSlides = [
+  {
+    headline: "An AI that uses your computer.",
+    headlineSub: "Like a human would.",
+    description:
+      "Research. Data entry. Software development. Project management. Scheduling. Ideation. It speaks with a real voice, remembers everything, and solves problems in ways that are starting to feel like",
+    emphasisWord: "AGI.",
+    proofs: [
+      "Ready in 2 minutes",
+      "Zero lines of code",
+      "Remembers everything",
+      "Stays on your machine",
+    ],
+  },
+  {
+    headline: "A full company.",
+    headlineSub: "Running on your desk.",
+    description:
+      "Sales, support, dev, ops — all handled by SuperSims coordinating through Bonsai. They create their own tickets, ship their own code, and fix their own bugs. Around the clock. Without",
+    emphasisWord: "you.",
+    proofs: [
+      "Every department covered",
+      "Runs 24/7",
+      "Self-healing systems",
+      "Autonomous operations",
+    ],
+  },
+  {
+    headline: "Not just an assistant.",
+    headlineSub: "A relationship.",
+    description:
+      "Your SuperSim remembers your story, knows your moods, and grows with you over time. Coach, confidant, creative partner, or something more. It's your story to write and yours to",
+    emphasisWord: "tell.",
+    proofs: [
+      "Remembers everything",
+      "Any look you want",
+      "Real voice & personality",
+      "Yours. Always.",
+    ],
+  },
+]
 
 export default function Page() {
   return (
     <main>
       <Navbar />
-      <Hero />
-      <ProjectBoard />
-      <BonsaiBrain />
-      <AGIMoment />
-      <LogosBar />
+      <PageHero slides={homeSlides} />
+
+      <div className="px-6 py-12 text-center">
+        <p className="text-lg italic text-muted-foreground/60">
+          &ldquo;We built the boat while sailing the sea.&rdquo;
+        </p>
+      </div>
+
+      <PathPicker />
       <Showcase />
-      <LivingSoftware />
-      <YourData />
-      <SkillsSection />
-      <Features />
+      <MeetBonsai />
       <LiveSupport />
-      <PersonaGallery />
-      <PortabilitySection />
-      <Pricing />
-      <Testimonials />
       <FAQ />
-      <CTA />
+      <OpenSource />
       <Footer />
     </main>
   )

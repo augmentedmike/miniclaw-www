@@ -9,6 +9,11 @@ import {
 
 const faqs = [
   {
+    question: "How is MiniClaw different from OpenClaw / MoltBot?",
+    answer:
+      "We were inspired by OpenClaw and used some of its base libraries as a starting point — which is where the name comes from. But MiniClaw is built from the ground up for security, process isolation, long-term memory, and self-healing systems. OpenClaw can control your terminal. MiniClaw controls the desktop, the terminal, and much more — all without the gaping security issues that come with OpenClaw's architecture. If OpenClaw is the engine, MiniClaw is the entire vehicle: safe, maintained, and ready to drive.",
+  },
+  {
     question: "How is this different from ChatGPT?",
     answer:
       "ChatGPT is a tool — you visit a website, ask a question, and get an answer. MiniClaw is your AI. It has a name you chose, a personality you defined, and a memory of everything you've told it. It doesn't just answer questions — it takes action. Clear your inbox, prep your morning briefing, find customers, book travel, run your smart home — all without a single line of code.",

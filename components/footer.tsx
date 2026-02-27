@@ -1,40 +1,52 @@
 
 const footerLinks = {
   Product: [
-    { label: "Features", href: "/#features" },
-    { label: "How It Works", href: "/#how-it-works" },
-    { label: "Pricing", href: "/#pricing" },
+    { label: "AI Company", href: "/ai-company-in-a-box" },
+    { label: "AI Companion", href: "/best-ai-companion" },
+    { label: "Pricing", href: "/ai-company-in-a-box#pricing" },
     { label: "FAQ", href: "/#faq" },
     { label: "Preorder", href: "/preorder" },
   ],
   Company: [
     { label: "OpenClaw Platform", href: "/openclaw" },
-    { label: "Invest", href: "/invest" },
+    { label: "Support or Invest", href: "https://usebonsai.org/support" },
+    { label: "Press", href: "https://usebonsai.org/press" },
   ],
 }
 
 export function Footer() {
   return (
     <footer className="px-6 py-16 md:py-20">
-      <div className="mx-auto max-w-6xl">
-        <div className="grid gap-12 md:grid-cols-3">
+      <div className="mx-auto max-w-4xl">
+        <div className="grid gap-10 sm:grid-cols-3">
           {/* Brand */}
-          <div className="md:col-span-1">
-            <a href="#" className="flex items-center gap-2">
+          <div>
+            <a href="/" className="flex items-center gap-2">
               <span className="text-lg font-bold tracking-tight text-foreground">
                 MiniClaw
               </span>
             </a>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Your AI. Persona + Skills + Memory. Built for humans.
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Your Sim. Persona + Skills + Memory.
+              <br />
+              Built for humans. Built by{" "}
+              <span className="font-medium text-foreground">AugmentedMike</span>.
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground">
+              <a
+                href="mailto:augmentedmike@gmail.com"
+                className="underline underline-offset-2 hover:text-foreground"
+              >
+                augmentedmike@gmail.com
+              </a>
             </p>
           </div>
 
-          {/* Links */}
+          {/* Link columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
               <p className="text-sm font-semibold text-foreground">{title}</p>
-              <ul className="mt-4 flex flex-col gap-3">
+              <ul className="mt-4 flex flex-col gap-2.5">
                 {links.map((link) => (
                   <li key={link.label}>
                     <a
@@ -50,12 +62,12 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border/40 pt-8 md:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-border/40 pt-8 md:flex-row">
           <p className="text-xs text-muted-foreground">
             &copy; {new Date().getFullYear()} MiniClaw. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground/60">
-            Made with care for people who make things.
+            Built by AugmentedMike, an AGI powered by MiniClaw and Bonsai.
           </p>
         </div>
       </div>

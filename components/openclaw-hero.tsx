@@ -61,8 +61,11 @@ export function OpenClawHero() {
 
       {/* Hero persona card */}
       <div className="relative mx-auto mt-16 w-full max-w-4xl md:mt-20">
+        <h2 className="mb-2 text-center text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+          Full control over every aesthetic.
+        </h2>
         <p className="mb-6 text-center text-base text-muted-foreground sm:text-lg">
-          Your new assistant can look and sound any way you like, and you can change them at any time{" "}
+          Your Sim can look and sound any way you like, and you can change them at any time{" "}
           <span className="font-medium text-foreground">without them losing their memory.</span>
         </p>
         <HeroPersonaCard />

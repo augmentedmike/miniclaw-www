@@ -88,9 +88,9 @@ export function Showcase() {
             <span className="text-muted-foreground">Done digitally.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            This isn&apos;t a chatbot you talk to. It&apos;s an assistant that
-            gets things done — on your computer, your phone, even your smart
-            glasses. MiniClaw makes it all plug-and-play.
+            Whether you&apos;re building an AI company or a personal Sim — these
+            are the things it can handle on day one. On your computer, your
+            phone, even your smart glasses.
           </p>
         </div>
 

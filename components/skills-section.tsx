@@ -2,7 +2,14 @@
 
 import { Brain, Code, Image as ImageIcon, Video } from "lucide-react"
 
-const skills = [
+const skills: {
+  name: string
+  subtitle: string
+  description: string
+  icon: typeof Brain
+  color: string
+  note?: string
+}[] = [
   {
     name: "AI Agent",
     subtitle: "Your Personal Agent",
@@ -13,9 +20,10 @@ const skills = [
   {
     name: "Claude Code",
     subtitle: "Pair Programmer",
-    description: "Your AI has access to the terminal, runs git commands, handles deployments, and codes alongside you—from any device.",
+    description: "Your Sim has access to the terminal, runs git commands, handles deployments, and codes alongside you—from any device. Requires a Claude Max subscription ($100–$200/mo), which caps your monthly spend — unlike API-based platforms where costs can spiral. Add more subscriptions to the same MiniClaw or MiniRack for even more power.",
     icon: Code,
     color: "text-blue-500",
+    note: "Claude Max required",
   },
   {
     name: "Nano Banana",
@@ -27,7 +35,7 @@ const skills = [
   {
     name: "Sora",
     subtitle: "Video Production",
-    description: "Automate video production pipelines through conversation. From concept to rendered video, your AI handles it.",
+    description: "Automate video production pipelines through conversation. From concept to rendered video, your Sim handles it.",
     icon: Video,
     color: "text-orange-500",
   },
@@ -46,7 +54,11 @@ export function SkillsSection() {
             One Personality. All the Power.
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            Your AI companion has access to the latest cutting-edge tools. They use whichever skill is needed—you don't think about it.
+            Your Sim has access to the latest cutting-edge tools. They use whichever skill is needed—you don't think about it.
+          </p>
+          <p className="mt-3 inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/50 px-4 py-1.5 text-sm text-muted-foreground">
+            <span className="inline-block h-2 w-2 rounded-full bg-green-500" />
+            No vendor lock-in — MiniClaw works across AI providers
           </p>
         </div>
 
@@ -59,9 +71,16 @@ export function SkillsSection() {
                 key={skill.name}
                 className="group relative overflow-hidden rounded-2xl border border-border/40 bg-card p-6 transition-all hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10"
               >
-                {/* Icon */}
-                <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                  <Icon className={`h-6 w-6 ${skill.color}`} />
+                {/* Icon + Badge */}
+                <div className="mb-4 flex items-start justify-between">
+                  <div className="inline-flex rounded-xl bg-primary/10 p-3">
+                    <Icon className={`h-6 w-6 ${skill.color}`} />
+                  </div>
+                  {skill.note && (
+                    <span className="rounded-full bg-blue-500/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-blue-400">
+                      {skill.note}
+                    </span>
+                  )}
                 </div>
 
                 {/* Content */}
@@ -86,7 +105,7 @@ export function SkillsSection() {
         <div className="mt-12 text-center">
           <p className="text-lg font-medium text-muted-foreground">
             New AI models released?{" "}
-            <span className="text-foreground">Your AI gets them automatically.</span>
+            <span className="text-foreground">Your Sim gets them automatically.</span>
             <br />
             <span className="text-sm">It only gets better over time.</span>
           </p>

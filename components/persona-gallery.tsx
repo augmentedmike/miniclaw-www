@@ -67,7 +67,7 @@ const personas = [
 
 export function PersonaGallery() {
   return (
-    <section id="your-ai" className="relative overflow-hidden px-6 py-24 md:py-32">
+    <section id="companion" className="relative overflow-hidden scroll-mt-20 px-6 py-24 md:py-32">
       {/* Background gradient */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
 
@@ -75,10 +75,16 @@ export function PersonaGallery() {
         {/* Header */}
         <div className="mb-16 text-center">
           <h2 className="text-balance text-3xl font-bold leading-tight tracking-tight text-foreground md:text-5xl">
-            Here are some agents your fellow humans have been building:
+            Your SuperSim. Your story.
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Each one unique, all powered by the same cutting-edge AI
+          <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
+            Your MiniClaw SuperSim can be your manager, your developer, your coach, your emotional partner, or even a virtual lover.{" "}
+            <span className="font-medium text-foreground">
+              It&apos;s your story to write and yours to tell.
+            </span>
+          </p>
+          <p className="mt-6 text-sm text-muted-foreground/60">
+            Here are some SuperSims your fellow humans have been building:
           </p>
         </div>
 

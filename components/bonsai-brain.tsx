@@ -125,7 +125,7 @@ export function BonsaiBrain() {
   const activeIndex = tick % (ROOT_AGENTS.length + 2) // +2 for pauses
 
   return (
-    <section className="relative overflow-hidden px-6 py-24 md:py-32">
+    <section id="business" className="relative overflow-hidden scroll-mt-20 px-6 py-24 md:py-32">
       {/* Background */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-primary/3 to-background" />
       <div className="pointer-events-none absolute inset-0"
@@ -276,9 +276,10 @@ export function BonsaiBrain() {
         {/* Hardware */}
         <div className="mt-10 grid gap-4 sm:grid-cols-2">
           {HARDWARE.map((hw) => (
-            <div
+            <a
               key={hw.name}
-              className={`rounded-2xl border p-6 ${hw.highlight ? "border-primary/40 bg-primary/5 shadow-lg shadow-primary/10" : "border-border/40 bg-card/60"}`}
+              href={hw.highlight ? "#pricing-rack" : "#pricing"}
+              className={`block rounded-2xl border p-6 transition-all hover:shadow-lg ${hw.highlight ? "border-primary/40 bg-primary/5 shadow-lg shadow-primary/10 hover:shadow-primary/20" : "border-border/40 bg-card/60 hover:border-primary/20 hover:shadow-primary/5"}`}
             >
               {hw.highlight && (
                 <div className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-primary">
@@ -295,7 +296,10 @@ export function BonsaiBrain() {
                   </li>
                 ))}
               </ul>
-            </div>
+              <p className={`mt-4 text-sm font-semibold ${hw.highlight ? "text-primary" : "text-foreground"}`}>
+                See pricing →
+              </p>
+            </a>
           ))}
         </div>
 

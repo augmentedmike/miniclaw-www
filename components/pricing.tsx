@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Check, Download, Monitor } from "lucide-react"
 import { EmailSignupModal } from "@/components/email-signup-modal"
+import { MiniRackConfigurator } from "@/components/minirack-configurator"
 
 const plans = [
   {
@@ -178,6 +179,32 @@ export function Pricing() {
               )}
             </div>
           ))}
+        </div>
+
+        {/* Pre-order CTA */}
+        <div className="mx-auto mt-12 max-w-md text-center">
+          <Button size="lg" className="w-full gap-2 text-base" asChild>
+            <a href="/preorder">
+              <Monitor className="h-4 w-4" />
+              Pre-Order Now — Shipping Spring 2026
+            </a>
+          </Button>
+          <p className="mt-3 text-xs text-muted-foreground/60">
+            $999.50 deposit secures your spot. Balance due before shipping.
+          </p>
+        </div>
+
+        {/* MiniRack Configurator */}
+        <div id="pricing-rack" className="mx-auto mt-16 max-w-4xl scroll-mt-24">
+          <div className="mb-8 text-center">
+            <h3 className="text-2xl font-bold tracking-tight text-foreground md:text-3xl">
+              Need more power? Build a MiniRack.
+            </h3>
+            <p className="mt-2 text-muted-foreground">
+              Stack up to 6 Claws into a single rack. Run an entire digital company from your desk.
+            </p>
+          </div>
+          <MiniRackConfigurator />
         </div>
       </div>
 
