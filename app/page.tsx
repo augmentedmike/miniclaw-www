@@ -3,6 +3,7 @@ import { PageHero } from "@/components/page-hero"
 import { PathPicker } from "@/components/path-picker"
 import { Showcase } from "@/components/showcase"
 import { MeetBonsai } from "@/components/meet-bonsai"
+import { BlogHighlight } from "@/components/blog-highlight"
 import { LiveSupport } from "@/components/live-support"
 import { FAQ } from "@/components/faq"
 import { OpenSource } from "@/components/open-source"
@@ -65,6 +66,7 @@ export default function Page() {
       <PathPicker />
       <Showcase />
       <MeetBonsai />
+      <BlogHighlight />
       <LiveSupport />
       <FAQ />
       <OpenSource />
