@@ -4,19 +4,19 @@ import { ArrowRight } from "lucide-react"
 
 const features = [
   {
-    title: "Sims, not a chatbot",
+    title: "Agents, not a chatbot",
     description:
       "A researcher, a designer, a developer — each with distinct skills and work style. They pick up your tickets and collaborate like a real team. No prompting. No babysitting.",
   },
   {
     title: "Tickets in, features out",
     description:
-      "Write what you want in plain English. Your Sims handle research, planning, and implementation end to end. Move the ticket to 'In Progress' and walk away.",
+      "Write what you want in plain English. Your agents handle research, planning, and implementation end to end. Move the ticket to 'In Progress' and walk away.",
   },
   {
     title: "Ships while you sleep",
     description:
-      "Your Sims run 24/7. Drop a ticket at midnight, wake up to a working feature. The kanban board tracks every decision so nothing slips.",
+      "Your agents run 24/7. Drop a ticket at midnight, wake up to a working feature. The kanban board tracks every decision so nothing slips.",
   },
   {
     title: "Human-gated deploys",
@@ -31,7 +31,7 @@ const features = [
   {
     title: "Watch the work happen",
     description:
-      "The Sim activity dashboard shows every Sim in real time — what they're doing, how long it's taking, and what it costs. Full transparency.",
+      "The agent activity dashboard shows every agent in real time — what they're doing, how long it's taking, and what it costs. Full transparency.",
   },
 ]
 
@@ -60,7 +60,7 @@ export function MeetBonsai() {
             Meet Bonsai
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-pretty text-lg text-muted-foreground">
-            Bonsai is a kanban board where Sims do the actual work. Not a copilot. Not a chatbot.{" "}
+            Bonsai is a kanban board where agents do the actual work. Not a copilot. Not a chatbot.{" "}
             <span className="font-medium text-foreground">A team that ships.</span>
           </p>
         </div>

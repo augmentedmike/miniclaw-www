@@ -65,7 +65,7 @@ export function OpenClawHero() {
           Full control over every aesthetic.
         </h2>
         <p className="mb-6 text-center text-base text-muted-foreground sm:text-lg">
-          Your Sim can look and sound any way you like, and you can change them at any time{" "}
+          Your digital companion can look and sound any way you like, and you can change them at any time{" "}
           <span className="font-medium text-foreground">without them losing their memory.</span>
         </p>
         <HeroPersonaCard />

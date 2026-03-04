@@ -14,7 +14,7 @@ const companionSlides = [
     headline: "Not just an assistant.",
     headlineSub: "A relationship.",
     description:
-      "Your SuperSim remembers your story, knows your moods, and grows with you over time. Coach, confidant, creative partner, or something more. It's your story to write and yours to",
+      "Your digital companion remembers your story, knows your moods, and grows with you over time. Coach, confidant, creative partner, or something more. It's your story to write and yours to",
     emphasisWord: "tell.",
     proofs: [
       "Remembers everything",
@@ -40,7 +40,7 @@ const companionSlides = [
     headline: "An AI persona.",
     headlineSub: "With real followers.",
     description:
-      "Give your SuperSim a face, a voice, a personality, and a following. Virtual influencers, AI-native brands, characters that feel alive — built and run entirely by",
+      "Give your digital companion a face, a voice, a personality, and a following. Virtual influencers, AI-native brands, characters that feel alive — built and run entirely by",
     emphasisWord: "Sims.",
     proofs: [
       "Full visual identity",
@@ -53,7 +53,7 @@ const companionSlides = [
     headline: "Full control over every aesthetic.",
     headlineSub: "Change anything, anytime.",
     description:
-      "Your Sim can look and sound any way you like, and you can change them at any time without them losing their",
+      "Your digital companion can look and sound any way you like, and you can change them at any time without them losing their",
     emphasisWord: "memory.",
     proofs: [
       "Unlimited customization",

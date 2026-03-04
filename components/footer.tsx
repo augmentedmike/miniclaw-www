@@ -27,7 +27,7 @@ export function Footer() {
               </span>
             </a>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Your Sim. Persona + Skills + Memory.
+              Your AI companion. Persona + Skills + Memory.
               <br />
               Built for humans. Built by{" "}
               <span className="font-medium text-foreground">AugmentedMike</span>.

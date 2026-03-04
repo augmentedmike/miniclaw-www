@@ -88,7 +88,7 @@ export function Showcase() {
             <span className="text-muted-foreground">Done digitally.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            Whether you&apos;re building an AI company or a personal Sim — these
+            Whether you&apos;re building an AI company or a digital companion — these
             are the things it can handle on day one. On your computer, your
             phone, even your smart glasses.
           </p>

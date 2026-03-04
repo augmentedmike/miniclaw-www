@@ -20,7 +20,7 @@ const skills: {
   {
     name: "Claude Code",
     subtitle: "Pair Programmer",
-    description: "Your Sim has access to the terminal, runs git commands, handles deployments, and codes alongside you—from any device. Requires a Claude Max subscription ($100–$200/mo), which caps your monthly spend — unlike API-based platforms where costs can spiral. Add more subscriptions to the same MiniClaw or MiniRack for even more power.",
+    description: "Your digital assistant has access to the terminal, runs git commands, handles deployments, and codes alongside you—from any device. Requires a Claude Max subscription ($100–$200/mo), which caps your monthly spend — unlike API-based platforms where costs can spiral. Add more subscriptions to the same MiniClaw or MiniRack for even more power.",
     icon: Code,
     color: "text-blue-500",
     note: "Claude Max required",
@@ -35,7 +35,7 @@ const skills: {
   {
     name: "Sora",
     subtitle: "Video Production",
-    description: "Automate video production pipelines through conversation. From concept to rendered video, your Sim handles it.",
+    description: "Automate video production pipelines through conversation. From concept to rendered video, your digital assistant handles it.",
     icon: Video,
     color: "text-orange-500",
   },
@@ -54,7 +54,7 @@ export function SkillsSection() {
             One Personality. All the Power.
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            Your Sim has access to the latest cutting-edge tools. They use whichever skill is needed—you don't think about it.
+            Your digital assistant has access to the latest cutting-edge tools. They use whichever skill is needed—you don't think about it.
           </p>
           <p className="mt-3 inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/50 px-4 py-1.5 text-sm text-muted-foreground">
             <span className="inline-block h-2 w-2 rounded-full bg-green-500" />
@@ -105,7 +105,7 @@ export function SkillsSection() {
         <div className="mt-12 text-center">
           <p className="text-lg font-medium text-muted-foreground">
             New AI models released?{" "}
-            <span className="text-foreground">Your Sim gets them automatically.</span>
+            <span className="text-foreground">Your digital assistant gets them automatically.</span>
             <br />
             <span className="text-sm">It only gets better over time.</span>
           </p>

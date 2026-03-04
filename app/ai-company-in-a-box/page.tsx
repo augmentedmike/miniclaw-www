@@ -18,7 +18,7 @@ const companySlides = [
     headline: "A full company.",
     headlineSub: "Running on your desk.",
     description:
-      "Sales, support, dev, ops — all handled by SuperSims coordinating through Bonsai. They create their own tickets, ship their own code, and fix their own bugs. Around the clock. Without",
+      "Sales, support, dev, ops — all handled by digital assistants coordinating through Bonsai. They create their own tickets, ship their own code, and fix their own bugs. Around the clock. Without",
     emphasisWord: "you.",
     proofs: [
       "Every department covered",
@@ -31,7 +31,7 @@ const companySlides = [
     headline: "Ship code while you sleep.",
     headlineSub: "Wake up to a PR.",
     description:
-      "Your SuperSim writes features, reviews PRs, handles deployments, and fixes bugs — all from the terminal. Pair program during the day. Let it ship",
+      "Your digital assistant writes features, reviews PRs, handles deployments, and fixes bugs — all from the terminal. Pair program during the day. Let it ship",
     emphasisWord: "overnight.",
     proofs: [
       "Full terminal access",
@@ -44,7 +44,7 @@ const companySlides = [
     headline: "Your brand. Every platform.",
     headlineSub: "Always on.",
     description:
-      "Post daily content. Maintain your brand voice. Monitor engagement. Run A/B tests. Pause underperforming ads. Your SuperSim is the social media manager that never",
+      "Post daily content. Maintain your brand voice. Monitor engagement. Run A/B tests. Pause underperforming ads. Your digital assistant is the social media manager that never",
     emphasisWord: "sleeps.",
     proofs: [
       "Every platform managed",
@@ -57,7 +57,7 @@ const companySlides = [
     headline: "Your inbox. Your calendar.",
     headlineSub: "Your life. Handled.",
     description:
-      "Inbox zero every day. Meetings turned into action items. Flights checked in. Morning briefings delivered. Your SuperSim manages the chaos so you can focus on what",
+      "Inbox zero every day. Meetings turned into action items. Flights checked in. Morning briefings delivered. Your digital assistant manages the chaos so you can focus on what",
     emphasisWord: "matters.",
     proofs: [
       "Inbox zero daily",

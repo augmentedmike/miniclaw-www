@@ -38,7 +38,7 @@ export function PathPicker() {
               <Heart className="h-8 w-8 text-pink-400" />
             </div>
             <div>
-              <p className="text-2xl font-bold text-foreground">A personal Sim</p>
+              <p className="text-2xl font-bold text-foreground">A digital companion</p>
               <p className="mt-2 text-base text-muted-foreground">
                 Companion, coach, creative partner
               </p>

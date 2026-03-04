@@ -17,7 +17,7 @@ const plans = [
     timeline: "Available soon!",
     features: [
       "One-click installer for macOS & Windows",
-      "Full Sim capabilities",
+      "Full digital companion capabilities",
       "Offline mode included",
       "Automatic updates",
       "Private & local by default",
@@ -59,7 +59,7 @@ export function CompanionPricing() {
             Get started
           </p>
           <h3 className="mt-3 text-2xl font-bold tracking-tight text-foreground md:text-3xl">
-            One Sim. Your story.
+            One digital companion. Your story.
           </h3>
           <p className="mt-2 text-muted-foreground">
             No rack needed. Just a single MiniClaw — or download it free on your existing Mac.

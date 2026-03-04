@@ -27,7 +27,7 @@ const homeSlides = [
     headline: "A full company.",
     headlineSub: "Running on your desk.",
     description:
-      "Sales, support, dev, ops — all handled by SuperSims coordinating through Bonsai. They create their own tickets, ship their own code, and fix their own bugs. Around the clock. Without",
+      "Sales, support, dev, ops — all handled by digital assistants coordinating through Bonsai. They create their own tickets, ship their own code, and fix their own bugs. Around the clock. Without",
     emphasisWord: "you.",
     proofs: [
       "Every department covered",
@@ -40,7 +40,7 @@ const homeSlides = [
     headline: "Not just an assistant.",
     headlineSub: "A relationship.",
     description:
-      "Your SuperSim remembers your story, knows your moods, and grows with you over time. Coach, confidant, creative partner, or something more. It's your story to write and yours to",
+      "Your digital companion remembers your story, knows your moods, and grows with you over time. Coach, confidant, creative partner, or something more. It's your story to write and yours to",
     emphasisWord: "tell.",
     proofs: [
       "Remembers everything",

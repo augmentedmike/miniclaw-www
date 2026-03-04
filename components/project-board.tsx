@@ -47,7 +47,7 @@ export function ProjectBoard() {
             Built-in Project Board
           </p>
           <h2 className="mt-3 text-balance text-3xl font-bold leading-tight tracking-tight text-foreground md:text-5xl">
-            Your Sim never loses the thread.
+            Your digital assistant never loses the thread.
           </h2>
           <p className="mt-4 text-pretty text-lg text-muted-foreground">
             Under the hood, your AI maintains a real project board — tracking every task, deadline, and deliverable across every role it plays. It&apos;s just like having a full team at work. Except every card is owned by the same person, wearing a different hat.

@@ -96,7 +96,7 @@ export function LiveSupport() {
                       "MiniClaw first-time setup",
                       "Bonsai onboarding",
                       "MiniRack configuration",
-                      "Custom Sim creation",
+                      "Custom digital companion creation",
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-2">
                         <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />

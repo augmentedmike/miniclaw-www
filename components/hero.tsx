@@ -23,7 +23,7 @@ const heroes = [
     headline: "Your inbox. Your calendar.",
     headlineSub: "Your life. Handled.",
     description:
-      "Inbox zero every day. Meetings turned into action items. Flights checked in. Morning briefings delivered. Your SuperSim manages the chaos so you can focus on what",
+      "Inbox zero every day. Meetings turned into action items. Flights checked in. Morning briefings delivered. Your digital assistant manages the chaos so you can focus on what",
     emphasisWord: "matters.",
     proofs: [
       "📬 Inbox zero daily",
@@ -36,7 +36,7 @@ const heroes = [
     headline: "A full company.",
     headlineSub: "Running on your desk.",
     description:
-      "Sales, support, dev, ops — all handled by SuperSims coordinating through Bonsai. They create their own tickets, ship their own code, and fix their own bugs. Around the clock. Without",
+      "Sales, support, dev, ops — all handled by digital assistants coordinating through Bonsai. They create their own tickets, ship their own code, and fix their own bugs. Around the clock. Without",
     emphasisWord: "you.",
     proofs: [
       "🏢 Every department covered",
@@ -49,7 +49,7 @@ const heroes = [
     headline: "Your brand. Every platform.",
     headlineSub: "Always on.",
     description:
-      "Post daily content. Maintain your brand voice. Monitor engagement. Run A/B tests. Pause underperforming ads. Your SuperSim is the social media manager that never",
+      "Post daily content. Maintain your brand voice. Monitor engagement. Run A/B tests. Pause underperforming ads. Your digital assistant is the social media manager that never",
     emphasisWord: "sleeps.",
     proofs: [
       "📱 Every platform managed",
@@ -62,8 +62,8 @@ const heroes = [
     headline: "An AI persona.",
     headlineSub: "With real followers.",
     description:
-      "Give your SuperSim a face, a voice, a personality, and a following. Virtual influencers, AI-native brands, characters that feel alive — built and run entirely by",
-    emphasisWord: "Sims.",
+      "Give your digital companion a face, a voice, a personality, and a following. Virtual influencers, AI-native brands, characters that feel alive — built and run entirely by",
+    emphasisWord: "AI.",
     proofs: [
       "🎭 Full visual identity",
       "🗣️ Unique voice & style",
@@ -75,7 +75,7 @@ const heroes = [
     headline: "Ship code while you sleep.",
     headlineSub: "Wake up to a PR.",
     description:
-      "Your SuperSim writes features, reviews PRs, handles deployments, and fixes bugs — all from the terminal. Pair program during the day. Let it ship",
+      "Your digital assistant writes features, reviews PRs, handles deployments, and fixes bugs — all from the terminal. Pair program during the day. Let it ship",
     emphasisWord: "overnight.",
     proofs: [
       "💻 Full terminal access",
@@ -88,7 +88,7 @@ const heroes = [
     headline: "Not just an assistant.",
     headlineSub: "A relationship.",
     description:
-      "Your SuperSim remembers your story, knows your moods, and grows with you over time. Coach, confidant, creative partner, or something more. It's your story to write and yours to",
+      "Your digital companion remembers your story, knows your moods, and grows with you over time. Coach, confidant, creative partner, or something more. It's your story to write and yours to",
     emphasisWord: "tell.",
     proofs: [
       "💭 Remembers everything",
@@ -225,7 +225,7 @@ export function Hero() {
           Full control over every aesthetic.
         </h2>
         <p className="mb-6 text-center text-base text-muted-foreground sm:text-lg">
-          Your Sim can look and sound any way you like, and you can change them
+          Your digital companion can look and sound any way you like, and you can change them
           at any time{" "}
           <span className="font-medium text-foreground">
             without them losing their memory.

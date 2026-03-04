@@ -21,7 +21,7 @@ const timeline = [
     marker: "Day 2 — Core platform ships",
     title: "The foundation lands in a single day",
     description:
-      "Sim tooling, ticket attachments, vault injection, and the full kanban board — all landed in a single day.",
+      "agent tooling, ticket attachments, vault injection, and the full kanban board — all landed in a single day.",
   },
   {
     date: "Feb 7",
@@ -39,10 +39,10 @@ const timeline = [
   },
   {
     date: "Feb 11",
-    marker: "Day 7 — Sim dispatch system",
+    marker: "Day 7 — agent dispatch system",
     title: "The Sims start coordinating",
     description:
-      "@team mentions, Sim @mention dispatch, role-based skills, and board auto-sort. The Sims start coordinating.",
+      "@team mentions, agent @mention dispatch, role-based skills, and board auto-sort. The Sims start coordinating.",
   },
   {
     date: "Feb 14",
@@ -63,28 +63,28 @@ const timeline = [
     marker: "Day 13 — Major overhaul",
     title: "Full MiniClaw homepage rebuild",
     description:
-      "Persona card system, OpenClaw page, preorder page, hero rewrite, SSR fixes, logo — 6 commits, all Sim-driven.",
+      "Persona card system, OpenClaw page, preorder page, hero rewrite, SSR fixes, logo — 6 commits, all agent-driven.",
   },
   {
     date: "Feb 20",
     marker: "Day 16 — Autonomy breakthrough",
     title: "Sims start thinking for themselves",
     description:
-      "Single-version research, Sim memory (QMD), worktree preview system, and self-healing workflows. 14 commits in one day.",
+      "Single-version research, agent memory (QMD), worktree preview system, and self-healing workflows. 14 commits in one day.",
   },
   {
     date: "Feb 21",
     marker: "Day 17 — Dogfooding goes live",
     title: "Bonsai builds Bonsai full-time",
     description:
-      "Sim symlinks, persona editing, and UI polish — all shipped by the Sims.",
+      "agent symlinks, persona editing, and UI polish — all shipped by the agents.",
   },
   {
     date: "Feb 26",
     marker: "Day 22 — 38 commits in a single day",
     title: "The Sims are shipping faster than any human team",
     description:
-      "Operator dispatch, unified chat panels, role archetypes, Sim activity dashboard on Bonsai. MiniRack configurator, rotating hero, Built with Bonsai timeline, branding overhaul on MiniClaw. Both products shipping in parallel, autonomously.",
+      "Operator dispatch, unified chat panels, role archetypes, agent activity dashboard on Bonsai. MiniRack configurator, rotating hero, Built with Bonsai timeline, branding overhaul on MiniClaw. Both products shipping in parallel, autonomously.",
   },
 ]
 

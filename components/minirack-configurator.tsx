@@ -15,10 +15,10 @@ function getPrice(count: number) {
 }
 
 const TIER_INFO: Record<number, { label: string; description: string }> = {
-  1: { label: "Solo Founder", description: "One SuperSim, always on. Your 24/7 digital employee." },
-  2: { label: "Duo", description: "Two SuperSims in parallel — one builds, one manages." },
+  1: { label: "Solo Founder", description: "One digital assistant, always on. Your 24/7 digital employee." },
+  2: { label: "Duo", description: "Two digital assistants in parallel — one builds, one manages." },
   3: { label: "Small Team", description: "A full creative squad. Design, code, and ship." },
-  4: { label: "Growth Engine", description: "Dedicated SuperSims for sales, support, ops, and dev." },
+  4: { label: "Growth Engine", description: "Dedicated digital assistants for sales, support, ops, and dev." },
   5: { label: "Department", description: "Run entire business functions autonomously." },
   6: { label: "Digital Company", description: "A full company in a rack. Every role covered." },
 }
@@ -170,7 +170,7 @@ export function MiniRackConfigurator() {
                   <span className="text-lg font-bold tabular-nums text-foreground">
                     {count * 16}
                   </span>
-                  <span className="text-[10px] text-muted-foreground">SuperSims</span>
+                  <span className="text-[10px] text-muted-foreground">Assistants</span>
                 </div>
                 <div className="flex flex-col items-center rounded-lg border border-border/30 bg-background/50 p-3">
                   <Zap className="mb-1 h-4 w-4 text-primary" />
