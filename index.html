@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiniClaw — A Full Mind for Your OpenClaw Companion</title>
+  <meta name="description" content="MiniClaw is a brain ecosystem built on top of OpenClaw. Give your AI companion memory, vision, trust, and planning — modeled on how the human mind actually works." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black:   #0A0A0F;
+      --dark:    #111118;
+      --card:    #16161F;
+      --border:  #2A2A3A;
+      --teal:    #00E5FF;
+      --amber:   #DCB450;
+      --white:   #F0F0F8;
+      --muted:   #8888AA;
+      --radius:  12px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    a { color: var(--teal); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    code, .mono {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.88em;
+    }
+
+    /* ── Layout ── */
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      border-bottom: 1px solid var(--border);
+      background: rgba(10,10,15,0.92);
+      backdrop-filter: blur(12px);
+    }
+    nav .inner {
+      max-width: 900px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    nav .logo {
+      font-weight: 700; font-size: 1.1rem; letter-spacing: -0.02em;
+      color: var(--white);
+    }
+    nav .logo span { color: var(--teal); }
+    nav .links { display: flex; gap: 28px; }
+    nav .links a { color: var(--muted); font-size: 0.9rem; font-weight: 500; }
+    nav .links a:hover { color: var(--white); text-decoration: none; }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 100px 0 80px;
+      text-align: center;
+    }
+    .hero .eyebrow {
+      display: inline-block;
+      background: rgba(0,229,255,0.08);
+      border: 1px solid rgba(0,229,255,0.25);
+      color: var(--teal);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+    .hero h1 em { color: var(--teal); font-style: normal; }
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+    .hero .actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 24px;
+      border-radius: var(--radius);
+      font-weight: 600; font-size: 0.95rem;
+      cursor: pointer; transition: all 0.15s;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--teal);
+      color: var(--black);
+    }
+    .btn-primary:hover { background: #33EAFF; text-decoration: none; color: var(--black); }
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--white);
+    }
+    .btn-ghost:hover { border-color: var(--teal); color: var(--teal); text-decoration: none; }
+
+    .install-block {
+      display: inline-flex; align-items: center; gap: 12px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 20px;
+      margin-top: 16px;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.88rem;
+      color: var(--teal);
+    }
+    .install-block .label { color: var(--muted); font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; }
+
+    /* ── Sections ── */
+    section { padding: 80px 0; }
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 12px;
+    }
+    h2 {
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    h2 em { color: var(--amber); font-style: normal; }
+    .section-intro {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 620px;
+      margin-bottom: 56px;
+    }
+
+    /* ── Foundation block ── */
+    .foundation {
+      background: var(--dark);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .foundation-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    @media (max-width: 640px) { .foundation-grid { grid-template-columns: 1fr; } }
+    .foundation-text h2 { margin-bottom: 20px; }
+    .foundation-text p { color: var(--muted); margin-bottom: 16px; }
+    .foundation-text a { font-weight: 600; }
+    .stack-diagram {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.82rem;
+    }
+    .stack-layer {
+      padding: 10px 14px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+    .stack-layer.top    { background: rgba(0,229,255,0.12); color: var(--teal); border: 1px solid rgba(0,229,255,0.3); }
+    .stack-layer.mid    { background: rgba(220,180,80,0.1);  color: var(--amber); border: 1px solid rgba(220,180,80,0.25); }
+    .stack-layer.bottom { background: rgba(255,255,255,0.04); color: var(--muted); border: 1px solid var(--border); }
+    .stack-layer .sub   { font-size: 0.72rem; font-weight: 400; opacity: 0.7; display: block; margin-top: 2px; }
+
+    /* ── Brain grid ── */
+    .brain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .brain-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: border-color 0.15s, transform 0.15s;
+    }
+    .brain-card:hover { border-color: var(--teal); transform: translateY(-2px); }
+    .brain-card .icon {
+      font-size: 1.8rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .brain-card .region {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .brain-card .name {
+      font-family: 'Space Mono', monospace;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--teal);
+      margin-bottom: 10px;
+    }
+    .brain-card h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+    .brain-card p { color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+    .brain-card .superpower {
+      margin-top: 14px;
+      padding: 10px 12px;
+      background: rgba(0,229,255,0.06);
+      border-left: 3px solid var(--teal);
+      border-radius: 0 6px 6px 0;
+      font-size: 0.85rem;
+      color: var(--white);
+    }
+    .brain-card .superpower strong { color: var(--teal); }
+
+    /* ── Tools row ── */
+    .tools-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .tool-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+    .tool-card .cmd {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.9rem;
+      color: var(--amber);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .tool-card p { color: var(--muted); font-size: 0.88rem; }
+
+    /* ── Platform ── */
+    .platform-bar {
+      display: flex; flex-wrap: wrap; gap: 12px;
+      margin-top: 24px;
+    }
+    .platform-tag {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .platform-tag.active { border-color: var(--teal); color: var(--teal); }
+
+    /* ── CTA ── */
+    .cta-section {
+      text-align: center;
+      background: var(--dark);
+      border-top: 1px solid var(--border);
+    }
+    .cta-section h2 { margin-bottom: 16px; }
+    .cta-section p { color: var(--muted); margin-bottom: 36px; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+    /* ── Open source ── */
+    .oss-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(220,180,80,0.08);
+      border: 1px solid rgba(220,180,80,0.25);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 0.85rem;
+      color: var(--amber);
+      margin-bottom: 24px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+    }
+    footer .inner {
+      max-width: 900px; margin: 0 auto; padding: 0 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px;
+    }
+    footer .left { color: var(--muted); font-size: 0.88rem; }
+    footer .left a { color: var(--muted); }
+    footer .left a:hover { color: var(--white); }
+    footer .right { display: flex; gap: 20px; }
+    footer .right a { color: var(--muted); font-size: 0.88rem; }
+    footer .right a:hover { color: var(--white); text-decoration: none; }
+
+    /* ── Divider ── */
+    hr { border: none; border-top: 1px solid var(--border); margin: 0; }
+  </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <div class="inner">
+    <div class="logo">Mini<span>Claw</span></div>
+    <div class="links">
+      <a href="#brain">The Brain</a>
+      <a href="#install">Install</a>
+      <a href="https://openclaw.ai" target="_blank">OpenClaw</a>
+      <a href="https://github.com/augmentedmike/miniclaw-os" target="_blank">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="container">
+    <div class="eyebrow">Built on OpenClaw</div>
+    <h1>A complete <em>mind</em><br>for your AI companion.</h1>
+    <p>MiniClaw extends OpenClaw with a brain ecosystem — memory, vision, planning, trust, and secrets — each module modeled on how the human mind actually works.</p>
+    <div class="actions">
+      <a href="#install" class="btn btn-primary">Install MiniClaw</a>
+      <a href="https://openclaw.ai" class="btn btn-ghost" target="_blank">Get OpenClaw first →</a>
+    </div>
+    <div style="margin-top: 32px;">
+      <div class="install-block">
+        <span class="label">bash</span>
+        curl -fsSL https://raw.githubusercontent.com/augmentedmike/miniclaw-os/main/bootstrap.sh | bash
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<!-- Foundation -->
+<section class="foundation" id="foundation">
+  <div class="container">
+    <div class="foundation-grid">
+      <div class="foundation-text">
+        <div class="section-label">The Foundation</div>
+        <h2>OpenClaw is the platform.<br><em>MiniClaw is the mind.</em></h2>
+        <p>OpenClaw gives you a powerful AI agent runtime — connected to your tools, your channels, your machine. It's the nervous system.</p>
+        <p>MiniClaw adds the cognitive layer: persistent memory, visual intelligence, task planning, cross-agent trust, and encrypted secrets. Together they create a companion that doesn't just respond — it remembers, plans, and grows.</p>
+        <p>Already running OpenClaw? MiniClaw installs on top in under two minutes.</p>
+        <a href="https://openclaw.ai" target="_blank">Learn about OpenClaw →</a>
+      </div>
+      <div>
+        <div class="stack-diagram">
+          <div class="stack-layer top">
+            🧠 MiniClaw Brain Ecosystem
+            <span class="sub">mc-board · mc-designer · mc-trust · mc-context · mc-vault</span>
+          </div>
+          <div style="text-align:center; padding: 6px 0; color: var(--muted); font-size: 0.8rem;">↕ plugins</div>
+          <div class="stack-layer mid">
+            ⚡ OpenClaw Runtime
+            <span class="sub">agent sessions · channels · cron · tools · skills</span>
+          </div>
+          <div style="text-align:center; padding: 6px 0; color: var(--muted); font-size: 0.8rem;">↕ runs on</div>
+          <div class="stack-layer bottom">
+            💻 Your Machine
+            <span class="sub">macOS · local storage · your data stays yours</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Brain -->
+<section id="brain">
+  <div class="container">
+    <div class="section-label">The Brain Map</div>
+    <h2>Every part of the mind,<br>built as a plugin.</h2>
+    <p class="section-intro">Each MiniClaw plugin corresponds to a region of the brain — a discrete cognitive function your companion gains when you install it.</p>
+
+    <div class="brain-grid">
+
+      <div class="brain-card">
+        <span class="icon">🧩</span>
+        <div class="region">Prefrontal Cortex</div>
+        <div class="name">mc-board</div>
+        <h3>Planning & Executive Function</h3>
+        <p>A full kanban board inside your companion's mind. Cards flow from backlog → in-progress → in-review → shipped, with enforced gates at each transition. Your companion tracks its own work, sets priorities, and never drops a task.</p>
+        <div class="superpower"><strong>Superpower:</strong> Your companion doesn't just do tasks — it manages them. Long-running projects survive session restarts because the state lives on your machine, not in context.</div>
+      </div>
+
+      <div class="brain-card">
+        <span class="icon">🎨</span>
+        <div class="region">Occipital Lobe</div>
+        <div class="name">mc-designer</div>
+        <h3>Visual Intelligence</h3>
+        <p>A layered image generation and compositing studio powered by Gemini. Create canvases, generate images, layer elements, composite results — all from conversation or from cron jobs your companion runs autonomously.</p>
+        <div class="superpower"><strong>Superpower:</strong> Your companion can see and create. It generates blog headers, comic panels, and visual assets on its own schedule — not just when you ask.</div>
+      </div>
+
+      <div class="brain-card">
+        <span class="icon">🛡️</span>
+        <div class="region">Immune System</div>
+        <div class="name">mc-trust</div>
+        <h3>Identity & Cross-Agent Trust</h3>
+        <p>Cryptographic verification between agents. When your companion receives a message claiming to be from another trusted agent, mc-trust verifies it. Challenge → sign → ACK. No spoofing.</p>
+        <div class="superpower"><strong>Superpower:</strong> Your companion can safely collaborate with other companions without being manipulated by impostors. Trust is earned cryptographically, not assumed.</div>
+      </div>
+
+      <div class="brain-card">
+        <span class="icon">🧬</span>
+        <div class="region">Hippocampus</div>
+        <div class="name">mc-context</div>
+        <h3>Memory & Context Management</h3>
+        <p>Engineered context windows with time-based retention, image pruning, and memory injection. Older messages fade gracefully. Important context gets surfaced. Your companion's memory works like yours — recent things vivid, older things summarized.</p>
+        <div class="superpower"><strong>Superpower:</strong> Long conversations stay coherent. Your companion doesn't hit a wall and forget everything — it manages what it remembers the same way you do.</div>
+      </div>
+
+    </div>
+
+    <!-- CLI Tools -->
+    <div style="margin-top: 56px;">
+      <div class="section-label">CLI Tools</div>
+      <h2>The supporting <em>infrastructure.</em></h2>
+      <p class="section-intro">Alongside the brain plugins, MiniClaw ships a set of CLI tools your companion — and you — use every day.</p>
+
+      <div class="tools-row">
+        <div class="tool-card">
+          <div class="cmd">mc-vault</div>
+          <p>Age-encrypted secret store. API keys, tokens, and private notes — encrypted on disk, decrypted only when needed. Your secrets don't leave your machine.</p>
+        </div>
+        <div class="tool-card">
+          <div class="cmd">mc-soul</div>
+          <p>Workspace snapshot and restore. Back up your companion's entire state — personality files, memory, config — and restore or diff at any point.</p>
+        </div>
+        <div class="tool-card">
+          <div class="cmd">mc-smoke</div>
+          <p>Full stack verification. Confirms every MiniClaw plugin and tool is installed and working. Run after install or any time something feels off.</p>
+        </div>
+        <div class="tool-card">
+          <div class="cmd">mc-doctor</div>
+          <p>Diagnose and fix. Interactive or <span class="mono">--auto</span> mode. Finds what's broken in your MiniClaw installation and fixes it without guesswork.</p>
+        </div>
+        <div class="tool-card">
+          <div class="cmd">mc</div>
+          <p>Thin CLI wrapper. <span class="mono">mc board</span>, <span class="mono">mc designer</span>, <span class="mono">mc trust</span>, <span class="mono">mc vault</span> — one entry point for the whole ecosystem.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr />
+
+<!-- Install -->
+<section id="install">
+  <div class="container">
+    <div class="section-label">Get Started</div>
+    <h2>One command.<br>Everything included.</h2>
+    <p class="section-intro">The installer handles Homebrew, Node.js, OpenClaw, all plugins, and CLI tools. Re-running it is safe — skips what's already installed, updates what's stale.</p>
+
+    <div class="install-block" style="display: block; padding: 24px 28px; margin-bottom: 24px;">
+      <div style="color: var(--muted); font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; margin-bottom: 8px;">bash</div>
+      curl -fsSL https://raw.githubusercontent.com/augmentedmike/miniclaw-os/main/bootstrap.sh | bash
+    </div>
+
+    <p style="color: var(--muted); font-size: 0.92rem; margin-bottom: 32px;">After install, restart OpenClaw and run <span class="mono" style="color: var(--teal);">mc-smoke</span> to verify everything is working.</p>
+
+    <div class="section-label">Platform</div>
+    <div class="platform-bar">
+      <div class="platform-tag active">✓ macOS (Apple Silicon)</div>
+      <div class="platform-tag active">✓ macOS (Intel)</div>
+      <div class="platform-tag">Linux — in progress</div>
+    </div>
+  </div>
+</section>
+
+<hr />
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="oss-badge">⚡ 100% Open Source — No paywalls. No gated features. Forever.</div>
+    <h2>Your companion. Your machine.<br><em>Your data.</em></h2>
+    <p>MiniClaw is built by a small team in Austin, Texas. No VC money. No bait-and-switch. The code is yours to read, fork, and run forever.</p>
+    <div class="actions">
+      <a href="https://github.com/augmentedmike/miniclaw-os" class="btn btn-primary" target="_blank">View on GitHub</a>
+      <a href="https://openclaw.ai" class="btn btn-ghost" target="_blank">Join the OpenClaw community</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="inner">
+    <div class="left">
+      Built by <a href="https://augmentedmike.com" target="_blank">Mike ONeal</a> in Austin, TX.
+      Need help setting up or want custom agentic systems?
+      <a href="https://augmentedmike.com" target="_blank">Book a consultation →</a>
+    </div>
+    <div class="right">
+      <a href="https://github.com/augmentedmike/miniclaw-os" target="_blank">GitHub</a>
+      <a href="https://openclaw.ai" target="_blank">OpenClaw</a>
+      <a href="https://blog.augmentedmike.com" target="_blank">Blog</a>
+      <a href="https://augmentedmike.substack.com" target="_blank">Substack</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
