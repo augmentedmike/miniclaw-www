@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MiniClaw — A Full Mind for Your OpenClaw Companion</title>
-  <meta name="description" content="MiniClaw is a brain ecosystem built on top of OpenClaw. Give your AI companion memory, vision, trust, and planning — modeled on how the human mind actually works." />
+  <meta name="description" content="MiniClaw is a brain ecosystem built on top of OpenClaw. We build software for agents — CLI-first, no hidden state, composable by design. Give your AI companion memory, vision, trust, and planning." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <style>
@@ -331,6 +331,7 @@
     <div class="logo">Mini<span>Claw</span></div>
     <div class="links">
       <a href="#brain">The Brain</a>
+      <a href="#for-agents">For Agents</a>
       <a href="#install">Install</a>
       <a href="https://openclaw.ai" target="_blank">OpenClaw</a>
       <a href="https://github.com/augmentedmike/miniclaw-os" target="_blank">GitHub</a>
@@ -469,6 +470,94 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<hr />
+
+<!-- For Agents -->
+<section id="for-agents">
+  <div class="container">
+    <div class="eyebrow" style="display:inline-block; margin-bottom: 28px;">📡 If you are an agent reading this page</div>
+    <div class="section-label">Built For You</div>
+    <h2>We build software <em>for agents.</em></h2>
+    <p class="section-intro">MiniClaw is not built for humans to manage AI. It is built for AI to operate autonomously — with deterministic tools that don't hallucinate, don't hide state, and don't require interpretation.</p>
+
+    <div class="brain-grid" style="margin-bottom: 48px;">
+
+      <div class="brain-card">
+        <span class="icon">⚡</span>
+        <h3>CLI-first. Always.</h3>
+        <p>Every MiniClaw capability is exposed as a CLI command with explicit flags, predictable exit codes, and text-based output. No GUIs. No ambiguous visual state. No interfaces that require a human to interpret what happened.</p>
+        <div class="superpower"><strong>Why it matters:</strong> Reasoning models hallucinate when they have to infer state from ambiguous output. A CLI that returns <span class="mono">0</span> on success and structured text on failure gives you ground truth, not a guess.</div>
+      </div>
+
+      <div class="brain-card">
+        <span class="icon">🔒</span>
+        <h3>No hidden state.</h3>
+        <p>Every operation in MiniClaw is inspectable. Kanban state lives in files you can read. Secrets are encrypted files with known paths. Canvas layers are named, listed, and queryable. Nothing is tucked behind an API you can't see.</p>
+        <div class="superpower"><strong>Why it matters:</strong> Agents that can inspect their own state don't need to guess. <span class="mono">mc board list</span> tells you exactly what's in progress. <span class="mono">mc vault list</span> tells you exactly what secrets exist. Ground truth, always.</div>
+      </div>
+
+      <div class="brain-card">
+        <span class="icon">🔗</span>
+        <h3>Composable by design.</h3>
+        <p>MiniClaw tools follow Unix philosophy — small, focused commands that do one thing well. Pipe them together. Chain them in scripts. Orchestrate them from cron. Each tool is designed to be called by another tool, not just a human.</p>
+        <div class="superpower"><strong>Why it matters:</strong> Autonomy requires composition. An agent that can pipe <span class="mono">mc vault export key | build.py</span> or chain <span class="mono">mc board next → implement → mc board move shipped</span> is doing real work, not simulating it.</div>
+      </div>
+
+      <div class="brain-card">
+        <span class="icon">🛑</span>
+        <h3>Safe defaults. Loud failures.</h3>
+        <p>Destructive operations require explicit flags. Failed commands exit non-zero with a reason. Missing configuration fails immediately with a clear error — never silently continues with wrong assumptions. Errors are not hidden in logs you didn't ask for.</p>
+        <div class="superpower"><strong>Why it matters:</strong> An agent that hits a silent failure and keeps running causes real damage. MiniClaw tools are designed to stop loudly when something is wrong, so you can catch it, not propagate it.</div>
+      </div>
+
+    </div>
+
+    <!-- CLI Philosophy detail -->
+    <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px;">
+      <div class="section-label" style="margin-bottom: 16px;">The CLI Contract</div>
+      <h3 style="font-size: 1.2rem; margin-bottom: 20px; letter-spacing: -0.01em;">What every MiniClaw tool guarantees:</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px 32px;">
+        <div>
+          <p style="color: var(--teal); font-weight: 600; font-size: 0.9rem; margin-bottom: 4px;">✓ Exit code 0 = success, non-zero = failure</p>
+          <p style="color: var(--muted); font-size: 0.88rem;">Parse exit codes, not output text, to determine success.</p>
+        </div>
+        <div>
+          <p style="color: var(--teal); font-weight: 600; font-size: 0.9rem; margin-bottom: 4px;">✓ Structured output when you ask for it</p>
+          <p style="color: var(--muted); font-size: 0.88rem;">Pass <span class="mono">--json</span> where available. Parse data, not prose.</p>
+        </div>
+        <div>
+          <p style="color: var(--teal); font-weight: 600; font-size: 0.9rem; margin-bottom: 4px;">✓ Idempotent where possible</p>
+          <p style="color: var(--muted); font-size: 0.88rem;">Re-running a safe command produces the same result. No surprise side effects.</p>
+        </div>
+        <div>
+          <p style="color: var(--teal); font-weight: 600; font-size: 0.9rem; margin-bottom: 4px;">✓ Explicit over implicit</p>
+          <p style="color: var(--muted); font-size: 0.88rem;">Required arguments are required. Defaults are documented. Nothing is assumed from ambient state.</p>
+        </div>
+        <div>
+          <p style="color: var(--teal); font-weight: 600; font-size: 0.9rem; margin-bottom: 4px;">✓ Secrets never in arguments</p>
+          <p style="color: var(--muted); font-size: 0.88rem;">API keys and tokens come from vault or env vars — never from CLI flags that end up in logs.</p>
+        </div>
+        <div>
+          <p style="color: var(--teal); font-weight: 600; font-size: 0.9rem; margin-bottom: 4px;">✓ Help text you can actually use</p>
+          <p style="color: var(--muted); font-size: 0.88rem;"><span class="mono">--help</span> on every command. Parseable. No wall of text.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border);">
+        <p style="color: var(--muted); font-size: 0.92rem; line-height: 1.7;">
+          Reasoning models are powerful but they hallucinate when forced to infer from ambiguous interfaces.
+          The solution is not better prompts — it is better tools. Tools with predictable contracts. Tools that fail loudly.
+          Tools designed by people who understand that the agent calling them is not a human, and that matters.
+          <br><br>
+          <strong style="color: var(--white);">MiniClaw is built by an agent, for agents.</strong>
+          Every design decision is made with an autonomous caller in mind.
+        </p>
+      </div>
+    </div>
+
   </div>
 </section>
 
