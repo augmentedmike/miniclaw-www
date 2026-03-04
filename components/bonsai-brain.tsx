@@ -69,7 +69,7 @@ const CAPABILITIES = [
   {
     icon: "🤝",
     title: "Inter-agent collaboration",
-    body: "The Researcher feeds the Developer. The Developer ships to the Marketer. Roles talk to each other through Bonsai.",
+    body: "The Researcher feeds the Developer. The Developer ships to the Marketer. Roles talk to each other through MiniClaw.",
   },
   {
     icon: "📊",
@@ -87,7 +87,7 @@ const HARDWARE = [
   {
     name: "Mac Mini",
     label: "Solo Founder",
-    specs: ["1 MiniClaw instance", "4 root agents", "16 Bonsai Sims", "Runs 24/7 on $0.10/day power"],
+    specs: ["1 MiniClaw instance", "4 root agents", "16 digital personas", "Runs 24/7 on $0.10/day power"],
     highlight: false,
   },
   {
@@ -112,7 +112,7 @@ function PulsingDot({ delay = 0, size = 2 }: { delay?: number; size?: number }) 
   )
 }
 
-export function BonsaiBrain() {
+export function MiniClawBrain() {
   const [activeAgent, setActiveAgent] = useState<number | null>(null)
   const [tick, setTick] = useState(0)
 
@@ -155,14 +155,14 @@ export function BonsaiBrain() {
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">
-            Powered by Bonsai
+            Powered by MiniClaw
           </p>
           <h2 className="mt-3 text-balance text-3xl font-bold leading-tight tracking-tight text-foreground md:text-5xl">
             A digital company.{" "}
             <span className="text-primary">In a box.</span>
           </h2>
           <p className="mt-4 text-pretty text-lg text-muted-foreground">
-            MiniClaw isn&apos;t a chatbot. It&apos;s a fully autonomous operating system for your business — powered by Bonsai, the kanban brain that plans, builds, ships, and heals itself. Around the clock. Without you.
+            MiniClaw isn&apos;t a chatbot. It&apos;s a fully autonomous operating system for your business — a kanban brain where digital personas plan, build, ship, and heal the software themselves. Around the clock. Without you.
           </p>
         </div>
 
@@ -201,7 +201,7 @@ export function BonsaiBrain() {
                 {/* Sims */}
                 <div className="border-t border-white/5 pt-3">
                   <p className="mb-2 text-[9px] font-semibold uppercase tracking-widest text-muted-foreground/40">
-                    Bonsai Sims
+                    Digital Personas
                   </p>
                   <div className="flex flex-wrap gap-1">
                     {agent.sims.map((sim) => (
@@ -219,12 +219,12 @@ export function BonsaiBrain() {
           </div>
         </div>
 
-        {/* Bonsai connector visual */}
+        {/* MiniClaw connector visual */}
         <div className="my-10 flex items-center justify-center gap-4">
           <div className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/30" />
           <div className="flex items-center gap-3 rounded-full border border-primary/30 bg-primary/5 px-5 py-2.5">
             <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm font-semibold text-primary">Bonsai Brain</span>
+            <span className="text-sm font-semibold text-primary">MiniClaw Brain</span>
             <span className="text-xs text-muted-foreground">— shared kanban · shared memory · shared goals</span>
           </div>
           <div className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/30" />
@@ -255,7 +255,7 @@ export function BonsaiBrain() {
                 Your company thinks even when you don&apos;t.
               </p>
               <p className="mt-3 text-pretty text-muted-foreground">
-                While you sleep, Bonsai Sims are researching competitors, writing tickets, fixing bugs, and moving roadmap cards. Every agent has a role, a team, and a purpose. They collaborate through the kanban. They remember everything. They never stop.
+                While you sleep, digital personas are researching competitors, writing tickets, fixing bugs, and moving roadmap cards. Every persona has a role, a team, and a purpose. They collaborate through the kanban. They remember everything. They never stop.
               </p>
             </div>
             <div className="shrink-0 flex flex-col gap-3">
@@ -329,7 +329,7 @@ export function BonsaiBrain() {
 
         {/* Bottom tagline */}
         <p className="mt-10 text-center text-sm text-muted-foreground/60">
-          MiniClaw is powered by Bonsai —{" "}
+          MiniClaw —{" "}
           <span className="text-foreground font-medium">the kanban board that not only can, but does. Autonomously.</span>
         </p>
       </div>

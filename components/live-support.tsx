@@ -94,7 +94,7 @@ export function LiveSupport() {
                   <ul className="mt-3 space-y-1.5">
                     {[
                       "MiniClaw first-time setup",
-                      "Bonsai onboarding",
+                      "MiniClaw onboarding",
                       "MiniRack configuration",
                       "Custom digital companion creation",
                     ].map((item) => (

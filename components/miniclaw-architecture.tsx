@@ -45,22 +45,22 @@ const whoItsFor = [
   "CTOs",
 ]
 
-export function MeetBonsai() {
+export function MiniClawArchitecture() {
   return (
-    <section id="bonsai" className="relative overflow-hidden px-6 py-24 md:py-32">
+    <section id="architecture" className="relative overflow-hidden px-6 py-24 md:py-32">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
 
       <div className="relative mx-auto max-w-5xl">
         {/* Header */}
         <div className="text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">
-            The brain behind MiniClaw
+            How MiniClaw works
           </p>
           <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-            Meet Bonsai
+            Digital personas. Real work.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-pretty text-lg text-muted-foreground">
-            Bonsai is a kanban board where agents do the actual work. Not a copilot. Not a chatbot.{" "}
+            MiniClaw runs a kanban board where digital personas do the actual work. Not a copilot. Not a chatbot.{" "}
             <span className="font-medium text-foreground">A team that ships.</span>
           </p>
         </div>
@@ -99,24 +99,22 @@ export function MeetBonsai() {
           </div>
         </div>
 
-        {/* CTA to Bonsai site */}
+        {/* CTA */}
         <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a
-            href="https://usebonsai.org"
+            href="https://github.com/augmentedmike/miniclaw-os"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-primary/40 bg-primary/10 px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/20"
           >
-            Visit usebonsai.org
+            Get MiniClaw
             <ArrowRight className="h-4 w-4" />
           </a>
           <a
-            href="https://github.com/augmentedmike/bonsai-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/#faq"
             className="inline-flex items-center gap-2 rounded-lg border border-border/60 bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
           >
-            View on GitHub
+            Read the FAQ
             <ArrowRight className="h-4 w-4" />
           </a>
         </div>

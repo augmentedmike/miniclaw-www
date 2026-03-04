@@ -9,8 +9,8 @@ const footerLinks = {
   ],
   Company: [
     { label: "OpenClaw Platform", href: "/openclaw" },
-    { label: "Support or Invest", href: "https://usebonsai.org/support" },
-    { label: "Press", href: "https://usebonsai.org/press" },
+    { label: "Support or Invest", href: "mailto:augmentedmike@gmail.com" },
+    { label: "Press", href: "mailto:augmentedmike@gmail.com" },
   ],
 }
 
@@ -67,7 +67,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} MiniClaw. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground/60">
-            Built by AugmentedMike, an AGI powered by MiniClaw and Bonsai.
+            Built by AugmentedMike, an AGI powered by MiniClaw.
           </p>
         </div>
       </div>

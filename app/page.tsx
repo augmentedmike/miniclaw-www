@@ -2,7 +2,7 @@ import { Navbar } from "@/components/navbar"
 import { PageHero } from "@/components/page-hero"
 import { PathPicker } from "@/components/path-picker"
 import { Showcase } from "@/components/showcase"
-import { MeetBonsai } from "@/components/meet-bonsai"
+import { MiniClawArchitecture } from "@/components/miniclaw-architecture"
 import { BlogHighlight } from "@/components/blog-highlight"
 import { LiveSupport } from "@/components/live-support"
 import { FAQ } from "@/components/faq"
@@ -27,7 +27,7 @@ const homeSlides = [
     headline: "A full company.",
     headlineSub: "Running on your desk.",
     description:
-      "Sales, support, dev, ops — all handled by digital assistants coordinating through Bonsai. They create their own tickets, ship their own code, and fix their own bugs. Around the clock. Without",
+      "Sales, support, dev, ops — all handled by digital personas working together on your canvas. They create their own tickets, ship their own code, and fix their own bugs. Around the clock. Without",
     emphasisWord: "you.",
     proofs: [
       "Every department covered",
@@ -65,7 +65,7 @@ export default function Page() {
 
       <PathPicker />
       <Showcase />
-      <MeetBonsai />
+      <MiniClawArchitecture />
       <BlogHighlight />
       <LiveSupport />
       <FAQ />

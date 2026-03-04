@@ -4,7 +4,7 @@ import { GitCommit, Ticket, FolderKanban } from "lucide-react"
 
 const stats = [
   { value: "132", label: "Commits in 22 days", icon: GitCommit },
-  { value: "12", label: "Projects running on Bonsai", icon: FolderKanban },
+  { value: "12", label: "Projects running on MiniClaw", icon: FolderKanban },
   { value: "197", label: "Tickets created and worked", icon: Ticket },
 ]
 
@@ -12,7 +12,7 @@ const timeline = [
   {
     date: "Feb 4",
     marker: "Day 0 — First commit",
-    title: "Bonsai is born",
+    title: "MiniClaw is born",
     description:
       "Initial Next.js scaffold. One person, one idea.",
   },
@@ -25,7 +25,7 @@ const timeline = [
   },
   {
     date: "Feb 7",
-    marker: "Day 3 — Bonsai starts building itself",
+    marker: "Day 3 — MiniClaw starts building itself",
     title: "First tickets worked by Sims",
     description:
       "Speech-to-text, logo concepts, auto-focus UX. Merge tracking goes live.",
@@ -33,9 +33,9 @@ const timeline = [
   {
     date: "Feb 8",
     marker: "Day 4 — Multi-project architecture",
-    title: "Bonsai becomes multi-tenant",
+    title: "MiniClaw goes multi-tenant",
     description:
-      "Project-scoped routes, per-project Sims, settings, and the shipping pipeline. Bonsai becomes a multi-tenant system.",
+      "Project-scoped routes, per-project personas, settings, and the shipping pipeline. MiniClaw becomes a multi-tenant system.",
   },
   {
     date: "Feb 11",
@@ -75,7 +75,7 @@ const timeline = [
   {
     date: "Feb 21",
     marker: "Day 17 — Dogfooding goes live",
-    title: "Bonsai builds Bonsai full-time",
+    title: "MiniClaw builds MiniClaw full-time",
     description:
       "agent symlinks, persona editing, and UI polish — all shipped by the agents.",
   },
@@ -84,11 +84,11 @@ const timeline = [
     marker: "Day 22 — 38 commits in a single day",
     title: "The Sims are shipping faster than any human team",
     description:
-      "Operator dispatch, unified chat panels, role archetypes, agent activity dashboard on Bonsai. MiniRack configurator, rotating hero, Built with Bonsai timeline, branding overhaul on MiniClaw. Both products shipping in parallel, autonomously.",
+      "Operator dispatch, unified chat panels, role archetypes, agent activity dashboard on MiniClaw. MiniRack configurator, rotating hero, Built with MiniClaw timeline, branding overhaul. All shipping in parallel, autonomously.",
   },
 ]
 
-export function BuiltWithBonsai() {
+export function BuiltWithMiniClaw() {
   return (
     <section className="relative overflow-hidden px-6 py-24 md:py-32">
       {/* Background */}
@@ -104,7 +104,7 @@ export function BuiltWithBonsai() {
             We built the boat while sailing the sea.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-pretty text-lg text-muted-foreground">
-            MiniClaw and Bonsai were built using MiniClaw and Bonsai — the software, the websites, all of it. Every feature, every bug fix, every line of code — written by Sims, reviewed by a human, and shipped.{" "}
+            MiniClaw was built using MiniClaw — the software, the website, all of it. Every feature, every bug fix, every line of code — written by digital personas, reviewed by a human, and shipped.{" "}
             <span className="font-medium text-foreground">
               The tools build themselves.
             </span>

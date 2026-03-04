@@ -23,8 +23,8 @@ export function OpenSource() {
             </h3>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            MiniClaw is built by a small team — mostly Sims, guided by one
-            human. There&apos;s no VC money and no corporate backer. Server
+            MiniClaw is built by a small team — mostly digital personas, guided
+            by one human. There&apos;s no VC money and no corporate backer. Server
             costs, API bills, and hardware don&apos;t pay themselves. If
             MiniClaw has saved you time, made you money, or just made your life
             a little easier — consider supporting the project so we can keep
@@ -35,7 +35,7 @@ export function OpenSource() {
         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Button size="lg" className="gap-2" asChild>
             <a
-              href="https://usebonsai.org/support"
+              href="mailto:augmentedmike@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Support page coming soon"
