@@ -43,7 +43,7 @@ export function Navbar() {
 
         <div className="hidden items-center gap-3 md:flex">
           <Button variant="ghost" size="sm" asChild>
-            <a href="#download">Download</a>
+            <a href="https://github.com/augmentedmike/miniclaw-os">Download</a>
           </Button>
           <Button size="sm" asChild>
             <a href="/preorder">Order Mac Mini</a>
@@ -74,7 +74,7 @@ export function Navbar() {
             ))}
             <div className="mt-3 flex flex-col gap-2 border-t border-border/50 pt-4">
               <Button variant="outline" size="sm" asChild>
-                <a href="#download" onClick={() => setMobileOpen(false)}>Download</a>
+                <a href="https://github.com/augmentedmike/miniclaw-os" onClick={() => setMobileOpen(false)}>Download</a>
               </Button>
               <Button size="sm" asChild>
                 <a href="/preorder" onClick={() => setMobileOpen(false)}>Order Mac Mini</a>

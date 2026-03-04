@@ -190,7 +190,7 @@ export function Hero() {
 
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
             <Button size="lg" className="gap-2 px-8 text-base" asChild>
-              <a href="#download">
+              <a href="https://github.com/augmentedmike/miniclaw-os">
                 <Download className="h-4 w-4" />
                 Download Free
               </a>

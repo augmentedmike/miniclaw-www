@@ -14,8 +14,9 @@ const plans = [
     period: "",
     description: "Get MiniClaw running on your existing Mac in minutes.",
     icon: Download,
-    cta: "Notify Me",
-    timeline: "Available soon!",
+    cta: "Download Free",
+    href: "https://github.com/augmentedmike/miniclaw-os",
+    timeline: "Available now on GitHub",
     features: [
       "One-click installer for macOS & Windows",
       "Full AI assistant capabilities",

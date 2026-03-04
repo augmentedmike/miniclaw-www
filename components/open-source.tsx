@@ -46,7 +46,7 @@ export function OpenSource() {
           </Button>
           <Button variant="outline" size="lg" className="gap-2" asChild>
             <a
-              href="https://github.com/augmentedmike/miniclaw"
+              href="https://github.com/augmentedmike/miniclaw-os"
               target="_blank"
               rel="noopener noreferrer"
             >

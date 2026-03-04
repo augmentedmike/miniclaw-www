@@ -119,7 +119,7 @@ export function PersonaGallery() {
         <div className="mt-12 text-center">
           <p className="text-lg text-muted-foreground">
             Ready to build yours?{" "}
-            <a href="#download" className="font-semibold text-primary underline-offset-4 hover:underline">
+            <a href="https://github.com/augmentedmike/miniclaw-os" className="font-semibold text-primary underline-offset-4 hover:underline">
               Get started free
             </a>
           </p>
