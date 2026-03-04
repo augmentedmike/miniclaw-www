@@ -310,7 +310,7 @@ export function BonsaiBrain() {
           </p>
           <div className="flex flex-col items-center gap-3 sm:flex-row">
             <a
-              href="https://github.com/augmentedmike/pfc-openclaw"
+              href="https://github.com/augmentedmike/miniclaw-os"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-6 py-3 text-sm font-semibold text-primary transition-all hover:bg-primary/20 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/10"
@@ -322,7 +322,7 @@ export function BonsaiBrain() {
               </svg>
             </a>
             <code className="rounded-lg border border-border/40 bg-card/80 px-4 py-2.5 text-xs text-muted-foreground font-mono select-all">
-              openclaw plugins install pfc-openclaw
+              openclaw plugins install mc-board
             </code>
           </div>
         </div>
