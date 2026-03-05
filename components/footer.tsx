@@ -1,9 +1,7 @@
 
 const footerLinks = {
   Product: [
-    { label: "AI Company", href: "/ai-company-in-a-box" },
     { label: "AI Companion", href: "/best-ai-companion" },
-    { label: "Pricing", href: "/ai-company-in-a-box#pricing" },
     { label: "FAQ", href: "/#faq" },
     { label: "Preorder", href: "/preorder" },
   ],
