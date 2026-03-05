@@ -11,42 +11,42 @@ import { Footer } from "@/components/footer"
 
 const homeSlides = [
   {
-    headline: "Your super agent.",
-    headlineSub: "Always working.",
+    headline: "Ships code. Writes posts. Grows itself.",
+    headlineSub: "Actually works.",
     description:
-      "A single, capable AI that handles any task — coding, design, research, support, and more. MiniClaw adds the cognitive layer: persistent memory, visual intelligence, task planning, trusted communication, and encrypted secrets. Together they create a super agent that doesn't just respond — it remembers, plans, and grows with you over time.",
-    emphasisWord: "grows.",
+      "MiniClaw builds real products. Autonomous agents push to GitHub, publish to Substack, generate design assets, and manage business workflows. No approval needed. No context-switching. Your agent makes the decisions — reads the ticket, plans the work, ships the result. We built MiniClaw itself this way. Now you can too.",
+    emphasisWord: "itself.",
     proofs: [
-      "Ready in 2 minutes",
-      "Zero lines of code",
-      "Remembers everything",
+      "Pushed 200+ commits this month",
+      "18 blog posts shipped",
+      "Decisions made autonomously",
+      "Running on your machine",
+    ],
+  },
+  {
+    headline: "Your agent. Your products.",
+    headlineSub: "On your timeline.",
+    description:
+      "Give your agent a problem. It reads, plans, codes, designs, tests, and ships — while you sleep. MiniClaw provides persistent memory, visual intelligence, task planning, and decision autonomy. No prompting. No babysitting. Just work that gets done.",
+    emphasisWord: "ships.",
+    proofs: [
+      "24/7 autonomous execution",
+      "Remembers your entire codebase",
+      "Manages CI/CD + Git branching",
       "Stays on your machine",
     ],
   },
   {
-    headline: "Research, build, create.",
-    headlineSub: "At the speed of thought.",
+    headline: "Edge-first. No vendor lock-in.",
+    headlineSub: "You own everything.",
     description:
-      "Stop context-switching. Your super agent writes code, designs graphics, conducts research, writes copy, plans projects, and learns your patterns. It handles the work while you focus on strategy, judgment, and the things only humans can do. Paired or autonomous.",
-    emphasisWord: "autonomous.",
+      "All memory and reasoning lives on your machine — not in someone else's cloud. Your agent works when you're offline. Git is the single source of truth. No external API calls for core capability. Port your agent to any machine, any platform, any time. Full control. Full transparency.",
+    emphasisWord: "yours.",
     proofs: [
-      "Coding + design",
-      "Research + writing",
-      "24/7 availability",
-      "Learns your style",
-    ],
-  },
-  {
-    headline: "Your digital companion.",
-    headlineSub: "Always by your side.",
-    description:
-      "Not a tool. A thinking partner. MiniClaw knows your context, remembers your journey, and adapts to how you work. Whether you need strategic counsel, a sparring partner, or someone to rubber-duck your ideas with — your super agent is there, always learning from the time you spend together.",
-    emphasisWord: "together.",
-    proofs: [
-      "Remembers everything",
-      "Your look & personality",
-      "Real voice & presence",
-      "Yours. Always.",
+      "All memory local + encrypted",
+      "Works offline",
+      "Open source software",
+      "Export anytime, forever",
     ],
   },
 ]
