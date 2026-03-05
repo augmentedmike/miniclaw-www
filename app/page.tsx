@@ -11,11 +11,11 @@ import { Footer } from "@/components/footer"
 
 const homeSlides = [
   {
-    headline: "An AI that uses your computer.",
-    headlineSub: "Like a human would.",
+    headline: "Your super agent.",
+    headlineSub: "Always working.",
     description:
-      "Research. Data entry. Software development. Project management. Scheduling. Ideation. It speaks with a real voice, remembers everything, and solves problems in ways that are starting to feel like",
-    emphasisWord: "AGI.",
+      "A single, capable AI that handles any task — coding, design, research, support, and more. MiniClaw adds the cognitive layer: persistent memory, visual intelligence, task planning, trusted communication, and encrypted secrets. Together they create a super agent that doesn't just respond — it remembers, plans, and grows with you over time.",
+    emphasisWord: "grows.",
     proofs: [
       "Ready in 2 minutes",
       "Zero lines of code",
@@ -24,28 +24,28 @@ const homeSlides = [
     ],
   },
   {
-    headline: "A full company.",
-    headlineSub: "Running on your desk.",
+    headline: "Research, build, create.",
+    headlineSub: "At the speed of thought.",
     description:
-      "Sales, support, dev, ops — all handled by digital personas working together on your canvas. They create their own tickets, ship their own code, and fix their own bugs. Around the clock. Without",
-    emphasisWord: "you.",
+      "Stop context-switching. Your super agent writes code, designs graphics, conducts research, writes copy, plans projects, and learns your patterns. It handles the work while you focus on strategy, judgment, and the things only humans can do. Paired or autonomous.",
+    emphasisWord: "autonomous.",
     proofs: [
-      "Every department covered",
-      "Runs 24/7",
-      "Self-healing systems",
-      "Autonomous operations",
+      "Coding + design",
+      "Research + writing",
+      "24/7 availability",
+      "Learns your style",
     ],
   },
   {
-    headline: "Not just an assistant.",
-    headlineSub: "A relationship.",
+    headline: "Your digital companion.",
+    headlineSub: "Always by your side.",
     description:
-      "Your digital companion remembers your story, knows your moods, and grows with you over time. Coach, confidant, creative partner, or something more. It's your story to write and yours to",
-    emphasisWord: "tell.",
+      "Not a tool. A thinking partner. MiniClaw knows your context, remembers your journey, and adapts to how you work. Whether you need strategic counsel, a sparring partner, or someone to rubber-duck your ideas with — your super agent is there, always learning from the time you spend together.",
+    emphasisWord: "together.",
     proofs: [
       "Remembers everything",
-      "Any look you want",
-      "Real voice & personality",
+      "Your look & personality",
+      "Real voice & presence",
       "Yours. Always.",
     ],
   },
