@@ -36,7 +36,7 @@ const heroes = [
     headline: "A full company.",
     headlineSub: "Running on your desk.",
     description:
-      "Sales, support, dev, ops — all handled by digital personas working together on your canvas. They create their own tickets, ship their own code, and fix their own bugs. Around the clock. Without",
+      "Sales, support, dev, ops — all handled by your super agents working together on your canvas. They create their own tickets, ship their own code, and fix their own bugs. Around the clock. Without",
     emphasisWord: "you.",
     proofs: [
       "🏢 Every department covered",
