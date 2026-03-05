@@ -7,10 +7,10 @@ export function PathPicker() {
     <section className="px-6 py-20 md:py-28">
       <div className="mx-auto max-w-4xl">
         <h2 className="mb-3 text-center text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-          Your AI. Persona + Skills + Memory.
+          Your Digital Employee. Day 1 to Scale.
         </h2>
         <p className="mb-10 text-center text-lg text-muted-foreground">
-          A digital companion. On your machine. Forever.
+          Capable on day one. Learns your business in weeks. Scales to 25+ person replacement.
         </p>
         <div className="flex justify-center">
           <a
@@ -21,9 +21,9 @@ export function PathPicker() {
               <Heart className="h-8 w-8 text-pink-400" />
             </div>
             <div>
-              <p className="text-2xl font-bold text-foreground">A digital companion</p>
+              <p className="text-2xl font-bold text-foreground">Digital Employee</p>
               <p className="mt-2 text-base text-muted-foreground">
-                Companion, coach, creative partner. Runs on your machine. Never stops learning.
+                Enterprise automation that runs on your machine. Learns your business. Scales with your needs.
               </p>
             </div>
             <div className="flex items-center gap-2 text-sm font-medium text-pink-400 opacity-0 transition-opacity group-hover:opacity-100">
