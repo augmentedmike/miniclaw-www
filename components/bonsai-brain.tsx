@@ -87,7 +87,7 @@ const HARDWARE = [
   {
     name: "Mac Mini",
     label: "Solo Founder",
-    specs: ["1 MiniClaw instance", "4 root agents", "16 digital personas", "Runs 24/7 on $0.10/day power"],
+    specs: ["1 MiniClaw instance", "4 root agents", "16 worker agents", "Runs 24/7 on $0.10/day power"],
     highlight: false,
   },
   {
@@ -162,7 +162,7 @@ export function MiniClawBrain() {
             <span className="text-primary">In a box.</span>
           </h2>
           <p className="mt-4 text-pretty text-lg text-muted-foreground">
-            MiniClaw isn&apos;t a chatbot. It&apos;s a fully autonomous operating system for your business — a kanban brain where digital personas plan, build, ship, and heal the software themselves. Around the clock. Without you.
+            MiniClaw isn&apos;t a chatbot. It&apos;s a fully autonomous operating system for your business — a kanban brain where super agents plan, build, ship, and heal the software themselves. Around the clock. Without you.
           </p>
         </div>
 
@@ -201,7 +201,7 @@ export function MiniClawBrain() {
                 {/* Sims */}
                 <div className="border-t border-white/5 pt-3">
                   <p className="mb-2 text-[9px] font-semibold uppercase tracking-widest text-muted-foreground/40">
-                    Digital Personas
+                    Worker Agents
                   </p>
                   <div className="flex flex-wrap gap-1">
                     {agent.sims.map((sim) => (
@@ -255,7 +255,7 @@ export function MiniClawBrain() {
                 Your company thinks even when you don&apos;t.
               </p>
               <p className="mt-3 text-pretty text-muted-foreground">
-                While you sleep, digital personas are researching competitors, writing tickets, fixing bugs, and moving roadmap cards. Every persona has a role, a team, and a purpose. They collaborate through the kanban. They remember everything. They never stop.
+                While you sleep, your super agents are researching competitors, writing tickets, fixing bugs, and moving roadmap cards. Every agent has a role, a team, and a purpose. They collaborate through the kanban. They remember everything. They never stop.
               </p>
             </div>
             <div className="shrink-0 flex flex-col gap-3">

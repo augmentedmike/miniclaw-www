@@ -104,7 +104,7 @@ export function BuiltWithMiniClaw() {
             We built the boat while sailing the sea.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-pretty text-lg text-muted-foreground">
-            MiniClaw was built using MiniClaw — the software, the website, all of it. Every feature, every bug fix, every line of code — written by digital personas, reviewed by a human, and shipped.{" "}
+            MiniClaw was built using MiniClaw — the software, the website, all of it. Every feature, every bug fix, every line of code — written by super agents, reviewed by a human, and shipped.{" "}
             <span className="font-medium text-foreground">
               The tools build themselves.
             </span>

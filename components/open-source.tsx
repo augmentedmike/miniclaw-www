@@ -23,7 +23,7 @@ export function OpenSource() {
             </h3>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            MiniClaw is built by a small team — mostly digital personas, guided
+            MiniClaw is built by a small team — a super agent, guided
             by one human. There&apos;s no VC money and no corporate backer. Server
             costs, API bills, and hardware don&apos;t pay themselves. If
             MiniClaw has saved you time, made you money, or just made your life

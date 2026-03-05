@@ -23,7 +23,7 @@ export function PathPicker() {
             <div>
               <p className="text-2xl font-bold text-foreground">A digital company</p>
               <p className="mt-2 text-base text-muted-foreground">
-                Autonomous teams, MiniRack, digital personas
+                Super agents, team coordination, enterprise automation
               </p>
             </div>
             <div className="flex items-center gap-2 text-sm font-medium text-primary opacity-0 transition-opacity group-hover:opacity-100">

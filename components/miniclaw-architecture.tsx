@@ -57,11 +57,11 @@ export function MiniClawArchitecture() {
             How MiniClaw works
           </p>
           <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-            Digital personas. Real work.
+            Your super agent. Real work.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-pretty text-lg text-muted-foreground">
-            MiniClaw runs a kanban board where digital personas do the actual work. Not a copilot. Not a chatbot.{" "}
-            <span className="font-medium text-foreground">A team that ships.</span>
+            MiniClaw runs a kanban board where your super agent handles the actual work. Not a copilot. Not a chatbot.{" "}
+            <span className="font-medium text-foreground">A thinking partner that ships.</span>
           </p>
         </div>
 
