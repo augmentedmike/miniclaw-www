@@ -5,9 +5,8 @@ const footerLinks = {
     { label: "Preorder", href: "/preorder" },
   ],
   Company: [
-    { label: "OpenClaw Platform", href: "/openclaw" },
-    { label: "Support or Invest", href: "mailto:augmentedmike@gmail.com" },
-    { label: "Press", href: "mailto:augmentedmike@gmail.com" },
+    { label: "Support or Invest", href: "mailto:support@helloam.bot" },
+    { label: "Press", href: "https://helloam.bot/press" },
   ],
 }
 

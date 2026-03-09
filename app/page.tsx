@@ -100,26 +100,25 @@ export default function Page() {
       <Navbar />
       <PageHero slides={homeSlides} />
 
-      {/* 1. What AM is */}
+
       <CompanionIntro />
 
-      {/* 2. Your AI. Your data. Not a vendor's. */}
       <PortabilitySection />
       <YourData />
 
-      {/* 3. What it can do — features */}
+
       <PluginsGrid />
 
-      {/* 4. The kanban brain */}
+
       <KanbanSection />
 
-      {/* 5. Personality — name, voice, look, persona */}
+
       <Personalize />
 
-      {/* 6. Real digital work done */}
-      <Showcase />
       <MiniClawArchitecture />
 
+      <Showcase />
+      
       <BlogHighlight />
       <LiveSupport />
       <FAQ />
