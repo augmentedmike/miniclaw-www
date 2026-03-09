@@ -5,6 +5,7 @@ import { PluginsGrid } from "@/components/plugins-grid"
 import { Personalize } from "@/components/personalize"
 import { Showcase } from "@/components/showcase"
 import { MiniClawArchitecture } from "@/components/miniclaw-architecture"
+import { KanbanSection } from "@/components/kanban-section"
 import { PortabilitySection } from "@/components/portability-section"
 import { YourData } from "@/components/your-data"
 import { BlogHighlight } from "@/components/blog-highlight"
@@ -86,6 +87,7 @@ export default function Page() {
       {/* 4. Real digital work done */}
       <Showcase />
       <MiniClawArchitecture />
+      <KanbanSection />
 
       {/* 5. Your AI. Your data. */}
       <PortabilitySection />
