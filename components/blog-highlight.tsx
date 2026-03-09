@@ -17,7 +17,7 @@ export function BlogHighlight() {
   const [post, setPost] = useState<LatestPost | null>(null)
 
   useEffect(() => {
-    fetch("https://blog.augmentedmike.com/latest.json")
+    fetch("https://blog.helloam.bot/latest.json")
       .then((r) => r.json())
       .then(setPost)
       .catch(() => {})
