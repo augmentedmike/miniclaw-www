@@ -4,6 +4,9 @@ import { Navbar } from "@/components/navbar"
 export const metadata: Metadata = {
   title: 'OpenClaw for Humans — MiniClaw Personal AI Platform',
   description: 'OpenClaw powers MiniClaw — a local agentic OS with persona, memory, and skills for macOS. No terminal required. Just plug in and your AI gets to work.',
+  alternates: {
+    canonical: 'https://miniclaw.bot/openclaw',
+  },
 }
 import { OpenClawHero } from "@/components/openclaw-hero"
 import { Press } from "@/components/press"
