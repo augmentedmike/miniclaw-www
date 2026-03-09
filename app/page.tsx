@@ -78,22 +78,22 @@ export default function Page() {
       {/* 1. What AM is */}
       <CompanionIntro />
 
-      {/* 2. What it can do — plugin ecosystem */}
-      <PluginsGrid />
-
-      {/* 3. The kanban brain */}
-      <KanbanSection />
-
-      {/* 4. Personality — name, voice, look, persona */}
-      <Personalize />
-
-      {/* 5. Real digital work done */}
-      <Showcase />
-      <MiniClawArchitecture />
-
-      {/* 5. Your AI. Your data. */}
+      {/* 2. Your AI. Your data. Not a vendor's. */}
       <PortabilitySection />
       <YourData />
+
+      {/* 3. What it can do — features */}
+      <PluginsGrid />
+
+      {/* 4. The kanban brain */}
+      <KanbanSection />
+
+      {/* 5. Personality — name, voice, look, persona */}
+      <Personalize />
+
+      {/* 6. Real digital work done */}
+      <Showcase />
+      <MiniClawArchitecture />
 
       <BlogHighlight />
       <LiveSupport />
