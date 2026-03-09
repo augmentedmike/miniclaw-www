@@ -122,7 +122,7 @@ export function PluginsGrid() {
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">
-            Plugin ecosystem
+            Features
           </p>
           <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-foreground md:text-5xl">
             Everything stock OpenClaw is missing.
