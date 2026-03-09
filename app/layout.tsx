@@ -67,16 +67,77 @@ export const viewport: Viewport = {
   themeColor: '#0a0a0a',
 }
 
-const organizationJsonLd = {
+const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'MiniClaw',
-  url: 'https://miniclaw.bot',
-  logo: 'https://miniclaw.bot/og-image-square.png',
-  description:
-    'OpenClaw for humans. Build an AI with a real personality, memory, and powerful skills — no terminal, no config files, no tech degree required.',
-  sameAs: [
-    'https://github.com/augmentedmike/miniclaw-os',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://miniclaw.bot/#organization',
+      name: 'MiniClaw',
+      url: 'https://miniclaw.bot',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://miniclaw.bot/og-image-square.png',
+      },
+      description:
+        'MiniClaw is the plugin ecosystem and consumer product layer for OpenClaw — an open-source agentic OS for macOS. Build AI agents with real personality, memory, and powerful skills.',
+      sameAs: [
+        'https://github.com/augmentedmike/miniclaw-os',
+        'https://helloam.bot',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://miniclaw.bot/#website',
+      url: 'https://miniclaw.bot',
+      name: 'miniclaw.bot',
+      publisher: {
+        '@id': 'https://miniclaw.bot/#organization',
+      },
+    },
+    {
+      '@type': 'SoftwareApplication',
+      '@id': 'https://miniclaw.bot/#product',
+      name: 'MiniClaw',
+      alternateName: ['MiniClaw OS', 'miniclaw.bot'],
+      applicationCategory: 'DeveloperApplication',
+      applicationSubCategory: 'Agentic OS, AI Agent Platform',
+      operatingSystem: 'macOS',
+      url: 'https://miniclaw.bot',
+      description:
+        'MiniClaw is the plugin ecosystem built on top of OpenClaw — an open-source agentic OS for macOS. It provides personality, memory, skills, and tools that run as a local AI agent on your Mac. MiniClaw powers Amelia (helloam.bot) — a soul-bonded personal AI companion. The public plugin repo lives at github.com/augmentedmike/miniclaw-os.',
+      keywords:
+        'agentic OS, AI agent, macOS AI, OpenClaw, MiniClaw, local AI, plugin ecosystem, personal AI',
+      softwareVersion: '1.0',
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/PreOrder',
+        description: 'Join the waitlist for early access.',
+      },
+      publisher: {
+        '@id': 'https://miniclaw.bot/#organization',
+      },
+      isBasedOn: {
+        '@type': 'SoftwareApplication',
+        name: 'OpenClaw',
+        description:
+          'OpenClaw is an open-source agentic OS runtime for macOS. MiniClaw is the consumer product ecosystem built on top of it.',
+        url: 'https://github.com/augmentedmike/openclaw',
+      },
+      hasPart: [
+        {
+          '@type': 'SoftwareApplication',
+          name: 'Amelia (AM)',
+          alternateName: ['helloam.bot', 'AugmentedMike'],
+          url: 'https://helloam.bot',
+          description:
+            'Amelia (AM) is a soul-bonded personal AI companion built on MiniClaw and OpenClaw. She is the flagship product of the MiniClaw ecosystem.',
+          applicationCategory: 'PersonalAssistant',
+        },
+      ],
+    },
   ],
 }
 
@@ -90,7 +151,7 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className="font-sans antialiased">
