@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/navbar"
 import { PageHero } from "@/components/page-hero"
-import { PathPicker } from "@/components/path-picker"
 import { Showcase } from "@/components/showcase"
 import { MiniClawArchitecture } from "@/components/miniclaw-architecture"
 import { BlogHighlight } from "@/components/blog-highlight"
@@ -63,7 +62,6 @@ export default function Page() {
         </p>
       </div>
 
-      <PathPicker />
       <Showcase />
       <MiniClawArchitecture />
       <BlogHighlight />

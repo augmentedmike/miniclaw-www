@@ -5,7 +5,6 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { label: "AI Companion", href: "/best-ai-companion" },
   { label: "FAQ", href: "/#faq" },
   { label: "Support", href: "mailto:augmentedmike@gmail.com" },
 ]
