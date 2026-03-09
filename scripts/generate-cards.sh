@@ -35,7 +35,7 @@ declare -a PROMPTS=(
   "A person wearing Meta Ray-Ban smart glasses in a store, looking at a product. A glowing orange AR hologram overlay floats in front of their vision showing a shopping cart icon and a price tag. The person looks relaxed and casual, not techy. $STYLE"
   "A cozy morning scene. A phone on a nightstand next to a coffee cup, its screen glowing with a clean dashboard showing a sun icon, calendar blocks, and news headlines. Warm sunrise light from a window. $STYLE"
   "An email inbox being magically sorted. Glowing orange robotic hands organizing floating email envelopes into neat stacks labeled with icons — a star, a trash can, a reply arrow. Emails flying through the air. $STYLE"
-  "Split scene: on one side, a glowing orange AI figure working at a desk with multiple screens showing charts and messages. On the other side, a person sleeping peacefully in bed. A clock shows 3 AM. $STYLE"
+  "Split scene: on one side, a glowing orange AI figure working at a desk with multiple screens showing charts and messages. On the other side, a person sleeping peacefully in bed. A clock shows 3 Am. $STYLE"
   "A dreamy travel planning scene. A glowing tablet showing flight cards and hotel photos being compared side by side. A miniature airplane, palm tree, and suitcase float around it like a diorama. $STYLE"
   "A social media monitoring dashboard. Floating cards from Reddit, Twitter, and review sites flowing into a central glowing orange summary screen with thumbs up and thumbs down sentiment icons. $STYLE"
   "Multiple glowing orange chat bubbles with robot icons floating around a central control panel. Speech bubbles showing different conversation topics. A person casually setting up chatbots with simple clicks. $STYLE"
