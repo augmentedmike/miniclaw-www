@@ -30,7 +30,7 @@ const homeSlides = [
   },
   {
     headline: "Ships code. Writes posts. Grows itself.",
-    headlineSub: "Actually works.",
+    headlineSub: "MiniClaw actually works.",
     description:
       "MiniClaw builds real products. Autonomous agents push to GitHub, publish to Substack, generate design assets, and manage business workflows. No approval needed. No context-switching. Your agent makes the decisions — reads the ticket, plans the work, ships the result. We built MiniClaw itself this way. Now you can",
     emphasisWord: "too.",
@@ -43,7 +43,7 @@ const homeSlides = [
   },
   {
     headline: "Your agent. Your products.",
-    headlineSub: "On your timeline.",
+    headlineSub: "MiniClaw on your timeline.",
     description:
       "Give your agent a problem. It reads, plans, codes, designs, tests, and ships — while you sleep. MiniClaw provides persistent memory, visual intelligence, task planning, and decision autonomy. No prompting. No babysitting. Just work that gets",
     emphasisWord: "done.",
@@ -56,7 +56,7 @@ const homeSlides = [
   },
   {
     headline: "Edge-first. No vendor lock-in.",
-    headlineSub: "You own everything.",
+    headlineSub: "MiniClaw: you own everything.",
     description:
       "All memory and reasoning lives on your machine — not in someone else's cloud. Your agent works when you're offline. Git is the single source of truth. No external API calls for core capability. Port your agent to any machine, any platform, any time. Full control. Full",
     emphasisWord: "transparency.",
