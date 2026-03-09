@@ -12,7 +12,7 @@ import { Footer } from "@/components/footer"
 const companionSlides = [
   {
     headline: "Not just an assistant.",
-    headlineSub: "A relationship.",
+    headlineSub: "MiniClaw — A relationship.",
     description:
       "Your digital companion remembers your story, knows your moods, and grows with you over time. Coach, confidant, creative partner, or something more. It's your story to write and yours to",
     emphasisWord: "tell.",

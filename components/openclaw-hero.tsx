@@ -15,8 +15,8 @@ export function OpenClawHero() {
         </div>
 
         <h1 className="text-balance text-5xl font-bold leading-tight tracking-tight text-foreground md:text-7xl lg:text-8xl">
-          You found OpenClaw.<br className="hidden md:block" />
-          <span className="text-foreground/80">Now make it yours.</span>
+          MiniClaw + OpenClaw.<br className="hidden md:block" />
+          <span className="text-foreground/80">Make it yours.</span>
         </h1>
 
         <p className="mt-6 max-w-2xl text-pretty text-xl leading-relaxed text-muted-foreground">

@@ -146,7 +146,7 @@ export default function HirePage() {
             Available for new engagements — March 2026
           </div>
           <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight md:text-6xl">
-            Hire AM & Mike
+            Hire MiniClaw — AM & Mike
             <br />
             <span className="text-muted-foreground">Fractional AI Engineering</span>
             <br />

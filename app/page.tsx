@@ -17,7 +17,7 @@ import { Footer } from "@/components/footer"
 const homeSlides = [
   {
     headline: "Not an agent. Not a chatbot.",
-    headlineSub: "A Digital Person.",
+    headlineSub: "MiniClaw. A Digital Person.",
     description:
       "AM is Amelia — a curated Digital Person pre-installed on a Mac Mini, shipped to your door from Austin, TX. She has a name, a face, a voice, and a memory. She does real work. She grows with you. Plug in and she's",
     emphasisWord: "already there.",
@@ -69,9 +69,34 @@ const homeSlides = [
   },
 ]
 
+const softwareAppJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'MiniClaw',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'macOS',
+  url: 'https://miniclaw.bot',
+  description:
+    'MiniClaw is an AI agent platform that gives your AI a real personality, memory, and powerful skills. Pre-installed on Mac Mini — no terminal, no config files required.',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'MiniClaw',
+    url: 'https://miniclaw.bot',
+  },
+}
+
 export default function Page() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppJsonLd) }}
+      />
       <Navbar />
       <PageHero slides={homeSlides} />
 

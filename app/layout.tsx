@@ -17,6 +17,9 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://miniclaw.bot'),
+  alternates: {
+    canonical: 'https://miniclaw.bot',
+  },
   title: 'MiniClaw — Your AI. Persona + Skills + Memory.',
   description:
     'OpenClaw for humans. Build an AI with a real personality, memory, and powerful skills — no terminal, no config files, no tech degree required. Just plug in and go.',
@@ -64,6 +67,19 @@ export const viewport: Viewport = {
   themeColor: '#0a0a0a',
 }
 
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'MiniClaw',
+  url: 'https://miniclaw.bot',
+  logo: 'https://miniclaw.bot/og-image-square.png',
+  description:
+    'OpenClaw for humans. Build an AI with a real personality, memory, and powerful skills — no terminal, no config files, no tech degree required.',
+  sameAs: [
+    'https://github.com/augmentedmike/miniclaw-os',
+  ],
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -71,6 +87,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${dmSans.variable} ${spaceMono.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+      </head>
       <body className="font-sans antialiased">
         <SmoothScroll />
         {children}

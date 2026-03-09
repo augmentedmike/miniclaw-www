@@ -104,7 +104,7 @@ export default function InvestPage() {
           </div>
 
           <h1 className="text-balance text-5xl font-bold leading-tight tracking-tight text-foreground md:text-7xl">
-            Invest in the future of accessible AGI
+            Invest in MiniClaw — The future of accessible AGI
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
             MiniClaw is making AGI accessible to everyone — not just developers. Join us as we build the AI assistant that your mother can use.
