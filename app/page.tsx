@@ -56,12 +56,6 @@ export default function Page() {
       <Navbar />
       <PageHero slides={homeSlides} />
 
-      <div className="px-6 py-12 text-center">
-        <p className="text-lg italic text-muted-foreground/60">
-          &ldquo;We built the boat while sailing the sea.&rdquo;
-        </p>
-      </div>
-
       <Showcase />
       <MiniClawArchitecture />
       <BlogHighlight />

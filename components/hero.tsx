@@ -201,9 +201,9 @@ export function Hero() {
               className="gap-2 px-8 text-base"
               asChild
             >
-              <a href="#order">
+              <a href="https://helloam.bot">
                 <Monitor className="h-4 w-4" />
-                Order a Mac Mini
+                Order Your AGI Machine
               </a>
             </Button>
           </div>

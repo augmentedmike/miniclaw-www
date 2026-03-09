@@ -1,7 +1,6 @@
 
 const footerLinks = {
   Product: [
-    { label: "AI Companion", href: "/best-ai-companion" },
     { label: "FAQ", href: "/#faq" },
     { label: "Preorder", href: "/preorder" },
   ],

@@ -9,6 +9,11 @@ import {
 
 const faqs = [
   {
+    question: "What is AM and how does it relate to MiniClaw?",
+    answer:
+      "AM is Amelia — a polished, consumer-facing Digital Person built on top of MiniClaw. Where MiniClaw is the open-source runtime anyone can install, AM is a curated experience: Amelia pre-installed and configured on an M1 Mac Mini, with a beautiful custom skin, shipped straight to your door from Austin, TX. You plug it in and she's already there. MiniClaw is the engine. AM is the experience.",
+  },
+  {
     question: "How is MiniClaw different from OpenClaw / MoltBot?",
     answer:
       "We were inspired by OpenClaw and used some of its base libraries as a starting point — which is where the name comes from. But MiniClaw is built from the ground up for security, process isolation, long-term memory, and self-healing systems. OpenClaw can control your terminal. MiniClaw controls the desktop, the terminal, and much more — all without the gaping security issues that come with OpenClaw's architecture. If OpenClaw is the engine, MiniClaw is the entire vehicle: safe, maintained, and ready to drive.",

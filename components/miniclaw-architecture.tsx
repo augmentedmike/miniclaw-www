@@ -4,11 +4,6 @@ import { ArrowRight } from "lucide-react"
 
 const features = [
   {
-    title: "Agents, not a chatbot",
-    description:
-      "A researcher, a designer, a developer — each with distinct skills and work style. They pick up your tickets and collaborate like a real team. No prompting. No babysitting.",
-  },
-  {
     title: "Tickets in, features out",
     description:
       "Write what you want in plain English. Your agents handle research, planning, and implementation end to end. Move the ticket to 'In Progress' and walk away.",

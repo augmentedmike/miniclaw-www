@@ -28,22 +28,22 @@ const plans = [
     highlighted: false,
   },
   {
-    name: "Mac Mini + MiniClaw",
+    name: "AM — Mac Mini + Digital Person",
     slug: "order",
-    price: "$1,999",
+    price: "$1,800",
     period: "one time",
     description:
-      "We install and preconfigure your MiniClaw AI assistant on a brand new Mac Mini and ship it straight to you. Plug in and go.",
+      "Amelia, our curated Digital Person, pre-installed on an M1 Mac Mini with a custom skin. Ships to your door. Plug in and she's already there.",
     icon: Monitor,
-    cta: "Pre-Order Now",
-    href: "/preorder",
-    timeline: "Shipping Spring 2026",
+    cta: "Order Your AGI Machine",
+    href: "https://helloam.bot",
+    timeline: "Shipping July 1, 2026",
     features: [
-      "Brand new Mac Mini included",
-      "MiniClaw pre-installed & configured",
-      "White glove setup — we unbox with you on video",
+      "Mac Mini M1 with custom skin included",
+      "Amelia pre-installed & configured",
+      "White glove video setup on day one",
       "Hardware, labor & shipping included",
-      "Plug in, turn on, start talking",
+      "Plug in, turn on, she's there",
       "Priority support for 1 year",
     ],
     highlighted: true,
@@ -185,13 +185,13 @@ export function Pricing() {
         {/* Pre-order CTA */}
         <div className="mx-auto mt-12 max-w-md text-center">
           <Button size="lg" className="w-full gap-2 text-base" asChild>
-            <a href="/preorder">
+            <a href="https://helloam.bot">
               <Monitor className="h-4 w-4" />
-              Pre-Order Now — Shipping Spring 2026
+              Order Your AGI Machine — Shipping July 1, 2026
             </a>
           </Button>
           <p className="mt-3 text-xs text-muted-foreground/60">
-            $999.50 deposit secures your spot. Balance due before shipping.
+            $900 deposit secures your spot. Balance due before shipping. Fully refundable until July 2026.
           </p>
         </div>
 

@@ -5,6 +5,8 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
+  { label: "How It Works", href: "/#architecture" },
+  { label: "Blog", href: "https://blog.augmentedmike.com" },
   { label: "FAQ", href: "/#faq" },
   { label: "Support", href: "mailto:augmentedmike@gmail.com" },
 ]
@@ -43,7 +45,7 @@ export function Navbar() {
             <a href="https://github.com/augmentedmike/miniclaw-os">Download</a>
           </Button>
           <Button size="sm" asChild>
-            <a href="/preorder">Order Mac Mini</a>
+            <a href="https://helloam.bot">Order Your AGI Machine</a>
           </Button>
         </div>
 
@@ -74,7 +76,7 @@ export function Navbar() {
                 <a href="https://github.com/augmentedmike/miniclaw-os" onClick={() => setMobileOpen(false)}>Download</a>
               </Button>
               <Button size="sm" asChild>
-                <a href="/preorder" onClick={() => setMobileOpen(false)}>Order Mac Mini</a>
+                <a href="https://helloam.bot" onClick={() => setMobileOpen(false)}>Order Your AGI Machine</a>
               </Button>
             </div>
           </div>
