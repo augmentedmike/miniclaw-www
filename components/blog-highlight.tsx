@@ -54,6 +54,8 @@ export function BlogHighlight() {
             <img
               src={post.thumbnail}
               alt={`Latest comic — ${post.title}`}
+              width={800}
+              height={450}
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />

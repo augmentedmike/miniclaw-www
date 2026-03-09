@@ -22,6 +22,8 @@ export function Navbar() {
           <img
             src="/images/logo.png"
             alt="MiniClaw"
+            width={32}
+            height={32}
             className="h-8 w-8 object-contain"
           />
           <span className="text-lg font-bold tracking-tight text-foreground">

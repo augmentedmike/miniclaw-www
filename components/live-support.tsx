@@ -54,6 +54,8 @@ export function LiveSupport() {
                     <img
                       src="/images/founder-mike.jpg"
                       alt="Mike — Founder"
+                      width={40}
+                      height={40}
                       className="h-10 w-10 rounded-full border-2 border-primary/40 object-cover"
                     />
                     <div>
