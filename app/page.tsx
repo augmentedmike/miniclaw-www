@@ -2,7 +2,7 @@ import { Navbar } from "@/components/navbar"
 import { PageHero } from "@/components/page-hero"
 import { CompanionIntro } from "@/components/companion-intro"
 import { PluginsGrid } from "@/components/plugins-grid"
-import { PersonaGallery } from "@/components/persona-gallery"
+import { Personalize } from "@/components/personalize"
 import { Showcase } from "@/components/showcase"
 import { MiniClawArchitecture } from "@/components/miniclaw-architecture"
 import { PortabilitySection } from "@/components/portability-section"
@@ -80,8 +80,8 @@ export default function Page() {
       {/* 2. What it can do — plugin ecosystem */}
       <PluginsGrid />
 
-      {/* 3. Personality matrix — who your companion can be */}
-      <PersonaGallery />
+      {/* 3. Personality — name, voice, look, persona */}
+      <Personalize />
 
       {/* 4. Real digital work done */}
       <Showcase />
