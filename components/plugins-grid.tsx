@@ -26,7 +26,7 @@ const plugins = [
   {
     icon: Paintbrush,
     name: "mc-designer",
-    tagline: "Visual Studio",
+    tagline: "Photoshop in a CLI",
     description:
       "Stock agents can't create images. mc-designer adds layered image generation, compositing, and chroma-key transparency via Gemini — so your agent can design personas, thumbnails, and graphics from a conversation.",
   },
