@@ -81,13 +81,15 @@ export default function Page() {
       {/* 2. What it can do — plugin ecosystem */}
       <PluginsGrid />
 
-      {/* 3. Personality — name, voice, look, persona */}
+      {/* 3. The kanban brain */}
+      <KanbanSection />
+
+      {/* 4. Personality — name, voice, look, persona */}
       <Personalize />
 
-      {/* 4. Real digital work done */}
+      {/* 5. Real digital work done */}
       <Showcase />
       <MiniClawArchitecture />
-      <KanbanSection />
 
       {/* 5. Your AI. Your data. */}
       <PortabilitySection />
