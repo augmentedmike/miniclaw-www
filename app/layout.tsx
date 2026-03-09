@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   title: 'MiniClaw — Your AI. Persona + Skills + Memory.',
   description:
-    'OpenClaw for humans. Build an AI with a real personality, memory, and powerful skills — no terminal, no config files, no tech degree required. Just plug in and go.',
+    'OpenClaw for humans. Build an AI with a real personality, memory, and powerful skills — no terminal, no config files, no tech degree required. Plug in and go.',
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'MiniClaw — Your AI. Persona + Skills + Memory.',
     description:
-      'OpenClaw for humans. Build an AI with a real personality, memory, and powerful skills — no terminal, no config files, no tech degree required. Just plug in and go.',
+      'OpenClaw for humans. Build an AI with a real personality, memory, and powerful skills — no terminal, no config files, no tech degree required. Plug in and go.',
     url: 'https://miniclaw.bot',
     siteName: 'MiniClaw',
     type: 'website',
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'MiniClaw — Your AI. Persona + Skills + Memory.',
     description:
-      'OpenClaw for humans. Build an AI with a real personality, memory, and powerful skills — no terminal, no config files, no tech degree required. Just plug in and go.',
+      'OpenClaw for humans. Build an AI with a real personality, memory, and powerful skills — no terminal, no config files, no tech degree required. Plug in and go.',
     images: ['/og-image.png'],
   },
 }
