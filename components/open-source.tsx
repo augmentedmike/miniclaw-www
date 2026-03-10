@@ -35,7 +35,7 @@ export function OpenSource() {
         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Button size="lg" className="gap-2" asChild>
             <a
-              href="mailto:augmentedmike@gmail.com"
+              href="/invest"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Support page coming soon"

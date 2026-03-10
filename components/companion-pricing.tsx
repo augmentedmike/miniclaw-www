@@ -27,13 +27,13 @@ const plans = [
   {
     name: "Mac Mini + MiniClaw",
     slug: "order",
-    price: "$1,999",
+    price: "$1,800",
     period: "one time",
     description:
       "A brand new Mac Mini with MiniClaw pre-installed. Plug in and go.",
     icon: Monitor,
     cta: "Pre-Order Now",
-    href: "/preorder",
+    href: "https://helloam.bot/#waitlist",
     timeline: "Shipping Spring 2026",
     features: [
       "Brand new Mac Mini included",

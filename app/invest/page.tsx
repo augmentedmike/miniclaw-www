@@ -50,7 +50,7 @@ const whyInvest = [
 
 const terms = [
   "SAFE (Simple Agreement for Future Equity)",
-  "Minimum investment: $10,000",
+  "Minimum investment: $1,000",
   "Valuation cap and discount available",
   "Investor updates monthly",
   "Direct access to founding team",
@@ -66,12 +66,12 @@ const faqs = [
   {
     question: "What's the minimum investment?",
     answer:
-      "The minimum investment is $10,000. For investors looking to commit $100k+, we offer strategic advisory opportunities and additional terms.",
+      "The minimum investment is $1,000. For investors looking to commit $100k+, we offer strategic advisory opportunities and additional terms.",
   },
   {
     question: "When does the SAFE convert?",
     answer:
-      "The SAFE converts to equity during our next priced equity round (Series A) or upon an acquisition/IPO.",
+      "The SAFE converts to equity during our next priced equity round or upon an acquisition/IPO.",
   },
   {
     question: "Who can invest?",
@@ -86,7 +86,7 @@ const faqs = [
 ]
 
 export default function InvestPage() {
-  const investorEmail = "invest@miniclaw.com"
+  const investorEmail = "amelia@helloam.bot"
 
   return (
     <div className="min-h-screen bg-background">
@@ -113,7 +113,7 @@ export default function InvestPage() {
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Button size="lg" className="gap-2 px-8 text-base" asChild>
               <a href={`mailto:${investorEmail}?subject=Investment Inquiry`}>
-                Express Interest
+                Email Amelia and lets talk
                 <ArrowRight className="h-4 w-4" />
               </a>
             </Button>
@@ -212,7 +212,7 @@ export default function InvestPage() {
 
             <div className="mt-8 rounded-lg border border-primary/20 bg-primary/5 p-4">
               <p className="text-sm text-foreground">
-                <strong>For large investments ($100k+):</strong> We offer additional terms, board observer rights, and strategic advisory opportunities. Contact us to discuss.
+                <strong>For larger investments ($50+):</strong> We offer additional terms, board observer rights, and strategic advisory opportunities. Contact us to discuss.
               </p>
             </div>
           </div>

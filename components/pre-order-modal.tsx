@@ -45,11 +45,11 @@ export function PreOrderModal({ isOpen, onClose }: PreOrderModalProps) {
 
             <h4 className="text-lg font-semibold text-foreground">50% Deposit</h4>
             <div className="mt-2 flex items-baseline gap-1">
-              <span className="text-4xl font-bold text-foreground">$999.50</span>
+              <span className="text-4xl font-bold text-foreground">$900</span>
               <span className="text-sm text-muted-foreground">today</span>
             </div>
             <p className="mt-2 text-sm text-muted-foreground">
-              Pay remaining $999.50 before we ship
+              Pay remaining $900 before we ship
             </p>
 
             <ul className="mt-6 space-y-3 flex-1">
@@ -74,7 +74,7 @@ export function PreOrderModal({ isOpen, onClose }: PreOrderModalProps) {
               disabled={!depositLink}
             >
               <a href={depositLink || "#"} target="_blank" rel="noopener noreferrer">
-                Pay $999.50 Deposit
+                Pay $900 Deposit
               </a>
             </Button>
           </div>
@@ -85,7 +85,7 @@ export function PreOrderModal({ isOpen, onClose }: PreOrderModalProps) {
 
             <h4 className="text-lg font-semibold text-foreground">Full Payment</h4>
             <div className="mt-2 flex items-baseline gap-1">
-              <span className="text-4xl font-bold text-foreground">$1,999</span>
+              <span className="text-4xl font-bold text-foreground">$1,800</span>
               <span className="text-sm text-muted-foreground">today</span>
             </div>
             <p className="mt-2 text-sm text-muted-foreground">
@@ -115,7 +115,7 @@ export function PreOrderModal({ isOpen, onClose }: PreOrderModalProps) {
               disabled={!fullPaymentLink}
             >
               <a href={fullPaymentLink || "#"} target="_blank" rel="noopener noreferrer">
-                Pay $1,999 Full
+                Pay $1,800 Full
               </a>
             </Button>
           </div>

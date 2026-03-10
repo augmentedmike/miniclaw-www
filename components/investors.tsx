@@ -22,7 +22,7 @@ const investorFeatures = [
 ]
 
 export function Investors() {
-  const investorEmail = "invest@miniclaw.com"
+  const investorEmail = "amelia@helloam.bot"
 
   return (
     <section className="border-y border-border/40 bg-card/30 px-6 py-24 md:py-32">
@@ -63,7 +63,7 @@ export function Investors() {
             Interested in investing?
           </h3>
           <p className="mt-2 text-muted-foreground">
-            We're currently raising through SAFE agreements. Minimum investment: $10,000.
+            We're currently raising through SAFE agreements. Minimum investment: $1,000.
           </p>
 
           <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center">

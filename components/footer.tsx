@@ -2,11 +2,12 @@
 const footerLinks = {
   Product: [
     { label: "FAQ", href: "/#faq" },
-    { label: "Preorder", href: "/preorder" },
+    { label: "Preorder", href: "https://helloam.bot/#waitlist" },
   ],
   Company: [
-    { label: "Support or Invest", href: "mailto:support@helloam.bot" },
+    { label: "Support or Invest", href: "https://helloam.bot/invest" },
     { label: "Press", href: "https://helloam.bot/press" },
+    { label: "Invest", href: "https://miniclaw.bot/invest" },
   ],
 }
 

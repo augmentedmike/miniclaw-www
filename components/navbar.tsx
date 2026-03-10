@@ -48,7 +48,7 @@ export function Navbar() {
             <a href="https://github.com/augmentedmike/miniclaw-os">Download</a>
           </Button>
           <Button size="sm" asChild>
-            <a href="https://helloam.bot">Order Your AGI Machine</a>
+            <a href="https://helloam.bot/#waitlist">Order Your AGI Machine</a>
           </Button>
         </div>
 
@@ -79,7 +79,7 @@ export function Navbar() {
                 <a href="https://github.com/augmentedmike/miniclaw-os" onClick={() => setMobileOpen(false)}>Download</a>
               </Button>
               <Button size="sm" asChild>
-                <a href="https://helloam.bot" onClick={() => setMobileOpen(false)}>Order Your AGI Machine</a>
+                <a href="https://helloam.bot/#waitlist" onClick={() => setMobileOpen(false)}>Order Your AGI Machine</a>
               </Button>
             </div>
           </div>
