@@ -10,12 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: 'weekly',
       priority: 1,
-    },
-    {
-      url: `${baseUrl}/invest`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.7,
     }
   ]
 }
