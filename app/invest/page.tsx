@@ -66,7 +66,7 @@ const faqs = [
   {
     question: "What's the minimum investment?",
     answer:
-      "The minimum investment is $1,000. For investors looking to commit $100k+, we offer strategic advisory opportunities and additional terms.",
+      "The minimum investment is $1,000. For investors looking to commit $50+, we offer strategic advisory opportunities and additional terms.",
   },
   {
     question: "When does the SAFE convert?",
