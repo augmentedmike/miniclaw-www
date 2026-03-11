@@ -5,7 +5,7 @@ const footerLinks = {
     { label: "Preorder", href: "https://helloam.bot/#waitlist" },
   ],
   Company: [
-    { label: "Invest", href: "https://helloam.bot/invest" },
+    { label: "Invest", href: "https://miniclaw.bot/invest" },
     { label: "Press", href: "https://helloam.bot/press" },
   ],
 }
