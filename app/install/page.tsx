@@ -16,7 +16,7 @@ interface Step {
 
 const STEPS: Step[] = [
   { n: 1, title: "Download & unzip", desc: "Click the button above, then double-click the zip in your Downloads folder to unzip it.", img: "", imgAlt: "" },
-  { n: 2, title: "Double-click Install MiniClaw", desc: <>macOS will show a warning — this is normal for apps not from the App Store. Click <strong style={{ color: "#00E5CC" }}>Done</strong>.</>, img: "", imgAlt: "" },
+  { n: 2, title: "Double-click Install MiniClaw", desc: <>macOS will show a warning — this is normal for apps not from the App Store. Click <strong style={{ color: "#fff" }}>Done</strong>.</>, img: "", imgAlt: "" },
   { n: 3, title: "Open System Settings", desc: <>Click the Apple menu  → System Settings, then search for <strong style={{ color: "#fff" }}>&quot;priv&quot;</strong> in the search box.</>, img: "/guide/1-settings.png", imgAlt: "Open System Settings and search for priv" },
   { n: 4, title: "Go to Privacy & Security", desc: <>Click <strong style={{ color: "#fff" }}>Privacy & Security</strong> in the sidebar.</>, img: "/guide/3-privacy.png", imgAlt: "Privacy & Security in System Settings" },
   { n: 5, title: "Scroll down to Security", desc: "Scroll down past the privacy sections until you see the Security heading.", img: "/guide/4-privacy-scroll-down.png", imgAlt: "Scroll down to Security section" },
