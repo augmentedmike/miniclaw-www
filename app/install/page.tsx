@@ -6,18 +6,22 @@ export const metadata: Metadata = {
   description: "One-click installer for your personal AI assistant",
 };
 
-const step = (n: number, title: string, desc: string, img: string, imgAlt: string) => ({
-  n, title, desc, img, imgAlt,
-});
+interface Step {
+  n: number;
+  title: string;
+  desc: React.ReactNode;
+  img: string;
+  imgAlt: string;
+}
 
-const STEPS = [
-  step(1, "Download & unzip", "Click the button above, then double-click the zip in your Downloads folder to unzip it.", "", ""),
-  step(2, "Double-click Install MiniClaw", "macOS will show a warning — this is normal for apps not from the App Store. Click Done.", "", ""),
-  step(3, "Open System Settings", "Click the Apple menu  → System Settings, then search for \"priv\" in the search box.", "/guide/1-settings.png", "Open System Settings and search for priv"),
-  step(4, "Go to Privacy & Security", "Click Privacy & Security in the sidebar.", "/guide/3-privacy.png", "Privacy & Security in System Settings"),
-  step(5, "Scroll down to Security", "Scroll down past the privacy sections until you see the Security heading.", "/guide/4-privacy-scroll-down.png", "Scroll down to Security section"),
-  step(6, 'Click "Open Anyway"', 'You\'ll see "Install MiniClaw was blocked to protect your Mac." Click Open Anyway.', "/guide/5-look-for-this-click-open.png", "Click Open Anyway"),
-  step(7, "Click Allow on any remaining prompts", "macOS may ask you to confirm one or two more times. Just click Allow or Open each time until it finishes.", "", ""),
+const STEPS: Step[] = [
+  { n: 1, title: "Download & unzip", desc: "Click the button above, then double-click the zip in your Downloads folder to unzip it.", img: "", imgAlt: "" },
+  { n: 2, title: "Double-click Install MiniClaw", desc: <>macOS will show a warning — this is normal for apps not from the App Store. Click <strong style={{ color: "#00E5CC" }}>Done</strong>.</>, img: "", imgAlt: "" },
+  { n: 3, title: "Open System Settings", desc: <>Click the Apple menu  → System Settings, then search for <strong style={{ color: "#fff" }}>&quot;priv&quot;</strong> in the search box.</>, img: "/guide/1-settings.png", imgAlt: "Open System Settings and search for priv" },
+  { n: 4, title: "Go to Privacy & Security", desc: <>Click <strong style={{ color: "#fff" }}>Privacy & Security</strong> in the sidebar.</>, img: "/guide/3-privacy.png", imgAlt: "Privacy & Security in System Settings" },
+  { n: 5, title: "Scroll down to Security", desc: "Scroll down past the privacy sections until you see the Security heading.", img: "/guide/4-privacy-scroll-down.png", imgAlt: "Scroll down to Security section" },
+  { n: 6, title: 'Click "Open Anyway"', desc: <>You&apos;ll see &quot;Install MiniClaw was blocked to protect your Mac.&quot; Click <strong style={{ color: "#00E5CC" }}>Open Anyway</strong>.</>, img: "/guide/5-look-for-this-click-open.png", imgAlt: "Click Open Anyway" },
+  { n: 7, title: "Click Allow until done", desc: <>macOS may ask you to confirm one or two more times. Click <strong style={{ color: "#00E5CC" }}>Allow</strong> or <strong style={{ color: "#00E5CC" }}>Open</strong> each time until it finishes.</>, img: "", imgAlt: "" },
 ];
 
 export default function InstallPage() {
