@@ -46,7 +46,7 @@ export default function InstallPage() {
           </p>
 
           <a
-            href="https://raw.githubusercontent.com/augmentedmike/miniclaw-os/main/dist/MiniClaw-Installer.zip"
+            href="https://raw.githubusercontent.com/augmentedmike/miniclaw-os/main/dist/MiniClaw-Installer-v0.1.5.zip"
             style={{
               display: "inline-block",
               background: "#00E5CC",
@@ -75,7 +75,7 @@ export default function InstallPage() {
             </p>
             <ol style={{ fontSize: 14, color: "#999", margin: 0, paddingLeft: 20, lineHeight: 2 }}>
               <li>Open your <strong style={{ color: "#ccc" }}>Downloads</strong> folder</li>
-              <li>Double-click <strong style={{ color: "#ccc" }}>MiniClaw-Installer.zip</strong> to unzip</li>
+              <li>Double-click <strong style={{ color: "#ccc" }}>MiniClaw-Installer-v0.1.5.zip</strong> to unzip</li>
               <li>Right-click <strong style={{ color: "#ccc" }}>Install MiniClaw</strong> and click <strong style={{ color: "#ccc" }}>Open</strong></li>
               <li>Click <strong style={{ color: "#ccc" }}>Open</strong> once more to confirm</li>
             </ol>
