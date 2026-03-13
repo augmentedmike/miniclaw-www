@@ -1,32 +1,24 @@
 /**
  * GET /install/download
  *
- * For curl: serves raw bootstrap script for piping
- * For browsers: serves as downloadable "Install MiniClaw.command" file
+ * Proxies bootstrap.sh from GitHub and serves it as "Install MiniClaw.command".
+ * The proxy is needed to set Content-Disposition (GitHub raw doesn't).
+ * Cost: ~5ms serverless function, negligible on free tier (100K/mo).
+ * The landing page at /install is fully static — zero cost.
+ *
+ * curl: gets raw script for piping
+ * Browser: downloads as "Install MiniClaw.command"
  */
 export async function GET(req: Request) {
-  const res = await fetch(
+  const script = await fetch(
     "https://raw.githubusercontent.com/augmentedmike/miniclaw-os/main/bootstrap.sh",
-    { next: { revalidate: 60 } },
-  );
+  ).then(r => r.text());
 
-  if (!res.ok) {
-    return new Response(
-      "#!/bin/bash\necho 'Error: could not fetch installer.'\nexit 1\n",
-      { status: 502, headers: { "Content-Type": "text/plain" } },
-    );
-  }
-
-  const script = await res.text();
   const ua = req.headers.get("user-agent") || "";
-  const isCurl = /curl|wget|httpie/i.test(ua);
 
-  if (isCurl) {
+  if (/curl|wget|httpie/i.test(ua)) {
     return new Response(script, {
-      headers: {
-        "Content-Type": "text/plain; charset=utf-8",
-        "Cache-Control": "no-cache",
-      },
+      headers: { "Content-Type": "text/plain; charset=utf-8" },
     });
   }
 
@@ -34,7 +26,6 @@ export async function GET(req: Request) {
     headers: {
       "Content-Type": "application/octet-stream",
       "Content-Disposition": 'attachment; filename="Install MiniClaw.command"',
-      "Cache-Control": "no-cache",
     },
   });
 }
