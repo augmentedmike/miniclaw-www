@@ -76,7 +76,8 @@ export default function InstallPage() {
             <ol style={{ fontSize: 14, color: "#999", margin: 0, paddingLeft: 20, lineHeight: 2 }}>
               <li>Open your <strong style={{ color: "#ccc" }}>Downloads</strong> folder</li>
               <li>Double-click <strong style={{ color: "#ccc" }}>Install MiniClaw.zip</strong> to unzip</li>
-              <li>Double-click <strong style={{ color: "#ccc" }}>Install MiniClaw.command</strong></li>
+              <li>Right-click <strong style={{ color: "#ccc" }}>Install MiniClaw</strong> and click <strong style={{ color: "#ccc" }}>Open</strong></li>
+              <li>Click <strong style={{ color: "#ccc" }}>Open</strong> once more to confirm</li>
             </ol>
             <p style={{ fontSize: 12, color: "#555", marginTop: 12, marginBottom: 0 }}>
               A native macOS dialog asks for your password. Nothing is stored or sent anywhere.
