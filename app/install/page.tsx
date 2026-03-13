@@ -17,6 +17,7 @@ const STEPS = [
   step(4, "Go to Privacy & Security", "Click Privacy & Security in the sidebar.", "/guide/3-privacy.png", "Privacy & Security in System Settings"),
   step(5, "Scroll down to Security", "Scroll down past the privacy sections until you see the Security heading.", "/guide/4-privacy-scroll-down.png", "Scroll down to Security section"),
   step(6, 'Click "Open Anyway"', 'You\'ll see "Install MiniClaw was blocked to protect your Mac." Click Open Anyway.', "/guide/5-look-for-this-click-open.png", "Click Open Anyway"),
+  step(7, "Click Allow on any remaining prompts", "macOS may ask you to confirm one or two more times. Just click Allow or Open each time until it finishes.", "", ""),
 ];
 
 export default function InstallPage() {
