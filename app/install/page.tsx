@@ -16,7 +16,7 @@ interface Step {
 }
 
 const STEPS: Step[] = [
-  { n: 1, title: "Download & unzip", desc: "Click the button above, then double-click the zip in your Downloads folder to unzip it.", img: "", imgAlt: "" },
+  { n: 1, title: "Double-click the zip to unzip", desc: "You'll see Install MiniClaw appear in your Downloads.", img: "", imgAlt: "" },
   { n: 2, title: "Double-click Install MiniClaw", desc: <>macOS will show a warning — this is normal for apps not from the App Store. <strong style={{ color: "#fff" }}>Click Done</strong>.</>, img: "", imgAlt: "" },
   { n: 3, title: "Open System Settings", desc: <>Click the Apple menu  → System Settings, then search for <strong style={{ color: "#fff" }}>&quot;priv&quot;</strong> in the search box.</>, img: "/guide/1-settings.png", imgAlt: "Open System Settings and search for priv" },
   { n: 4, title: "Go to Privacy & Security", desc: <>Click <strong style={{ color: "#fff" }}>Privacy & Security</strong> in the sidebar.</>, img: "/guide/3-privacy.png", imgAlt: "Privacy & Security in System Settings" },
@@ -41,48 +41,45 @@ export default function InstallPage() {
         flexDirection: "column",
         alignItems: "center",
         textAlign: "center",
-        padding: "60px 24px 40px",
+        padding: "48px 24px 24px",
       }}>
-        <div style={{
-          width: 80, height: 80, borderRadius: "50%",
-          background: "#00E5CC22", border: "2px solid #00E5CC",
-          display: "flex", alignItems: "center", justifyContent: "center",
-          fontSize: 36, marginBottom: 24,
-        }}>
-          🦀
-        </div>
+        <Image
+          src="/miniclaw-logo.png"
+          alt="MiniClaw"
+          width={80}
+          height={80}
+          style={{ borderRadius: "50%", marginBottom: 20 }}
+        />
 
-        <h1 style={{ fontSize: 32, fontWeight: 700, marginBottom: 8 }}>
+        <h1 style={{ fontSize: 28, fontWeight: 700, marginBottom: 6 }}>
           Install MiniClaw
         </h1>
-        <p style={{ fontSize: 16, color: "#888", marginBottom: 32, lineHeight: 1.6 }}>
+        <p style={{ fontSize: 15, color: "#888", marginBottom: 24, lineHeight: 1.6 }}>
           Your personal AI assistant. Runs locally on your Mac.
         </p>
-
-        <a
-          href="https://raw.githubusercontent.com/augmentedmike/miniclaw-os/main/dist/MiniClaw-Installer-v0.1.5.zip"
-          style={{
-            display: "inline-block",
-            background: "#00E5CC",
-            color: "#0f0f0f",
-            fontSize: 18,
-            fontWeight: 600,
-            padding: "16px 48px",
-            borderRadius: 12,
-            textDecoration: "none",
-          }}
-        >
-          Download installer
-        </a>
       </div>
 
-      {/* Visual guide */}
       <div style={{
         maxWidth: 640,
         margin: "0 auto",
         padding: "0 24px 60px",
       }}>
-        {/* Quick install via Terminal */}
+        {/* Apple approval note */}
+        <div style={{
+          textAlign: "center",
+          marginBottom: 24,
+          padding: "14px 20px",
+          background: "#1a1a1a",
+          border: "1px solid #333",
+          borderRadius: 12,
+        }}>
+          <p style={{ fontSize: 13, color: "#999", margin: 0, lineHeight: 1.7 }}>
+            <strong style={{ color: "#fff" }}>We don&apos;t have Apple&apos;s approval yet</strong> — we&apos;re working on it.
+            We&apos;ll make this much easier soon!
+          </p>
+        </div>
+
+        {/* Terminal option */}
         <div style={{
           marginBottom: 32,
           padding: "24px",
@@ -91,7 +88,7 @@ export default function InstallPage() {
           borderRadius: 12,
         }}>
           <p style={{ fontSize: 15, fontWeight: 600, color: "#ccc", margin: "0 0 16px", textAlign: "center" }}>
-            Easier option
+            Easiest way to install
           </p>
           <ol style={{ fontSize: 14, color: "#999", margin: "0 0 16px", paddingLeft: 20, lineHeight: 2.2 }}>
             <li>Press <strong style={{ color: "#fff" }}>Cmd + Space</strong> to open Spotlight</li>
@@ -100,33 +97,41 @@ export default function InstallPage() {
           </ol>
           <CopyCommand command="bash <(curl -fsSL https://raw.githubusercontent.com/augmentedmike/miniclaw-os/main/bootstrap.sh)" />
           <p style={{ fontSize: 12, color: "#555", marginTop: 12, marginBottom: 0, textAlign: "center" }}>
-            Follow the instructions in Terminal — your browser will open automatically when it&apos;s done.
+            Your browser will open automatically when it&apos;s done.
           </p>
         </div>
 
+        {/* Divider */}
         <div style={{
-          textAlign: "center",
-          marginBottom: 32,
-          padding: "16px 20px",
-          background: "#1a1a1a",
-          border: "1px solid #333",
-          borderRadius: 12,
+          display: "flex", alignItems: "center", gap: 16, marginBottom: 32,
         }}>
-          <p style={{ fontSize: 14, color: "#999", margin: 0, lineHeight: 1.7 }}>
-            We don&apos;t have Apple&apos;s approval yet — we&apos;re working on it.
-            <br />
-            If you&apos;d rather download the app, there&apos;s a workaround below. We&apos;ll make this much easier soon!
-          </p>
+          <div style={{ flex: 1, height: 1, background: "#333" }} />
+          <span style={{ fontSize: 12, color: "#555", fontWeight: 600 }}>OR DOWNLOAD</span>
+          <div style={{ flex: 1, height: 1, background: "#333" }} />
         </div>
 
-        <h2 style={{
-          fontSize: 20, fontWeight: 700, color: "#ccc",
-          marginBottom: 32, textAlign: "center",
-        }}>
-          After downloading
-        </h2>
+        {/* Download button */}
+        <div style={{ textAlign: "center", marginBottom: 24 }}>
+          <a
+            href="https://raw.githubusercontent.com/augmentedmike/miniclaw-os/main/dist/MiniClaw-Installer-v0.1.5.zip"
+            style={{
+              display: "inline-block",
+              background: "#222",
+              color: "#ccc",
+              fontSize: 16,
+              fontWeight: 600,
+              padding: "14px 40px",
+              borderRadius: 12,
+              textDecoration: "none",
+              border: "1px solid #444",
+            }}
+          >
+            Download installer
+          </a>
+        </div>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
+        {/* Steps */}
+        <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           {STEPS.map((s) => (
             <div key={s.n} style={{
               background: "#1a1a1a",
@@ -134,23 +139,22 @@ export default function InstallPage() {
               borderRadius: 16,
               overflow: "hidden",
             }}>
-              {/* Step header */}
               <div style={{
-                padding: "16px 20px",
+                padding: "14px 18px",
                 display: "flex",
                 alignItems: "flex-start",
-                gap: 14,
+                gap: 12,
               }}>
                 <div style={{
-                  width: 28, height: 28, borderRadius: "50%",
+                  width: 26, height: 26, borderRadius: "50%",
                   background: "#00E5CC", color: "#0f0f0f",
                   display: "flex", alignItems: "center", justifyContent: "center",
-                  fontSize: 14, fontWeight: 700, flexShrink: 0,
+                  fontSize: 13, fontWeight: 700, flexShrink: 0,
                 }}>
                   {s.n}
                 </div>
                 <div>
-                  <div style={{ fontSize: 15, fontWeight: 600, color: "#e0e0e0", marginBottom: 4 }}>
+                  <div style={{ fontSize: 14, fontWeight: 600, color: "#e0e0e0", marginBottom: 3 }}>
                     {s.title}
                   </div>
                   <div style={{ fontSize: 13, color: "#888", lineHeight: 1.6 }}>
@@ -159,11 +163,10 @@ export default function InstallPage() {
                 </div>
               </div>
 
-              {/* Screenshot */}
               {s.img && (
                 <div style={{
                   borderTop: "1px solid #222",
-                  padding: 12,
+                  padding: 10,
                   background: "#111",
                 }}>
                   <Image
@@ -187,22 +190,20 @@ export default function InstallPage() {
         {/* That's it */}
         <div style={{
           textAlign: "center",
-          marginTop: 40,
-          padding: "24px 20px",
+          marginTop: 32,
+          padding: "20px",
           background: "#00E5CC11",
           border: "1px solid #00E5CC33",
           borderRadius: 12,
         }}>
-          <p style={{ fontSize: 16, fontWeight: 600, color: "#00E5CC", margin: "0 0 8px" }}>
+          <p style={{ fontSize: 15, fontWeight: 600, color: "#00E5CC", margin: "0 0 6px" }}>
             That&apos;s it!
           </p>
-          <p style={{ fontSize: 14, color: "#888", margin: 0, lineHeight: 1.6 }}>
+          <p style={{ fontSize: 13, color: "#888", margin: 0, lineHeight: 1.6 }}>
             MiniClaw will install itself and open in your browser.
-            <br />
-            You only need to do this once — it starts automatically after that.
+            You only need to do this once.
           </p>
         </div>
-
       </div>
     </div>
   );
