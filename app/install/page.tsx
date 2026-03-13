@@ -80,6 +80,21 @@ export default function InstallPage() {
         margin: "0 auto",
         padding: "0 24px 60px",
       }}>
+        <div style={{
+          textAlign: "center",
+          marginBottom: 32,
+          padding: "16px 20px",
+          background: "#1a1a1a",
+          border: "1px solid #333",
+          borderRadius: 12,
+        }}>
+          <p style={{ fontSize: 14, color: "#999", margin: 0, lineHeight: 1.7 }}>
+            We don&apos;t have Apple&apos;s approval yet — we&apos;re working on it.
+            <br />
+            Until then, there&apos;s a quick workaround below. We&apos;ll make this much easier soon!
+          </p>
+        </div>
+
         <h2 style={{
           fontSize: 20, fontWeight: 700, color: "#ccc",
           marginBottom: 32, textAlign: "center",
