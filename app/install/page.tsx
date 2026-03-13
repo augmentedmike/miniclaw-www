@@ -73,14 +73,17 @@ export default function InstallPage() {
             <p style={{ fontSize: 14, color: "#ccc", margin: "0 0 12px", fontWeight: 600 }}>
               After downloading:
             </p>
-            <ol style={{ fontSize: 14, color: "#999", margin: 0, paddingLeft: 20, lineHeight: 2 }}>
+            <ol style={{ fontSize: 14, color: "#999", margin: 0, paddingLeft: 20, lineHeight: 1.8 }}>
               <li>Open your <strong style={{ color: "#ccc" }}>Downloads</strong> folder</li>
               <li>Double-click <strong style={{ color: "#ccc" }}>MiniClaw-Installer-v0.1.5.zip</strong> to unzip</li>
-              <li>Right-click <strong style={{ color: "#ccc" }}>Install MiniClaw</strong> and click <strong style={{ color: "#ccc" }}>Open</strong></li>
-              <li>Click <strong style={{ color: "#ccc" }}>Open</strong> once more to confirm</li>
+              <li>Double-click <strong style={{ color: "#ccc" }}>Install MiniClaw</strong></li>
+              <li>macOS will say it can&apos;t verify the app — click <strong style={{ color: "#ccc" }}>Done</strong></li>
+              <li>Open <strong style={{ color: "#ccc" }}>System Settings → Privacy &amp; Security</strong></li>
+              <li>Scroll down — you&apos;ll see <em style={{ color: "#aaa" }}>&quot;Install MiniClaw was blocked&quot;</em></li>
+              <li>Click <strong style={{ color: "#ccc" }}>Open Anyway</strong>, then <strong style={{ color: "#ccc" }}>Open</strong></li>
             </ol>
             <p style={{ fontSize: 12, color: "#555", marginTop: 12, marginBottom: 0 }}>
-              A native macOS dialog asks for your password. Nothing is stored or sent anywhere.
+              This is a one-time macOS security step for apps downloaded outside the App Store. Your password is only used locally.
             </p>
           </div>
 
