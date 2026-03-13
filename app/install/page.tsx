@@ -21,7 +21,8 @@ const STEPS: Step[] = [
   { n: 4, title: "Go to Privacy & Security", desc: <>Click <strong style={{ color: "#fff" }}>Privacy & Security</strong> in the sidebar.</>, img: "/guide/3-privacy.png", imgAlt: "Privacy & Security in System Settings" },
   { n: 5, title: "Scroll down to Security", desc: "Scroll down past the privacy sections until you see the Security heading.", img: "/guide/4-privacy-scroll-down.png", imgAlt: "Scroll down to Security section" },
   { n: 6, title: 'Click "Open Anyway"', desc: <>You&apos;ll see &quot;Install MiniClaw was blocked to protect your Mac.&quot; Click <strong style={{ color: "#00E5CC" }}>Open Anyway</strong>.</>, img: "/guide/5-look-for-this-click-open.png", imgAlt: "Click Open Anyway" },
-  { n: 7, title: "Click Allow until done", desc: <>macOS may ask you to confirm one or two more times. Click <strong style={{ color: "#00E5CC" }}>Allow</strong> or <strong style={{ color: "#00E5CC" }}>Open</strong> each time until it finishes.</>, img: "", imgAlt: "" },
+  { n: 7, title: "Double-click Install MiniClaw again", desc: <>Go back to your Downloads folder and double-click <strong style={{ color: "#fff" }}>Install MiniClaw</strong> one more time. This time it will run.</>, img: "", imgAlt: "" },
+  { n: 8, title: "Enter your Mac password", desc: <>A dialog will ask for your password. Type it and click <strong style={{ color: "#00E5CC" }}>OK</strong>. Click <strong style={{ color: "#00E5CC" }}>Allow</strong> or <strong style={{ color: "#00E5CC" }}>Open</strong> on any other prompts until it finishes.</>, img: "", imgAlt: "" },
 ];
 
 export default function InstallPage() {
