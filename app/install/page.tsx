@@ -46,7 +46,7 @@ export default function InstallPage() {
           </p>
 
           <a
-            href="/install/download"
+            href="https://raw.githubusercontent.com/augmentedmike/miniclaw-os/main/dist/Install%20MiniClaw.zip"
             style={{
               display: "inline-block",
               background: "#00E5CC",
@@ -75,8 +75,8 @@ export default function InstallPage() {
             </p>
             <ol style={{ fontSize: 14, color: "#999", margin: 0, paddingLeft: 20, lineHeight: 2 }}>
               <li>Open your <strong style={{ color: "#ccc" }}>Downloads</strong> folder</li>
-              <li>Right-click <strong style={{ color: "#ccc" }}>Install MiniClaw.command</strong></li>
-              <li>Click <strong style={{ color: "#ccc" }}>Open</strong>, then <strong style={{ color: "#ccc" }}>Open</strong> again to confirm</li>
+              <li>Double-click <strong style={{ color: "#ccc" }}>Install MiniClaw.zip</strong> to unzip</li>
+              <li>Double-click <strong style={{ color: "#ccc" }}>Install MiniClaw.command</strong></li>
             </ol>
             <p style={{ fontSize: 12, color: "#555", marginTop: 12, marginBottom: 0 }}>
               A native macOS dialog asks for your password. Nothing is stored or sent anywhere.
@@ -84,7 +84,7 @@ export default function InstallPage() {
           </div>
 
           <p style={{ fontSize: 12, color: "#444", marginTop: 24 }}>
-            Or if you prefer the terminal: <code style={{ color: "#666", background: "#1a1a1a", padding: "2px 6px", borderRadius: 4 }}>curl -fsSL https://miniclaw.bot/install/download | bash</code>
+            Or if you prefer the terminal: <code style={{ color: "#666", background: "#1a1a1a", padding: "2px 6px", borderRadius: 4 }}>curl -fsSL https://raw.githubusercontent.com/augmentedmike/miniclaw-os/main/bootstrap.sh | bash</code>
           </p>
         </div>
       </body>
