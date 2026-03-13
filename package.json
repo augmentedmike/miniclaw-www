@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "lsof -ti:3009 | xargs kill -9 2>/dev/null; next dev --turbo -p 3009",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
