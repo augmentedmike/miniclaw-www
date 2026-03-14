@@ -110,29 +110,53 @@ export default function InstallPage() {
           <div style={{ flex: 1, height: 1, background: "#333" }} />
         </div>
 
+        {/* Step 1 */}
+        <div style={{ display: "flex", flexDirection: "column", gap: 24, marginBottom: 24 }}>
+          {STEPS.filter(s => s.n === 1).map((s) => (
+            <div key={s.n} style={{
+              background: "#1a1a1a",
+              border: "1px solid #2a2a2a",
+              borderRadius: 16,
+              overflow: "hidden",
+            }}>
+              <div style={{ padding: "14px 18px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <div style={{
+                  width: 26, height: 26, borderRadius: "50%",
+                  background: "#00E5CC", color: "#0f0f0f",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  fontSize: 13, fontWeight: 700, flexShrink: 0,
+                }}>{s.n}</div>
+                <div>
+                  <div style={{ fontSize: 14, fontWeight: 600, color: "#e0e0e0", marginBottom: 3 }}>{s.title}</div>
+                  <div style={{ fontSize: 13, color: "#888", lineHeight: 1.6 }}>{s.desc}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
         {/* Download button */}
         <div style={{ textAlign: "center", marginBottom: 24 }}>
           <a
             href="https://raw.githubusercontent.com/augmentedmike/miniclaw-os/main/dist/MiniClaw-Installer-v0.1.5.zip"
             style={{
               display: "inline-block",
-              background: "#222",
-              color: "#ccc",
+              background: "#00E5CC",
+              color: "#0f0f0f",
               fontSize: 16,
               fontWeight: 600,
               padding: "14px 40px",
               borderRadius: 12,
               textDecoration: "none",
-              border: "1px solid #444",
             }}
           >
             Download installer
           </a>
         </div>
 
-        {/* Steps */}
+        {/* Steps 2+ */}
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-          {STEPS.map((s) => (
+          {STEPS.filter(s => s.n > 1).map((s) => (
             <div key={s.n} style={{
               background: "#1a1a1a",
               border: "1px solid #2a2a2a",
