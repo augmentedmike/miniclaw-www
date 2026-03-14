@@ -138,7 +138,7 @@ export default function InstallPage() {
         {/* Download button */}
         <div style={{ textAlign: "center", marginBottom: 24 }}>
           <a
-            href="https://raw.githubusercontent.com/augmentedmike/miniclaw-os/main/dist/MiniClaw-Installer-v0.1.5.zip"
+            href="https://github.com/augmentedmike/miniclaw-os/releases/download/v0.1.5-installer/MiniClaw-Installer-v0.1.5.zip"
             style={{
               display: "inline-block",
               background: "#00E5CC",
