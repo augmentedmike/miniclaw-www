@@ -1,5 +1,11 @@
 "use client"
 
+const BOOKING_URL = process.env.NEXT_PUBLIC_BOOKING_URL
+const SESSION_PRICE = process.env.NEXT_PUBLIC_SESSION_PRICE
+
+if (!BOOKING_URL) throw new Error("NEXT_PUBLIC_BOOKING_URL is not set")
+if (!SESSION_PRICE) throw new Error("NEXT_PUBLIC_SESSION_PRICE is not set")
+
 export function LiveSupport() {
   return (
     <section id="support" className="relative overflow-hidden px-6 py-24 md:py-32">
@@ -113,12 +119,15 @@ export function LiveSupport() {
               <div className="border-t border-border/40 px-6 py-5">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-3xl font-bold text-primary">$100</p>
-                    <p className="mt-0.5 text-xs text-muted-foreground">per 30-minute block · book more if you need more time</p>
+                    <p className="text-3xl font-bold text-primary">${SESSION_PRICE}</p>
+                    <p className="mt-0.5 text-xs text-muted-foreground">per 30-minute session · no subscription required</p>
                   </div>
-                  <div className="rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/30">
+                  <a
+                    href={BOOKING_URL}
+                    className="rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition-opacity hover:opacity-90"
+                  >
                     Book Now →
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
