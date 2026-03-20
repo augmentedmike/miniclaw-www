@@ -5,14 +5,18 @@
  * Supports both DOMContentLoaded and async loading (Next.js afterInteractive).
  *
  * Registers tools:
+ *   - download-miniclaw (imperative, triggers /install/download)
+ *   - view-documentation (imperative, queries /api/docs/search)
+ *   - check-plugin-list (imperative, navigates to /#plugins)
  *   - view-portfolio (imperative, always)
  *   - send-message (imperative, always)
  *   - check_availability (imperative, fetches /api/slots)
  *   - chat_with_am (imperative, dynamic - registered when WS connected, unregistered on disconnect)
- *   - search_docs (imperative, queries docs endpoint)
  *
- * Declarative: The booking form in embed.ts has toolname="book-consultation"
+ * Declarative: The waitlist form in email-signup-modal.tsx has toolname="join-waitlist"
  * and is auto-discovered by webmcp-tools.js discoverDeclarativeForms().
+ *
+ * ModelContext endpoint: /.well-known/modelcontext
  */
 (function () {
   function doInit() {
@@ -20,7 +24,36 @@
 
     WebMCP.init({
       site: 'miniclaw.bot',
+      modelContext: '/.well-known/modelcontext',
       tools: [
+        {
+          name: 'download-miniclaw',
+          description: 'Download and install MiniClaw on macOS. Triggers a zip download containing the bootstrap installer.',
+          inputSchema: {
+            type: 'object',
+            properties: {}
+          },
+          execute: function () {
+            window.location.href = '/install/download';
+            return {
+              content: [{ type: 'text', text: 'MiniClaw installer download initiated.' }]
+            };
+          }
+        },
+        {
+          name: 'check-plugin-list',
+          description: 'View the list of available MiniClaw plugins — memory, skills, persona, kanban, design, email, and more.',
+          inputSchema: {
+            type: 'object',
+            properties: {}
+          },
+          execute: function () {
+            window.location.hash = '#plugins';
+            return {
+              content: [{ type: 'text', text: 'Navigated to the plugins section.' }]
+            };
+          }
+        },
         {
           name: 'view-portfolio',
           description: 'View the MiniClaw project portfolio \u2014 AI-native tools, plugins, and automations built by Mike O\'Neal.',
@@ -114,7 +147,7 @@
           }
         },
         {
-          name: 'search_docs',
+          name: 'view-documentation',
           description: 'Search MiniClaw documentation. Find information about plugins, APIs, setup guides, and architecture.',
           inputSchema: {
             type: 'object',

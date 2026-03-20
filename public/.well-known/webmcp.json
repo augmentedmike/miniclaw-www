@@ -1,37 +1,38 @@
 {
   "version": "1.0",
   "site": "miniclaw.bot",
-  "description": "MiniClaw — AI-native plugin ecosystem by Mike O'Neal. Book consultations, explore the portfolio, chat with Am, and search documentation.",
+  "description": "MiniClaw — AI-native plugin ecosystem by Mike O'Neal. Download MiniClaw, browse documentation, join the waitlist, and explore available plugins.",
+  "modelcontext": "/.well-known/modelcontext",
   "tools": [
     {
+      "name": "download-miniclaw",
+      "description": "Download and install MiniClaw on macOS",
+      "path": "/install/download"
+    },
+    {
+      "name": "view-documentation",
+      "description": "Search MiniClaw documentation for setup guides, plugin APIs, and architecture details",
+      "endpoint": "/api/docs/search"
+    },
+    {
+      "name": "join-waitlist",
+      "description": "Join the MiniClaw waitlist to get notified when early access is available",
+      "endpoint": "/api/subscribe"
+    },
+    {
+      "name": "check-plugin-list",
+      "description": "View all available MiniClaw plugins — memory, skills, persona, kanban, design, email, and more",
+      "path": "/#plugins"
+    },
+    {
       "name": "book-consultation",
-      "description": "Book a paid consultation with Mike O'Neal",
+      "description": "Book a paid consultation with Mike O'Neal — the MiniClaw founder",
       "path": "/booking"
-    },
-    {
-      "name": "view-portfolio",
-      "description": "View the MiniClaw project portfolio",
-      "path": "/#portfolio"
-    },
-    {
-      "name": "send-message",
-      "description": "Send a message or inquiry via contact form",
-      "path": "/contact"
-    },
-    {
-      "name": "check_availability",
-      "description": "Check available consultation time slots",
-      "endpoint": "/api/slots"
     },
     {
       "name": "chat_with_am",
       "description": "Chat with Am, the AI assistant (requires WebSocket connection)",
       "dynamic": true
-    },
-    {
-      "name": "search_docs",
-      "description": "Search MiniClaw documentation",
-      "endpoint": "/api/docs/search"
     }
   ],
   "support": {

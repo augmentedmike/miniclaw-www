@@ -83,6 +83,7 @@ export function EmailSignupModal({ isOpen, onClose, plan }: EmailSignupModalProp
             </label>
             <input
               id="name"
+              name="name"
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -98,6 +99,7 @@ export function EmailSignupModal({ isOpen, onClose, plan }: EmailSignupModalProp
             </label>
             <input
               id="email"
+              name="email"
               ref={emailInputRef}
               type="email"
               value={email}
@@ -115,6 +117,7 @@ export function EmailSignupModal({ isOpen, onClose, plan }: EmailSignupModalProp
             </label>
             <textarea
               id="usecase"
+              name="useCase"
               value={useCase}
               onChange={(e) => setUseCase(e.target.value)}
               placeholder="e.g., manage my small business, automate my inbox..."

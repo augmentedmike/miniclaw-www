@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   other: {
-    'model-context': 'supported',
+    'model-context-protocol': 'supported',
     'webmcp-version': '1.0',
     'webmcp-site': 'miniclaw.bot',
   },
@@ -101,6 +101,16 @@ const jsonLd = {
       publisher: {
         '@id': 'https://miniclaw.bot/#organization',
       },
+      potentialAction: [
+        {
+          '@type': 'SearchAction',
+          target: {
+            '@type': 'EntryPoint',
+            urlTemplate: 'https://miniclaw.bot/api/docs/search?q={search_term_string}',
+          },
+          'query-input': 'required name=search_term_string',
+        },
+      ],
     },
     {
       '@type': 'SoftwareApplication',
@@ -126,6 +136,27 @@ const jsonLd = {
       publisher: {
         '@id': 'https://miniclaw.bot/#organization',
       },
+      potentialAction: [
+        {
+          '@type': 'DownloadAction',
+          name: 'Download MiniClaw',
+          target: {
+            '@type': 'EntryPoint',
+            urlTemplate: 'https://miniclaw.bot/install/download',
+            actionPlatform: 'https://schema.org/DesktopWebPlatform',
+          },
+        },
+        {
+          '@type': 'JoinAction',
+          name: 'Join Waitlist',
+          target: {
+            '@type': 'EntryPoint',
+            urlTemplate: 'https://miniclaw.bot/api/subscribe',
+            httpMethod: 'POST',
+            contentType: 'application/json',
+          },
+        },
+      ],
       isBasedOn: {
         '@type': 'SoftwareApplication',
         name: 'OpenClaw',
@@ -160,6 +191,8 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <meta name="model-context-protocol" content="supported" />
+        <link rel="modelcontext" href="/.well-known/modelcontext" />
         <link rel="webmcp-manifest" href="/.well-known/webmcp.json" />
       </head>
       <body className="font-sans antialiased">
