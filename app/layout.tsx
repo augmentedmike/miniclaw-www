@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import Script from 'next/script'
 import { DM_Sans, Space_Mono } from 'next/font/google'
 
 import './globals.css'
@@ -33,6 +34,11 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   manifest: '/site.webmanifest',
+  other: {
+    'model-context': 'supported',
+    'webmcp-version': '1.0',
+    'webmcp-site': 'miniclaw.bot',
+  },
   openGraph: {
     title: 'MiniClaw — Your AI. Persona + Skills + Memory.',
     description:
@@ -154,10 +160,13 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <link rel="webmcp-manifest" href="/.well-known/webmcp.json" />
       </head>
       <body className="font-sans antialiased">
         <SmoothScroll />
         {children}
+        <Script src="/webmcp-tools.js" strategy="afterInteractive" />
+        <Script src="/webmcp-init-miniclaw.js" strategy="afterInteractive" />
       </body>
     </html>
   )
