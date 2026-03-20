@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowDown, Download, Monitor } from "lucide-react"
 
@@ -116,6 +116,9 @@ export function PageHero({ slides, rotationInterval = ROTATION_INTERVAL }: PageH
           <p className="mt-4 text-xs text-muted-foreground/60">
             macOS 13+&middot; No credit card required
           </p>
+
+          {/* Inline waitlist form — always in DOM for agent/checker discovery */}
+          <HeroSignupForm />
         </div>
 
         <div className="absolute bottom-8 flex flex-col items-center gap-2 text-muted-foreground/40">
@@ -123,5 +126,76 @@ export function PageHero({ slides, rotationInterval = ROTATION_INTERVAL }: PageH
         </div>
       </div>
     </section>
+  )
+}
+
+function HeroSignupForm() {
+  const [email, setEmail] = useState("")
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
+  const formRef = useRef<HTMLFormElement>(null)
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email) return
+    setStatus("loading")
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      })
+      if (res.ok) {
+        setStatus("success")
+        setEmail("")
+      } else {
+        setStatus("error")
+      }
+    } catch {
+      setStatus("error")
+    }
+  }
+
+  return (
+    <div className="mt-8 w-full max-w-md">
+      <form
+        ref={formRef}
+        onSubmit={handleSubmit}
+        action="/api/subscribe"
+        method="POST"
+        data-tool-name="join-waitlist"
+        data-tool-description="Join the MiniClaw waitlist to get notified when early access is available"
+        role="form"
+        aria-label="Join the MiniClaw waitlist"
+        className="flex gap-2"
+      >
+        <label htmlFor="hero-email" className="sr-only">Email address</label>
+        <input
+          id="hero-email"
+          name="email"
+          type="email"
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="you@example.com"
+          aria-label="Email address for waitlist signup"
+          disabled={status === "loading" || status === "success"}
+          className="flex-1 rounded-lg border border-border bg-background/80 px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+        />
+        <button
+          type="submit"
+          disabled={status === "loading" || status === "success"}
+          aria-label="Submit waitlist signup"
+          className="rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-50"
+        >
+          {status === "loading" ? "..." : status === "success" ? "Done!" : "Join Waitlist"}
+        </button>
+      </form>
+      {status === "success" && (
+        <p className="mt-2 text-center text-xs text-green-500" role="status">Thanks! We'll let you know when it's ready.</p>
+      )}
+      {status === "error" && (
+        <p className="mt-2 text-center text-xs text-red-500" role="alert">Something went wrong. Try again.</p>
+      )}
+    </div>
   )
 }

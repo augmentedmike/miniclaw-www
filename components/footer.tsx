@@ -87,8 +87,12 @@ export function Footer() {
             onSubmit={handleSubmit}
             toolname="join-waitlist"
             tooldescription="Join the MiniClaw waitlist to get notified when early access is available"
+            data-tool-name="join-waitlist"
+            data-tool-description="Join the MiniClaw waitlist to get notified when early access is available"
             action="/api/subscribe"
             method="POST"
+            role="form"
+            aria-label="Subscribe to MiniClaw waitlist"
           >
             <fieldset>
               <legend className="text-sm font-semibold text-foreground">

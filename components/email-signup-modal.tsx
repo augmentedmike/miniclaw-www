@@ -76,7 +76,7 @@ export function EmailSignupModal({ isOpen, onClose, plan }: EmailSignupModalProp
           We'll let you know when {plan} is available.
         </p>
 
-        <form onSubmit={handleSubmit} className="mt-6 space-y-4" toolname="join-waitlist" tooldescription="Join the MiniClaw waitlist to get notified when new plans are available" action="/api/subscribe" method="POST">
+        <form onSubmit={handleSubmit} className="mt-6 space-y-4" toolname="join-waitlist" tooldescription="Join the MiniClaw waitlist to get notified when new plans are available" data-tool-name="join-waitlist" data-tool-description="Join the MiniClaw waitlist to get notified when new plans are available" action="/api/subscribe" method="POST" role="form" aria-label="Join the MiniClaw waitlist">
           <fieldset>
           <legend className="sr-only">Join the MiniClaw Waitlist</legend>
           <div>
