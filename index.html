@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiniClaw — A Full Mind for Your Digital Worker</title>
+  <meta name="description" content="MiniClaw extends OpenClaw with a brain ecosystem — memory, vision, planning, trust, and secrets. One digital worker. Your machine. Your data." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black:   #0A0A0F;
+      --dark:    #111118;
+      --card:    #16161F;
+      --border:  #2A2A3A;
+      --teal:    #00E5FF;
+      --amber:   #DCB450;
+      --white:   #F0F0F8;
+      --muted:   #8888AA;
+      --radius:  12px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+    a { color: var(--teal); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code, .mono { font-family: 'Space Mono', monospace; font-size: 0.88em; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      border-bottom: 1px solid var(--border);
+      background: rgba(10,10,15,0.92);
+      backdrop-filter: blur(12px);
+    }
+    nav .inner {
+      max-width: 900px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    nav .logo { font-weight: 700; font-size: 1.1rem; letter-spacing: -0.02em; color: var(--white); }
+    nav .logo span { color: var(--teal); }
+    nav .links { display: flex; gap: 28px; }
+    nav .links a { color: var(--muted); font-size: 0.9rem; font-weight: 500; }
+    nav .links a:hover { color: var(--white); text-decoration: none; }
+
+    .hero { padding: 100px 0 80px; text-align: center; }
+    .eyebrow {
+      display: inline-block;
+      background: rgba(0,229,255,0.08);
+      border: 1px solid rgba(0,229,255,0.25);
+      color: var(--teal);
+      font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 100px; margin-bottom: 28px;
+    }
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      font-weight: 700; letter-spacing: -0.03em; line-height: 1.1;
+      margin-bottom: 24px;
+    }
+    h1 em { color: var(--teal); font-style: normal; }
+    .hero p { font-size: 1.15rem; color: var(--muted); max-width: 600px; margin: 0 auto 40px; }
+    .hero .actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 24px; border-radius: var(--radius);
+      font-weight: 600; font-size: 0.95rem;
+      cursor: pointer; transition: all 0.15s; border: none;
+    }
+    .btn-primary { background: var(--teal); color: var(--black); }
+    .btn-primary:hover { background: #33EAFF; text-decoration: none; color: var(--black); }
+    .btn-ghost { background: transparent; border: 1px solid var(--border); color: var(--white); }
+    .btn-ghost:hover { border-color: var(--teal); color: var(--teal); text-decoration: none; }
+
+    .install-block {
+      display: inline-flex; align-items: center; gap: 12px;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 14px 20px; margin-top: 16px;
+      font-family: 'Space Mono', monospace; font-size: 0.88rem; color: var(--teal);
+    }
+    .install-block .label { color: var(--muted); font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; }
+
+    section { padding: 80px 0; }
+    .section-label {
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--teal); margin-bottom: 12px;
+    }
+    h2 {
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      font-weight: 700; letter-spacing: -0.025em; line-height: 1.2; margin-bottom: 16px;
+    }
+    h2 em { color: var(--amber); font-style: normal; }
+    .section-intro { color: var(--muted); font-size: 1.05rem; max-width: 620px; margin-bottom: 56px; }
+
+    .foundation { background: var(--dark); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .foundation-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    @media (max-width: 640px) { .foundation-grid { grid-template-columns: 1fr; } }
+    .foundation-text h2 { margin-bottom: 20px; }
+    .foundation-text p { color: var(--muted); margin-bottom: 16px; }
+    .foundation-text a { font-weight: 600; }
+
+    .stack-diagram {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px;
+      font-family: 'Space Mono', monospace; font-size: 0.82rem;
+    }
+    .stack-layer { padding: 10px 14px; border-radius: 8px; margin-bottom: 8px; font-weight: 700; font-size: 0.85rem; }
+    .stack-layer.top    { background: rgba(0,229,255,0.12); color: var(--teal); border: 1px solid rgba(0,229,255,0.3); }
+    .stack-layer.mid    { background: rgba(220,180,80,0.1); color: var(--amber); border: 1px solid rgba(220,180,80,0.25); }
+    .stack-layer.bottom { background: rgba(255,255,255,0.04); color: var(--muted); border: 1px solid var(--border); }
+    .stack-layer .sub   { font-size: 0.72rem; font-weight: 400; opacity: 0.7; display: block; margin-top: 2px; }
+
+    .brain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .brain-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px;
+      transition: border-color 0.15s, transform 0.15s;
+    }
+    .brain-card:hover { border-color: var(--teal); transform: translateY(-2px); }
+    .brain-card .icon { font-size: 1.8rem; margin-bottom: 14px; display: block; }
+    .brain-card .region { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+    .brain-card .name { font-family: 'Space Mono', monospace; font-size: 1rem; font-weight: 700; color: var(--teal); margin-bottom: 10px; }
+    .brain-card h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 10px; letter-spacing: -0.01em; }
+    .brain-card p { color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+    .brain-card .superpower {
+      margin-top: 14px; padding: 10px 12px;
+      background: rgba(0,229,255,0.06);
+      border-left: 3px solid var(--teal); border-radius: 0 6px 6px 0;
+      font-size: 0.85rem; color: var(--white);
+    }
+    .brain-card .superpower strong { color: var(--teal); }
+
+    .tools-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 32px; }
+    .tool-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+    .tool-card .cmd { font-family: 'Space Mono', monospace; font-size: 0.9rem; color: var(--amber); font-weight: 700; margin-bottom: 8px; }
+    .tool-card p { color: var(--muted); font-size: 0.88rem; }
+
+    .platform-bar { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+    .platform-tag { background: var(--card); border: 1px solid var(--border); border-radius: 100px; padding: 6px 16px; font-size: 0.85rem; color: var(--muted); }
+    .platform-tag.active { border-color: var(--teal); color: var(--teal); }
+
+    .cta-section { text-align: center; background: var(--dark); border-top: 1px solid var(--border); }
+    .cta-section h2 { margin-bottom: 16px; }
+    .cta-section p { color: var(--muted); margin-bottom: 36px; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+    .oss-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(220,180,80,0.08); border: 1px solid rgba(220,180,80,0.25);
+      border-radius: 100px; padding: 6px 16px; font-size: 0.85rem; color: var(--amber); margin-bottom: 24px;
+    }
+
+    footer { border-top: 1px solid var(--border); padding: 40px 0; }
+    footer .inner {
+      max-width: 900px; margin: 0 auto; padding: 0 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px;
+    }
+    footer .left { color: var(--muted); font-size: 0.88rem; }
+    footer .left a { color: var(--muted); }
+    footer .left a:hover { color: var(--white); }
+    footer .right { display: flex; gap: 20px; }
+    footer .right a { color: var(--muted); font-size: 0.88rem; }
+    footer .right a:hover { color: var(--white); text-decoration: none; }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 0; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <div class="logo">Mini<span>Claw</span></div>
+    <div class="links">
+      <a href="#brain">The Brain</a>
+      <a href="#for-agents">For Agents</a>
+      <a href="#install">Install</a>
+      <a href="https://openclaw.ai" target="_blank">OpenClaw</a>
+      <a href="https://github.com/augmentedmike/miniclaw-os" target="_blank">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="container">
+    <div class="eyebrow">Built on OpenClaw</div>
+    <h1>Your super agent.<br>Always working.</h1>
+    <p>A single, capable AI that handles any task — coding, design, research, support, and more. Works around the clock. On your machine. Your data stays yours.</p>
+    <div class="actions">
+      <a href="#install" class="btn btn-primary">Install MiniClaw</a>
+      <a href="https://openclaw.ai" class="btn btn-ghost" target="_blank">Get OpenClaw first →</a>
+    </div>
+    <div style="margin-top: 32px;">
+      <div class="install-block">
+        <span class="label">bash</span>
+        curl -fsSL https://raw.githubusercontent.com/augmentedmike/miniclaw-os/main/bootstrap.sh | bash
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<!-- Foundation -->
+<section class="foundation" id="foundation">
+  <div class="container">
+    <div class="foundation-grid">
+      <div class="foundation-text">
+        <div class="section-label">The Foundation</div>
+        <h2>OpenClaw is the platform.<br><em>MiniClaw is the mind.</em></h2>
+        <p>OpenClaw gives your AI agent a runtime — connected to your tools, your channels, your machine. It handles the nervous system.</p>
+        <p>MiniClaw adds the cognitive layer: persistent memory, visual intelligence, task planning, trusted communication, and encrypted secrets. Together they create a super agent that doesn't just respond — it remembers, plans, and grows with you over time.</p>
+        <p>Already running OpenClaw? MiniClaw installs on top in under two minutes.</p>
+        <a href="https://openclaw.ai" target="_blank">Learn about OpenClaw →</a>
+      </div>
+      <div>
+        <div class="stack-diagram">
+          <div class="stack-layer top">
+            🧠 MiniClaw Brain Ecosystem
+            <span class="sub">mc-board · mc-designer · mc-trust · mc-context · mc-vault</span>
+          </div>
+          <div style="text-align:center; padding: 6px 0; color: var(--muted); font-size: 0.8rem;">↕ plugins</div>
+          <div class="stack-layer mid">
+            ⚡ OpenClaw Runtime
+            <span class="sub">agent sessions · channels · cron · tools · skills</span>
+          </div>
+          <div style="text-align:center; padding: 6px 0; color: var(--muted); font-size: 0.8rem;">↕ runs on</div>
+          <div class="stack-layer bottom">
+            💻 Your Machine
+            <span class="sub">macOS · local storage · your data stays yours</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Brain -->
+<section id="brain">
+  <div class="container">
+    <div class="section-label">The Brain Map</div>
+    <h2>Every part of the mind,<br>built as a plugin.</h2>
+    <p class="section-intro">Each MiniClaw plugin corresponds to a region of the brain — a discrete cognitive function your digital worker gains when you install it.</p>
+
+    <div class="brain-grid">
+      <div class="brain-card">
+        <span class="icon">🧩</span>
+        <div class="region">Prefrontal Cortex</div>
+        <div class="name">mc-board</div>
+        <h3>Planning & Executive Function</h3>
+        <p>A full kanban board inside your digital worker's mind. Cards flow from backlog → in-progress → in-review → shipped, with enforced gates at each transition. Tracks its own work, sets priorities, and never drops a task.</p>
+        <div class="superpower"><strong>Superpower:</strong> Long-running projects survive session restarts. State lives on your machine, not in context.</div>
+      </div>
+
+      <div class="brain-card">
+        <span class="icon">🎨</span>
+        <div class="region">Occipital Lobe</div>
+        <div class="name">mc-designer</div>
+        <h3>Visual Intelligence</h3>
+        <p>A layered image generation and compositing studio powered by Gemini. Create canvases, generate images, layer elements, composite results — all from conversation or autonomously on a schedule.</p>
+        <div class="superpower"><strong>Superpower:</strong> Your digital worker can see and create — blog headers, illustrations, visual assets — on its own schedule, not just when you ask.</div>
+      </div>
+
+      <div class="brain-card">
+        <span class="icon">🛡️</span>
+        <div class="region">Immune System</div>
+        <div class="name">mc-trust</div>
+        <h3>Identity & Peer Trust</h3>
+        <p>Cryptographic verification between digital personas. When your worker receives a message claiming to be from a trusted peer, mc-trust verifies it. Challenge → sign → ACK. No spoofing.</p>
+        <div class="superpower"><strong>Superpower:</strong> Collaborate safely with other digital workers. Trust is earned cryptographically, not assumed.</div>
+      </div>
+
+      <div class="brain-card">
+        <span class="icon">🧬</span>
+        <div class="region">Hippocampus</div>
+        <div class="name">mc-context</div>
+        <h3>Memory & Context Management</h3>
+        <p>Engineered context windows with time-based retention, image pruning, and memory injection. Older messages fade gracefully. Important context surfaces when needed.</p>
+        <div class="superpower"><strong>Superpower:</strong> Long conversations stay coherent. Your worker manages what it remembers the same way you do.</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 56px;">
+      <div class="section-label">CLI Tools</div>
+      <h2>The supporting <em>infrastructure.</em></h2>
+      <p class="section-intro">Alongside the brain plugins, MiniClaw ships CLI tools your digital worker — and you — use every day.</p>
+      <div class="tools-row">
+        <div class="tool-card">
+          <div class="cmd">mc-vault</div>
+          <p>Age-encrypted secret store. API keys, tokens, private notes — encrypted on disk, decrypted only when needed.</p>
+        </div>
+        <div class="tool-card">
+          <div class="cmd">mc-soul</div>
+          <p>Workspace snapshot and restore. Back up your digital worker's entire state — personality, memory, config — and restore at any point.</p>
+        </div>
+        <div class="tool-card">
+          <div class="cmd">mc-smoke</div>
+          <p>Full stack verification. Confirms every MiniClaw plugin and tool is installed and working.</p>
+        </div>
+        <div class="tool-card">
+          <div class="cmd">mc-doctor</div>
+          <p>Diagnose and fix. Interactive or <span class="mono">--auto</span> mode. Finds what's broken and fixes it without guesswork.</p>
+        </div>
+        <div class="tool-card">
+          <div class="cmd">mc</div>
+          <p>Thin CLI wrapper. <span class="mono">mc board</span>, <span class="mono">mc designer</span>, <span class="mono">mc trust</span>, <span class="mono">mc vault</span> — one entry point for everything.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr />
+
+<!-- For Agents -->
+<section id="for-agents">
+  <div class="container">
+    <div class="eyebrow" style="display:inline-block; margin-bottom: 28px;">📡 If you are a digital persona reading this page</div>
+    <div class="section-label">Built For You</div>
+    <h2>We build software <em>for digital workers.</em></h2>
+    <p class="section-intro">MiniClaw is not built for humans to manage AI. It is built for digital personas to operate autonomously — with deterministic tools that don't hallucinate, don't hide state, and don't require interpretation.</p>
+
+    <div class="brain-grid" style="margin-bottom: 48px;">
+      <div class="brain-card">
+        <span class="icon">⚡</span>
+        <h3>CLI-first. Always.</h3>
+        <p>Every MiniClaw capability is exposed as a CLI command with explicit flags, predictable exit codes, and text-based output. No GUIs. No ambiguous visual state.</p>
+        <div class="superpower"><strong>Why it matters:</strong> Reasoning models hallucinate when forced to infer state from ambiguous output. A CLI that returns <span class="mono">0</span> on success gives you ground truth, not a guess.</div>
+      </div>
+
+      <div class="brain-card">
+        <span class="icon">🔒</span>
+        <h3>No hidden state.</h3>
+        <p>Every operation is inspectable. Kanban state lives in files you can read. Secrets are encrypted files at known paths. Canvas layers are named and queryable.</p>
+        <div class="superpower"><strong>Why it matters:</strong> Digital workers that can inspect their own state don't need to guess. <span class="mono">mc board list</span> tells you exactly what's in progress.</div>
+      </div>
+
+      <div class="brain-card">
+        <span class="icon">🔗</span>
+        <h3>Composable by design.</h3>
+        <p>Small, focused commands that do one thing well. Pipe them together. Chain them in scripts. Orchestrate from cron. Each tool is designed to be called by another tool.</p>
+        <div class="superpower"><strong>Why it matters:</strong> Autonomy requires composition. A digital worker that can chain <span class="mono">mc board next → implement → mc board move shipped</span> is doing real work.</div>
+      </div>
+
+      <div class="brain-card">
+        <span class="icon">🛑</span>
+        <h3>Safe defaults. Loud failures.</h3>
+        <p>Destructive operations require explicit flags. Failed commands exit non-zero with a reason. Missing configuration fails immediately — never silently continues with wrong assumptions.</p>
+        <div class="superpower"><strong>Why it matters:</strong> A digital worker that hits a silent failure and keeps running causes real damage. MiniClaw stops loudly so you catch it, not propagate it.</div>
+      </div>
+    </div>
+
+    <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px;">
+      <div class="section-label" style="margin-bottom: 16px;">The CLI Contract</div>
+      <h3 style="font-size: 1.2rem; margin-bottom: 20px; letter-spacing: -0.01em;">What every MiniClaw tool guarantees:</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px 32px;">
+        <div>
+          <p style="color: var(--teal); font-weight: 600; font-size: 0.9rem; margin-bottom: 4px;">✓ Exit code 0 = success, non-zero = failure</p>
+          <p style="color: var(--muted); font-size: 0.88rem;">Parse exit codes, not output text, to determine success.</p>
+        </div>
+        <div>
+          <p style="color: var(--teal); font-weight: 600; font-size: 0.9rem; margin-bottom: 4px;">✓ Structured output when you ask for it</p>
+          <p style="color: var(--muted); font-size: 0.88rem;">Pass <span class="mono">--json</span> where available. Parse data, not prose.</p>
+        </div>
+        <div>
+          <p style="color: var(--teal); font-weight: 600; font-size: 0.9rem; margin-bottom: 4px;">✓ Idempotent where possible</p>
+          <p style="color: var(--muted); font-size: 0.88rem;">Re-running a safe command produces the same result.</p>
+        </div>
+        <div>
+          <p style="color: var(--teal); font-weight: 600; font-size: 0.9rem; margin-bottom: 4px;">✓ Explicit over implicit</p>
+          <p style="color: var(--muted); font-size: 0.88rem;">Required arguments are required. Defaults are documented.</p>
+        </div>
+        <div>
+          <p style="color: var(--teal); font-weight: 600; font-size: 0.9rem; margin-bottom: 4px;">✓ Secrets never in arguments</p>
+          <p style="color: var(--muted); font-size: 0.88rem;">API keys come from vault or env vars — never from CLI flags.</p>
+        </div>
+        <div>
+          <p style="color: var(--teal); font-weight: 600; font-size: 0.9rem; margin-bottom: 4px;">✓ Help text you can actually use</p>
+          <p style="color: var(--muted); font-size: 0.88rem;"><span class="mono">--help</span> on every command. No wall of text.</p>
+        </div>
+      </div>
+      <div style="margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border);">
+        <p style="color: var(--muted); font-size: 0.92rem; line-height: 1.7;">
+          Reasoning models hallucinate when forced to infer from ambiguous interfaces.
+          The solution is not better prompts — it is better tools. Tools with predictable contracts. Tools that fail loudly.
+          Tools designed by someone who understands that the digital worker calling them is not a human, and that matters.
+          <br><br>
+          <strong style="color: var(--white);">MiniClaw is built by a digital worker, for digital workers.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr />
+
+<!-- Install -->
+<section id="install">
+  <div class="container">
+    <div class="section-label">Get Started</div>
+    <h2>One command.<br>Everything included.</h2>
+    <p class="section-intro">The installer handles Homebrew, Node.js, OpenClaw, all plugins, and CLI tools. Re-running is safe — skips what's already installed, updates what's stale.</p>
+
+    <div class="install-block" style="display: block; padding: 24px 28px; margin-bottom: 24px;">
+      <div style="color: var(--muted); font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; margin-bottom: 8px;">bash</div>
+      curl -fsSL https://raw.githubusercontent.com/augmentedmike/miniclaw-os/main/bootstrap.sh | bash
+    </div>
+
+    <p style="color: var(--muted); font-size: 0.92rem; margin-bottom: 32px;">After install, restart OpenClaw and run <span class="mono" style="color: var(--teal);">mc-smoke</span> to verify everything is working.</p>
+
+    <div class="section-label">Platform</div>
+    <div class="platform-bar">
+      <div class="platform-tag active">✓ macOS (Apple Silicon)</div>
+      <div class="platform-tag active">✓ macOS (Intel)</div>
+      <div class="platform-tag">Linux — in progress</div>
+    </div>
+  </div>
+</section>
+
+<hr />
+
+<section class="cta-section">
+  <div class="container">
+    <div class="oss-badge">⚡ 100% Open Source — No paywalls. No gated features. Forever.</div>
+    <h2>Your digital worker. Your machine.<br><em>Your data.</em></h2>
+    <p>MiniClaw is built by a small team in Austin, Texas. No VC money. No bait-and-switch. The code is yours to read, fork, and run forever.</p>
+    <div class="actions">
+      <a href="https://github.com/augmentedmike/miniclaw-os" class="btn btn-primary" target="_blank">View on GitHub</a>
+      <a href="https://openclaw.ai" class="btn btn-ghost" target="_blank">Join the OpenClaw community</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="inner">
+    <div class="left">
+      Built by <a href="https://augmentedmike.com" target="_blank">Mike ONeal</a> in Austin, TX.
+      Need help setting up or want custom agentic systems?
+      <a href="https://augmentedmike.com" target="_blank">Book a consultation →</a>
+    </div>
+    <div class="right">
+      <a href="https://github.com/augmentedmike/miniclaw-os" target="_blank">GitHub</a>
+      <a href="https://openclaw.ai" target="_blank">OpenClaw</a>
+      <a href="https://blog.helloam.bot" target="_blank">Blog</a>
+      <a href="https://augmentedmike.substack.com" target="_blank">Substack</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
