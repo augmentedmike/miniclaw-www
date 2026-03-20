@@ -8,7 +8,7 @@ if (!SESSION_PRICE) throw new Error("NEXT_PUBLIC_SESSION_PRICE is not set")
 
 export function LiveSupport() {
   return (
-    <section id="support" className="relative overflow-hidden px-6 py-24 md:py-32">
+    <section id="support" aria-label="Live Support and Booking" className="relative overflow-hidden px-6 py-24 md:py-32">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/8 via-background to-background" />
       <div className="pointer-events-none absolute top-0 left-1/2 h-px w-3/4 -translate-x-1/2 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 

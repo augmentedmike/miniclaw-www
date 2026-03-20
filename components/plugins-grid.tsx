@@ -278,7 +278,7 @@ export function PluginsGrid() {
   )
 
   return (
-    <section id="plugins" className="px-6 py-24 md:py-32">
+    <section id="plugins" aria-label="Available Plugins" className="px-6 py-24 md:py-32">
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">

@@ -22,7 +22,7 @@ const features = [
 
 export function PortabilitySection() {
   return (
-    <section className="relative overflow-hidden px-6 py-24 md:py-32">
+    <section aria-label="Portability" className="relative overflow-hidden px-6 py-24 md:py-32">
       {/* Background gradient */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
 

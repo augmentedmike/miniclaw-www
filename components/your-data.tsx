@@ -2,7 +2,7 @@
 
 export function YourData() {
   return (
-    <section className="relative overflow-hidden px-6 py-24 md:py-32">
+    <section aria-label="Your Data" className="relative overflow-hidden px-6 py-24 md:py-32">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-primary/3 to-background" />
 
       <div className="relative mx-auto max-w-5xl">

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 
 export function OpenSource() {
   return (
-    <section className="px-6 py-24 md:py-32">
+    <section aria-label="Open Source" className="px-6 py-24 md:py-32">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-5xl">
           MiniClaw is and always will be{" "}

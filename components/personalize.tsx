@@ -36,7 +36,7 @@ export function Personalize() {
   const agent = agents[selected]
 
   return (
-    <section id="customize" className="relative overflow-hidden bg-[#07070d] px-6 py-24 md:py-32">
+    <section id="customize" aria-label="Customize Your AI" className="relative overflow-hidden bg-[#07070d] px-6 py-24 md:py-32">
       {/* Ambient glow */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
         <div className="h-[480px] w-[480px] rounded-full bg-primary/8 blur-[140px]" />

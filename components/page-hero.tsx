@@ -40,7 +40,7 @@ export function PageHero({ slides, rotationInterval = ROTATION_INTERVAL }: PageH
   const slide = slides[activeIndex]
 
   return (
-    <section className="relative overflow-hidden px-6">
+    <section aria-label="Hero" role="banner" className="relative overflow-hidden px-6">
       <div className="pointer-events-none absolute top-1/4 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/5 blur-3xl" />
 
       <div className="relative flex min-h-[85vh] flex-col items-center justify-center pt-16">

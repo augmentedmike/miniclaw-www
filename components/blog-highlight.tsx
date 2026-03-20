@@ -26,7 +26,7 @@ export function BlogHighlight() {
   if (!post) return null
 
   return (
-    <section className="px-6 py-24 md:py-32">
+    <section aria-label="Blog" className="px-6 py-24 md:py-32">
       <div className="mx-auto max-w-5xl">
         <div className="mb-10 text-center">
           <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5">

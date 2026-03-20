@@ -1,5 +1,12 @@
 import { NextResponse } from "next/server"
 
+/**
+ * /.well-known/webmcp — WebMCP discovery endpoint
+ *
+ * This is the canonical path the WebMCP checker and agents look for.
+ * Mirrors the manifest from /.well-known/modelcontext.
+ */
+
 const manifest = {
   schema_version: "1.0",
   name: "MiniClaw",
@@ -145,8 +152,15 @@ const manifest = {
         type: "object",
         properties: {
           name: { type: "string", description: "Your name" },
-          email: { type: "string", format: "email", description: "Your email address" },
-          message: { type: "string", description: "Your message or inquiry" },
+          email: {
+            type: "string",
+            format: "email",
+            description: "Your email address",
+          },
+          message: {
+            type: "string",
+            description: "Your message or inquiry",
+          },
         },
         required: ["name", "email", "message"],
       },
@@ -197,8 +211,15 @@ const manifest = {
       inputSchema: {
         type: "object",
         properties: {
-          name: { type: "string", description: "Full name of the person booking" },
-          email: { type: "string", format: "email", description: "Email for booking confirmation" },
+          name: {
+            type: "string",
+            description: "Full name of the person booking",
+          },
+          email: {
+            type: "string",
+            format: "email",
+            description: "Email for booking confirmation",
+          },
         },
         required: ["name", "email"],
       },
@@ -217,7 +238,10 @@ const manifest = {
       inputSchema: {
         type: "object",
         properties: {
-          message: { type: "string", description: "The message or question to send to Am" },
+          message: {
+            type: "string",
+            description: "The message or question to send to Am",
+          },
         },
         required: ["message"],
       },

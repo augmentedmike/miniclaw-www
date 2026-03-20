@@ -47,7 +47,7 @@ const gates = [
 
 export function KanbanSection() {
   return (
-    <section id="kanban" className="px-6 py-24 md:py-32 overflow-hidden">
+    <section id="kanban" aria-label="Kanban Task Management" className="px-6 py-24 md:py-32 overflow-hidden">
       <div className="mx-auto max-w-6xl">
 
         {/* Header */}

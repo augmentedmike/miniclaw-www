@@ -72,7 +72,7 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="px-6 py-24 md:py-32">
+    <section id="faq" aria-label="Frequently Asked Questions" className="px-6 py-24 md:py-32">
       <div className="mx-auto max-w-3xl">
         <div className="text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">

@@ -23,7 +23,7 @@ const pillars = [
 
 export function CompanionIntro() {
   return (
-    <section className="px-6 py-24 md:py-32">
+    <section aria-label="Your AI Companion" className="px-6 py-24 md:py-32">
       <div className="mx-auto max-w-5xl">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">
