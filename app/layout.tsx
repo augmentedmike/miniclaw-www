@@ -4,6 +4,7 @@ import { DM_Sans, Space_Mono } from 'next/font/google'
 
 import './globals.css'
 import { SmoothScroll } from '@/components/smooth-scroll'
+import WebMCPPolyfill from '@/components/webmcp-polyfill'
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -311,6 +312,7 @@ export default function RootLayout({
         <link rel="webmcp-manifest" href="/.well-known/webmcp.json" />
       </head>
       <body className="font-sans antialiased">
+        <WebMCPPolyfill />
         <SmoothScroll />
         {children}
         <Script src="/webmcp-tools.js" strategy="afterInteractive" />
