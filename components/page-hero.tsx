@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowDown, Download, Monitor } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 interface HeroSlide {
   headline: string
@@ -20,6 +21,7 @@ interface PageHeroProps {
 const ROTATION_INTERVAL = 6000
 
 export function PageHero({ slides, rotationInterval = ROTATION_INTERVAL }: PageHeroProps) {
+  const t = useTranslations('hero')
   const [activeIndex, setActiveIndex] = useState(() =>
     Math.floor(Math.random() * slides.length)
   )
@@ -97,7 +99,7 @@ export function PageHero({ slides, rotationInterval = ROTATION_INTERVAL }: PageH
             <Button size="lg" className="gap-2 px-8 text-base" asChild>
               <a href="https://github.com/augmentedmike/miniclaw-os">
                 <Download className="h-4 w-4" />
-                Download Free
+                {t('downloadFree')}
               </a>
             </Button>
             <Button
@@ -108,16 +110,15 @@ export function PageHero({ slides, rotationInterval = ROTATION_INTERVAL }: PageH
             >
               <a href="https://helloam.bot">
                 <Monitor className="h-4 w-4" />
-                Order Your AGI Machine
+                {t('orderMachine')}
               </a>
             </Button>
           </div>
 
           <p className="mt-4 text-xs text-muted-foreground/60">
-            macOS 13+&middot; No credit card required
+            {t('sysReqMac')}&middot; {t('sysReqCard')}
           </p>
 
-          {/* Inline waitlist form — always in DOM for agent/checker discovery */}
           <HeroSignupForm />
         </div>
 
@@ -130,6 +131,7 @@ export function PageHero({ slides, rotationInterval = ROTATION_INTERVAL }: PageH
 }
 
 function HeroSignupForm() {
+  const t = useTranslations('footer')
   const [email, setEmail] = useState("")
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
   const formRef = useRef<HTMLFormElement>(null)
@@ -178,7 +180,7 @@ function HeroSignupForm() {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="you@example.com"
+          placeholder={t('emailPlaceholder')}
           aria-label="Email address for waitlist signup"
           pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
           title="Enter a valid email address"
@@ -192,14 +194,14 @@ function HeroSignupForm() {
           aria-label="Submit waitlist signup"
           className="rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-50"
         >
-          {status === "loading" ? "..." : status === "success" ? "Done!" : "Join Waitlist"}
+          {status === "loading" ? "..." : status === "success" ? t('done') : t('notifyMe')}
         </button>
       </form>
       {status === "success" && (
-        <p className="mt-2 text-center text-xs text-green-500" role="status">Thanks! We'll let you know when it's ready.</p>
+        <p className="mt-2 text-center text-xs text-green-500" role="status">{t('successMessage')}</p>
       )}
       {status === "error" && (
-        <p className="mt-2 text-center text-xs text-red-500" role="alert">Something went wrong. Try again.</p>
+        <p className="mt-2 text-center text-xs text-red-500" role="alert">{t('errorMessage')}</p>
       )}
     </div>
   )

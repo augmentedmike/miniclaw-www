@@ -1,26 +1,28 @@
 "use client"
 
 import { useState } from "react"
-
-const footerLinks = {
-  Product: [
-    { label: "FAQ", href: "/#faq" },
-    { label: "Pilot Program", href: "https://github.com/augmentedmike/miniclaw-os/blob/main/PILOTS.md" },
-    { label: "Preorder", href: "https://helloam.bot/#waitlist" },
-  ],
-  Company: [
-    { label: "Invest", href: "/invest" },
-  ],
-  "Open Source": [
-    { label: "Voice-to-Text Hotkey Tool", href: "https://github.com/augmentedmike/whisper-hotkey" },
-    { label: "AI Comic Generator CLI", href: "https://github.com/augmentedmike/comic-cli" },
-    { label: "Claude Image Optimizer", href: "https://github.com/augmentedmike/claude-img-opt" },
-  ],
-}
+import { useTranslations } from "next-intl"
 
 export function Footer() {
   const [email, setEmail] = useState("")
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
+  const t = useTranslations('footer')
+
+  const footerLinks = {
+    [t('productSection')]: [
+      { label: t('faqLink'), href: "/#faq" },
+      { label: t('pilotProgram'), href: "https://github.com/augmentedmike/miniclaw-os/blob/main/PILOTS.md" },
+      { label: t('preorder'), href: "https://helloam.bot/#waitlist" },
+    ],
+    [t('companySection')]: [
+      { label: t('invest'), href: "/invest" },
+    ],
+    [t('openSourceSection')]: [
+      { label: t('whisperHotkey'), href: "https://github.com/augmentedmike/whisper-hotkey" },
+      { label: t('comicCli'), href: "https://github.com/augmentedmike/comic-cli" },
+      { label: t('claudeImgOpt'), href: "https://github.com/augmentedmike/claude-img-opt" },
+    ],
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -51,13 +53,13 @@ export function Footer() {
           <div>
             <a href="/" className="flex items-center gap-2">
               <span className="text-lg font-bold tracking-tight text-foreground">
-                MiniClaw
+                {t('brand')}
               </span>
             </a>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Your AI companion. Persona + Skills + Memory.
+              {t('tagline')}
               <br />
-              Built for humans. Built by{" "}
+              {t('builtBy')}{" "}
               <a
                 href="https://augmentedmike.com"
                 className="font-medium text-foreground underline underline-offset-2 hover:text-foreground/80"
@@ -88,7 +90,7 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Inline waitlist form — always in DOM for agent discovery */}
+        {/* Inline waitlist form */}
         <div className="mt-10 rounded-xl border border-border/40 bg-card/50 p-6">
           <form
             onSubmit={handleSubmit}
@@ -103,7 +105,7 @@ export function Footer() {
           >
             <fieldset>
               <legend className="text-sm font-semibold text-foreground">
-                Get notified when MiniClaw launches
+                {t('waitlistLegend')}
               </legend>
               <div className="mt-3 flex gap-3">
                 <label htmlFor="footer-email" className="sr-only">Email address</label>
@@ -114,7 +116,7 @@ export function Footer() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="you@example.com"
+                  placeholder={t('emailPlaceholder')}
                   aria-label="Email address"
                   pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                   title="Enter a valid email address"
@@ -127,14 +129,14 @@ export function Footer() {
                   disabled={status === "loading" || status === "success"}
                   className="rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-50"
                 >
-                  {status === "loading" ? "..." : status === "success" ? "Done!" : "Notify Me"}
+                  {status === "loading" ? t('subscribing') : status === "success" ? t('done') : t('notifyMe')}
                 </button>
               </div>
               {status === "success" && (
-                <p className="mt-2 text-xs text-green-500">Thanks! We'll let you know.</p>
+                <p className="mt-2 text-xs text-green-500">{t('successMessage')}</p>
               )}
               {status === "error" && (
-                <p className="mt-2 text-xs text-red-500">Something went wrong. Try again.</p>
+                <p className="mt-2 text-xs text-red-500">{t('errorMessage')}</p>
               )}
             </fieldset>
           </form>
@@ -142,10 +144,10 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-border/40 pt-8 md:flex-row">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} MiniClaw. All rights reserved.
+            &copy; {new Date().getFullYear()} {t('copyright')}
           </p>
           <p className="text-xs text-muted-foreground/60">
-            Built by AugmentedMike, an AGI powered by MiniClaw.
+            {t('builtByCredit')}
           </p>
         </div>
       </div>

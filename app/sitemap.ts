@@ -1,27 +1,28 @@
 import type { MetadataRoute } from 'next'
 
+const locales = ['en', 'es', 'zh-CN']
+const baseUrl = 'https://miniclaw.bot'
+
+function localizedUrls(path: string) {
+  const languages: Record<string, string> = {}
+  for (const locale of locales) {
+    languages[locale] = locale === 'en' ? `${baseUrl}${path}` : `${baseUrl}/${locale}${path}`
+  }
+  return languages
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://miniclaw.bot'
   const lastModified = new Date()
 
-  return [
-    {
-      url: baseUrl,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 1,
+  const routes = ['', '/compare', '/invest', '/install']
+
+  return routes.map((path) => ({
+    url: `${baseUrl}${path}`,
+    lastModified,
+    changeFrequency: path === '' ? 'weekly' as const : 'monthly' as const,
+    priority: path === '' ? 1 : path === '/compare' ? 0.8 : 0.6,
+    alternates: {
+      languages: localizedUrls(path),
     },
-    {
-      url: baseUrl + "/compare",
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: baseUrl + "/invest",
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    }
-  ]
+  }))
 }
