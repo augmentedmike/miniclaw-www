@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export function CopyCommand({ command }: { command: string }) {
+export function CopyCommand({ command, copiedLabel, copyLabel }: { command: string; copiedLabel?: string; copyLabel?: string }) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -65,7 +65,7 @@ export function CopyCommand({ command }: { command: string }) {
             whiteSpace: "nowrap",
           }}
         >
-          {copied ? "Copied!" : "Click to copy"}
+          {copied ? (copiedLabel || "Copied!") : (copyLabel || "Click to copy")}
         </div>
       </div>
     </div>
