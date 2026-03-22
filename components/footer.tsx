@@ -11,6 +11,11 @@ const footerLinks = {
   Company: [
     { label: "Invest", href: "/invest" },
   ],
+  "Open Source": [
+    { label: "Voice-to-Text Hotkey Tool", href: "https://github.com/augmentedmike/whisper-hotkey" },
+    { label: "AI Comic Generator CLI", href: "https://github.com/augmentedmike/comic-cli" },
+    { label: "Claude Image Optimizer", href: "https://github.com/augmentedmike/claude-img-opt" },
+  ],
 }
 
 export function Footer() {
@@ -41,7 +46,7 @@ export function Footer() {
   return (
     <footer role="contentinfo" aria-label="Site footer" className="px-6 py-16 md:py-20">
       <div className="mx-auto max-w-4xl">
-        <div className="grid gap-10 sm:grid-cols-3">
+        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
           {/* Brand */}
           <div>
             <a href="/" className="flex items-center gap-2">
@@ -71,6 +76,7 @@ export function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
+                      {...(link.href.startsWith("http") ? { target: "_blank", rel: "noopener" } : {})}
                       className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                     >
                       {link.label}
